@@ -6,7 +6,8 @@
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    font-size: 16px; /* Default font-size */
+    font-size: 16px;
+    /* Default font-size */
 }
 
 /* Set core root defaults */
@@ -18,6 +19,41 @@ html {
 .hyperLinks {
     color: blue;
     text-decoration: none;
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 90px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    right: 110%;
+    font-size: 13px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
 
 
@@ -123,8 +159,9 @@ html {
     background: opacity 0.5;
 }
 
-.creditTo:hover, .creditTo:active {
-  background-color: #f55a4e;
+.creditTo:hover,
+.creditTo:active {
+    background-color: #f55a4e;
 }
 
 /* ---------------------- Header (End) ---------------------- */
@@ -293,6 +330,7 @@ video {
 
 /* Content */
 .content {
+    width: 100%;
     max-width: 1000px;
     max-height: 900px;
 }
@@ -308,15 +346,18 @@ div.content {
 /* ----- Row (Start) ----- */
 /* Column container */
 .row {
-    display: -ms-flexbox; /* IE10 */
+    display: -ms-flexbox;
+    /* IE10 */
     display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
+    -ms-flex-wrap: wrap;
+    /* IE10 */
     flex-wrap: wrap;
 }
 
 /* 3D Model Canvas Divs */
 .optionsModel {
-    -ms-flex: 10%; /* IE10 */
+    -ms-flex: 10%;
+    /* IE10 */
     flex: 10%;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -325,31 +366,37 @@ div.content {
 }
 
 .canvasModel {
-    -ms-flex: 90%; /* IE10 */
+    -ms-flex: 90%;
+    /* IE10 */
     flex: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 /* ----- Row (End) ----- */
 
 
 /* ----- rowBlankLeft (Start) ----- */
 /* Column container ONLY FOR THE ROWS WITH BLANK SPACE TO THE LEFT */
 .rowBlankLeft {
-    display: -ms-flexbox; /* IE10 */
+    display: -ms-flexbox;
+    /* IE10 */
     display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
+    -ms-flex-wrap: wrap;
+    /* IE10 */
     flex-wrap: wrap;
 }
 
 .blankModel {
-    -ms-flex: 10%; /* IE10 */
+    -ms-flex: 10%;
+    /* IE10 */
     flex: 10%;
 }
 
 .headingModel {
-    -ms-flex: 90%; /* IE10 */
+    -ms-flex: 90%;
+    /* IE10 */
     flex: 90%;
     display: flex;
     justify-content: center;
@@ -357,7 +404,8 @@ div.content {
 }
 
 .controlsModel {
-    -ms-flex: 90%; /* IE10 */
+    -ms-flex: 90%;
+    /* IE10 */
     flex: 90%;
     display: flex;
     justify-content: center;
@@ -370,6 +418,7 @@ while in desktop mode */
 .mobile {
     display: none;
 }
+
 /* ----- rowBlankLeft (End) ----- */
 
 /* ---------------------- Main section (End) ---------------------- */
@@ -380,7 +429,8 @@ while in desktop mode */
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-    -ms-flex: 20%; /* IE10 */
+    -ms-flex: 20%;
+    /* IE10 */
     flex: 20%;
     background-color: #f1f1f1;
     padding: 20px;
@@ -524,11 +574,13 @@ while in desktop mode */
         top: 0;
     }
 }
+
 /* ----- Print Screen Area (End) ----- */
 
 
 /* ----- min-width: 1111px (Start) ----- */
 @media screen and (min-width: 1111px) {
+
     /* -- To the top left (Start) -- */
     #toTheTop-left {
         display: none;
@@ -549,13 +601,16 @@ while in desktop mode */
     #toTheTop-left:hover {
         background-color: #1abc9c;
     }
+
     /* -- To the top button left (End) -- */
 }
+
 /* ----- min-width: 1111px (End) ----- */
 
 
 /* ----- max-width: 1110px (Start) ----- */
 @media (max-width: 1110px) {
+
     /* -- To the top left (Start) -- */
     #toTheTop-left {
         display: none;
@@ -576,8 +631,10 @@ while in desktop mode */
     #toTheTop-left:hover {
         background-color: #1abc9c;
     }
+
     /* -- To the top button left (End) -- */
 }
+
 /* ----- max-width: 1110px (End) ----- */
 
 
@@ -603,7 +660,7 @@ while in desktop mode */
         margin-top: 0px;
         margin-bottom: 50px;
     }
-    
+
     .content-box4 {
         box-shadow: none;
         border-radius: 0px;
@@ -611,6 +668,7 @@ while in desktop mode */
         margin-bottom: 50px;
     }
 }
+
 /* ----- max-width: 1010px (End) ----- */
 
 
@@ -622,6 +680,7 @@ while in desktop mode */
         line-height: 1.5em;
     }
 }
+
 /* ----- min-width: 961px (End) ----- */
 
 
@@ -660,14 +719,14 @@ while in desktop mode */
         margin: 0;
         font-size: 1em;
     }
-    
+
     /* Hides the desktop version of 
     the controls guide text,
     while in mobile mode */
     .desktop {
         display: none;
     }
-    
+
     /* Makes the mobile version of 
     the controls guide text visible, 
     while in mobile mode */
@@ -688,6 +747,7 @@ while in desktop mode */
         text-align: right;
     }
 }
+
 /* ----- max-width: 960px (End) ----- */
 
 
@@ -709,6 +769,7 @@ while in desktop mode */
         max-width: 50px;
     }
 }
+
 /* ----- max-width: 720px (End) ----- */
 
 
@@ -728,6 +789,7 @@ while in desktop mode */
         bottom: 50px;
     }
 }
+
 /* ----- max-width: 680px (End) ----- */
 
 
@@ -743,12 +805,13 @@ while in desktop mode */
         text-align: center;
         float: none;
     }
-    
+
     .options {
         bottom: 50px;
         max-width: 350px;
     }
 }
+
 /* ----- max-width: 400px (End) ----- */
 
 /* ----------------------- Media Queries (End) ----------------------- */
