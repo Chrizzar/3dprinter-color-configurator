@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Voron V0.1 - 9 Accents Config</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="icons/voron_icon_v3.ico">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles/voron_style.css">
+    <link rel="stylesheet" type="text/css" href="styles/configuration.css">
+
+    <!-- --------- Google fonts (Start) --------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    
+    <!-- Oxygen -->
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+    
+    <!-- Inconsolata -->
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <!-- --------- Google fonts (End) --------- -->
+
+    <!-- Font Awesome -->
+    <link href="fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- We add the loader CSS here so that assets don't pop in before the bundled CSS is loaded -->
+    <style>
+        .loading {
+            position: absolute;
+            border-radius: 10px;
+            margin: 20px 20px 20px 0px;
+            z-index: 50;
+            width: 100%;
+            height: 600px;
+            top: 0;
+            left: 0;
+            background: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader {
+            -webkit-perspective: 120px;
+            -moz-perspective: 120px;
+            -ms-perspective: 120px;
+            perspective: 120px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .loader::before {
+            content: "";
+            position: absolute;
+            left: 25px;
+            top: 25px;
+            width: 50px;
+            height: 50px;
+            background-color: #ff0000;
+            animation: flip 1s infinite;
+        }
+
+        @keyframes flip {
+            0% {
+                transform: rotate(0);
+            }
+
+            50% {
+                transform: rotateY(180deg);
+            }
+
+            100% {
+                transform: rotateY(180deg) rotateX(180deg);
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <a class="skip-nav-link" href="#main">
+            skip navigation
+        </a>
+
+        <a class="creditTo" style="float: right;" href="https://threejs.org/" target="_blank">
+            Made with three.js
+        </a>
+
+        <div class="header-text">
+            <h1>VORON COLOR CONFIGURATOR (WIP)</h1>
+            <p>A website created by: <br> Christian Sass Hansen</p>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Voron V0.1
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="voron-v0.1-default.html">Default</a>
+                <a href="voron-v0.1-9accents.html">9 Accents</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Voron Trident (WIP)
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Default</a>
+                <a href="#">.. Accents</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Voron V2.4
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="voron-v2.4-default.html">Default</a>
+                <a href="voron-v2.4-6accents.html">6 Accents</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Voron Switchwire (WIP)
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Default</a>
+                <a href="#">.. Accents</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Voron Legacy (WIP)
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Default</a>
+                <a href="#">.. Accents</a>
+            </div>
+        </div>
+        
+        <a href="download-center.html">Download Center</a>
+       
+        <div style="float:right;">
+            <div class="dropdown">
+                <button class="dropbtn">About Us
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="contact.html">Contact</a>
+                    <a href="terms-of-use.html">Terms of use</a>
+                </div>
+            </div>
+            
+            <a href="roadmap.html">Roadmap</a>
+
+            <a href="support-me.html" style="font-weight: bold;">Support Me</a>
+        </div>
+    </div>
+    
+    <!-- To the top button -->
+    <button onclick="topFunction()" id="toTheTop-left" title="Go to top">Top</button>
+
+    <div id="section-to-print" class="row">
+        <div id="main" class="main">
+            <div class="content">
+
+                <div class="rowBlankLeft">
+                    <div class="blankModel">
+
+                    </div>
+
+                    <div class="headingModel">
+                        <h2 class="textSmaller">VORON V0.1 - 9 ACCENTS (PRIMARY + 8 ACCENTS)</h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="optionsModel">
+                        <!-- These toggle the the different parts of the chair that can be edited, note data-option is the key that links to the name of the part in the 3D file -->
+                        <div class="options">
+                            <div class="optionV0_accents --is-active special" data-option="first_color">
+                                <img class="resize" src="images/thumbnails/V0.1/V0_part_1.svg" alt="" />
+                            </div>
+                            <div class="optionV0_accents special" data-option="second_color">
+                                <img src="images/thumbnails/V0.1/V0_part_2.svg" alt="" />
+                            </div>
+                            <div class="optionV0_accents special" data-option="accessories">
+                                <img src="images/thumbnails/V0.1/V0_part_3.svg" alt="" />
+                            </div>
+                            <div class="optionV0_accents special" data-option="stops">
+                                <img src="images/thumbnails/V0.1/V0_part_4.svg" alt="" />
+                            </div>
+                            <div class="optionV0_accents special" data-option="powersupply_shroud">
+                                <img class="resize" src="images/thumbnails/V0.1/V0_part_5.svg" alt="" />
+                            </div>
+                            <div class="optionV0_accents special" data-option="skirt_2">
+                                <img class="resize" class="smaller" src="images/thumbnails/V0.1/V0_part_6.svg" alt="" />
+                            </div>
+                            <div class="optionV0_accents special" data-option="skirt_1">
+                                <img class="resize" class="smaller" src="images/thumbnails/V0.1/V0_part_7.svg" alt="" />
+                            </div>
+                            <div class="optionV0_accents special" data-option="hotend_extruder_part1">
+                                <img class="resize" src="images/thumbnails/V0.1/V0_part_8.svg" alt="" />
+                            </div>
+                            <div class="optionV0_accents special" data-option="hotend_extruder_part2">
+                                <img class="resize" src="images/thumbnails/V0.1/V0_part_9.svg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="canvasModel" style="position: relative;">
+                        <!-- Just a quick notice to the user that it can be interacted with -->
+                        <span class="drag-notice" id="js-drag-notice">Drag to rotate 360&#176;</span>
+
+                        <!-- The canvas element is used to draw the 3D scene -->
+                        <canvas id="c"></canvas>
+
+                        <!-- The loading element overlays all else until the model is loaded, at which point we remove this element from the DOM -->
+                        <div class="loading" id="js-loader">
+                            <div class="loader"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rowBlankLeft">
+                    <div class="blankModel">
+
+                    </div>
+
+                    <div class="controlsModel">
+                        <div class="controls">
+                            <div class="info">
+                                <div class="desktop" class="info__message">
+                                    <p><strong>&nbsp;Grab&nbsp;</strong>to rotate the printer. <strong>&nbsp;Scroll&nbsp;</strong>to zoom. <strong>&nbsp;Drag&nbsp;</strong>colors to view more.</p>
+                                </div>
+
+                                <div class="mobile" class="info__message">
+                                    <p><strong>&nbsp;Touch&nbsp;</strong>to rotate the printer.<br> <strong>&nbsp;Pinch&nbsp;</strong>to zoom. <strong>&nbsp;Drag&nbsp;</strong>colors to view more.</p>
+                                </div>
+                            </div>
+                            <!-- This tray will be filled with colors via JS, and the ability to slide this panel will be added in with a lightweight slider script (no dependency used for this) -->
+                            <div id="js-tray" class="tray">
+                                <div id="js-tray-slide" class="tray__slide"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="side">
+            <h2 class="textCenter">Configuration</h2>
+            <div class="radioContainer">
+                <form class="form cf">
+
+                    <section class="radioOptions cf selectionStyle">
+                        <h3>Choose type of toolhead:</h3>
+                        <input type="radio" name="radio1" id="bowden" value="bowden" onclick="bowdenHotendSection()"><label class="four col" for="bowden">Bowden</label>
+                        <input type="radio" name="radio1" id="afterburner" value="afterburner" onclick="directHotendSection()"><label class="four col" for="afterburner">Mini&nbsp;Afterburner</label>
+                    </section>
+
+                    <section id="bowdenHotend" class="radioOptions cf hidden selectionStyle" style="display:none;">
+                        <h3>Choose bowden toolhead:</h3>
+                        <input type="radio" name="radio2" id="dragon" value="dragon"><label class="four col" for="dragon">Dragon</label>
+                        <input type="radio" name="radio2" id="mosquito" value="mosquito"><label class="yearly-label four col" for="mosquito">Mosquito</label>
+                        <input type="radio" name="radio2" id="v6" value="v6"><label class="four col" for="v6">Threaded V6</label>
+                    </section>
+
+                    <section id="directHotend" class="radioOptions cf hidden selectionStyle" style="display:none;">
+                        <h3>Choose Mini Afterburner toolhead:</h3>
+                        <input type="radio" name="radio3" id="dragon_dd" value="dragon_dd"><label class="four col" for="dragon_dd">Dragon DD</label>
+                        <input type="radio" name="radio3" id="dragonfly_bmo_dd" value="dragonfly_bmo_dd"><label class="yearly-label four col" for="dragonfly_bmo_dd">Dragonfly BMO DD</label>
+                        <input type="radio" name="radio3" id="mosquito_dd" value="mosquito_dd"><label class="four col" for="mosquito_dd">Mosquito DD</label>
+                    </section>
+
+                    <section class="radioOptions cf selectionStyle">
+                        <h3>Choose panel thickness:</h3>
+                        <input type="radio" name="radio4" id="panel1" value="panel1"><label class="credit-label four col" for="panel1">For 3mm</label>
+                        <input type="radio" name="radio4" id="panel2" value="panel2"><label class="debit-label four col" for="panel2">For 2.5mm</label>
+                        <input type="radio" name="radio4" id="panel3" value="panel3"><label class="paypal-label four col" for="panel3">For 2mm</label>
+                    </section>
+
+                    <section>
+                        <h3>Choose colors (using the tool):</h3>
+                        <h4>Primary color</h4>
+                        <select aria-label="Primary color" id="primaryColor" class="selectionStyle">
+                            <option class="whiteText" value="" selected disabled hidden>Choose a color</option>
+                            <option class="whiteText" value="#26282f">Black</option>
+                            <option class="whiteText" value="#fbfbfd">Cold White</option>
+                            <option class="whiteText" value="#e72e1e">Red</option>
+                            <option class="whiteText" value="#0b8d6f">Green</option>
+                            <option class="whiteText" value="#345495">Blue</option>
+                            <option class="whiteText" value="#5d4088">Purple</option>
+                            <option class="whiteText" value="#fd6b3e">Orange</option>
+                            <option class="whiteText" value="#fbcd27">Yellow</option>
+                            <option class="whiteText" value="#6be067">Peak Green</option>
+                        </select>
+
+                        <h4>First accent color</h4>
+                        <select aria-label="First accent color" id="1_accent" class="selectionStyle">
+                            <option class="whiteText" value="" selected disabled hidden>Choose a color</option>
+                            <option class="whiteText" value="#26282f">Black</option>
+                            <option class="whiteText" value="#fbfbfd">Cold White</option>
+                            <option class="whiteText" value="#e72e1e">Red</option>
+                            <option class="whiteText" value="#0b8d6f">Green</option>
+                            <option class="whiteText" value="#345495">Blue</option>
+                            <option class="whiteText" value="#5d4088">Purple</option>
+                            <option class="whiteText" value="#fd6b3e">Orange</option>
+                            <option class="whiteText" value="#fbcd27">Yellow</option>
+                            <option class="whiteText" value="#6be067">Peak Green</option>
+                        </select>
+
+                        <h4>Second accent color</h4>
+                        <select aria-label="Second accent color" id="2_accent" class="selectionStyle">
+                            <option class="whiteText" value="" selected disabled hidden>Choose a color</option>
+                            <option class="whiteText" value="#26282f">Black</option>
+                            <option class="whiteText" value="#fbfbfd">Cold White</option>
+                            <option class="whiteText" value="#e72e1e">Red</option>
+                            <option class="whiteText" value="#0b8d6f">Green</option>
+                            <option class="whiteText" value="#345495">Blue</option>
+                            <option class="whiteText" value="#5d4088">Purple</option>
+                            <option class="whiteText" value="#fd6b3e">Orange</option>
+                            <option class="whiteText" value="#fbcd27">Yellow</option>
+                            <option class="whiteText" value="#6be067">Peak Green</option>
+                        </select>
+
+                        <h4>Third accent color</h4>
+                        <select aria-label="Third accent color" id="3_accent" class="selectionStyle">
+                            <option class="whiteText" value="" selected disabled hidden>Choose a color</option>
+                            <option class="whiteText" value="#26282f">Black</option>
+                            <option class="whiteText" value="#fbfbfd">Cold White</option>
+                            <option class="whiteText" value="#e72e1e">Red</option>
+                            <option class="whiteText" value="#0b8d6f">Green</option>
+                            <option class="whiteText" value="#345495">Blue</option>
+                            <option class="whiteText" value="#5d4088">Purple</option>
+                            <option class="whiteText" value="#fd6b3e">Orange</option>
+                            <option class="whiteText" value="#fbcd27">Yellow</option>
+                            <option class="whiteText" value="#6be067">Peak Green</option>
+                        </select>
+
+                        <h4>Fourth accent color</h4>
+                        <select aria-label="Fourth accent color" id="4_accent" class="selectionStyle">
+                            <option class="whiteText" value="" selected disabled hidden>Choose a color</option>
+                            <option class="whiteText" value="#26282f">Black</option>
+                            <option class="whiteText" value="#fbfbfd">Cold White</option>
+                            <option class="whiteText" value="#e72e1e">Red</option>
+                            <option class="whiteText" value="#0b8d6f">Green</option>
+                            <option class="whiteText" value="#345495">Blue</option>
+                            <option class="whiteText" value="#5d4088">Purple</option>
+                            <option class="whiteText" value="#fd6b3e">Orange</option>
+                            <option class="whiteText" value="#fbcd27">Yellow</option>
+                            <option class="whiteText" value="#6be067">Peak Green</option>
+                        </select>
+
+                        <h4>Fith accent color</h4>
+                        <select aria-label="Fith accent color" id="5_accent" class="selectionStyle">
+                            <option class="whiteText" value="" selected disabled hidden>Choose a color</option>
+                            <option class="whiteText" value="#26282f">Black</option>
+                            <option class="whiteText" value="#fbfbfd">Cold White</option>
+                            <option class="whiteText" value="#e72e1e">Red</option>
+                            <option class="whiteText" value="#0b8d6f">Green</option>
+                            <option class="whiteText" value="#345495">Blue</option>
+                            <option class="whiteText" value="#5d4088">Purple</option>
+                            <option class="whiteText" value="#fd6b3e">Orange</option>
+                            <option class="whiteText" value="#fbcd27">Yellow</option>
+                            <option class="whiteText" value="#6be067">Peak Green</option>
+                        </select>
+
+                        <h4>Sixth accent color</h4>
+                        <select aria-label="Sixth accent color" id="6_accent" class="selectionStyle">
+                            <option class="whiteText" value="" selected disabled hidden>Choose a color</option>
+                            <option class="whiteText" value="#26282f">Black</option>
+                            <option class="whiteText" value="#fbfbfd">Cold White</option>
+                            <option class="whiteText" value="#e72e1e">Red</option>
+                            <option class="whiteText" value="#0b8d6f">Green</option>
+                            <option class="whiteText" value="#345495">Blue</option>
+                            <option class="whiteText" value="#5d4088">Purple</option>
+                            <option class="whiteText" value="#fd6b3e">Orange</option>
+                            <option class="whiteText" value="#fbcd27">Yellow</option>
+                            <option class="whiteText" value="#6be067">Peak Green</option>
+                        </select>
+
+                        <h4>Seventh accent color</h4>
+                        <select aria-label="Seventh accent color" id="7_accent" class="selectionStyle">
+                            <option class="whiteText" value="" selected disabled hidden>Choose a color</option>
+                            <option class="whiteText" value="#26282f">Black</option>
+                            <option class="whiteText" value="#fbfbfd">Cold White</option>
+                            <option class="whiteText" value="#e72e1e">Red</option>
+                            <option class="whiteText" value="#0b8d6f">Green</option>
+                            <option class="whiteText" value="#345495">Blue</option>
+                            <option class="whiteText" value="#5d4088">Purple</option>
+                            <option class="whiteText" value="#fd6b3e">Orange</option>
+                            <option class="whiteText" value="#fbcd27">Yellow</option>
+                            <option class="whiteText" value="#6be067">Peak Green</option>
+                        </select>
+
+                        <h4>Eighth accent color</h4>
+                        <select aria-label="Eighth accent color" id="8_accent" class="selectionStyle">
+                            <option class="whiteText" value="" selected disabled hidden>Choose a color</option>
+                            <option class="whiteText" value="#26282f">Black</option>
+                            <option class="whiteText" value="#fbfbfd">Cold White</option>
+                            <option class="whiteText" value="#e72e1e">Red</option>
+                            <option class="whiteText" value="#0b8d6f">Green</option>
+                            <option class="whiteText" value="#345495">Blue</option>
+                            <option class="whiteText" value="#5d4088">Purple</option>
+                            <option class="whiteText" value="#fd6b3e">Orange</option>
+                            <option class="whiteText" value="#fbcd27">Yellow</option>
+                            <option class="whiteText" value="#6be067">Peak Green</option>
+                        </select>
+                    </section>
+
+                    <input class="submit" type="submit" value="Submit" onClick="window.print()">
+
+                    <p class="textCenter" style="color: red; margin-top: 0px; margin-bottom: 20px">(OBS: The configuration will reset after submission)</p>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-content">
+            <h3>About</h3>
+            <p>Our mission with this tool is to make it more convenient for the user to visualize what they want their Voron color theme to look like. Users can now create and visualize everything from the default two color groups (primary and accent color) to a very unique looking build, where up to 9 different groups of parts can be colored (this holds for Voron V0.1).</p>
+            <ul class="socials">
+                <!--<li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
+                <li><a href="https://twitter.com/Chrizzar" target="_blank" aria-label="Link to my Twitter"><i class="fa fa-twitter twitter"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UC7DucVUUyAl8whkK8KzqBhA" target="_blank" aria-label="Link to my YouTube"><i class="fa fa-youtube youtube"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/christian-sass-hansen-639571188/" target="_blank" aria-label="Link to my Linkedin"><i class="fa fa-linkedin-square linkedin"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2021. designed by <span>Christian Sass Hansen</span></p>
+        </div>
+    </div>
+
+    <!-- The main three.js file -->
+    <script src='https://unpkg.com/three@0.136.0/build/three.js'></script>
+    <!-- This brings in the ability to load custom 3D objects in the .gltf file format. Blender allows the ability to export to this format out the box -->
+    <script src='https://cdn.jsdelivr.net/gh/mrdoob/three.js@r136/examples/js/loaders/GLTFLoader.js'></script>
+    <!-- This is a simple to use extension for three.js that activates all the rotating, dragging and zooming controls we need for both mouse and touch, there isn't a clear CDN for this that I can find -->
+    <script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script>
+    <script src="scripts/v0_accents_script.js"></script>
+
+    
+    <!-- Go to the top -->
+    <script>
+        //Get the button
+        var toTheTop = document.getElementById("toTheTop-left");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                toTheTop.style.display = "block";
+            } else {
+                toTheTop.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    
+    <!-- Change color of the select components dependent on, 
+    if an option has been selected -->
+    <script>
+        // Primary Color 
+        var primary = document.getElementById('primaryColor')
+        primary.onchange = () => {
+            // Initial color
+            let color = 'white'
+
+            // Check background color and change font color accordingly
+            if (primary.value == '#fbfbfd') color = 'black' // White
+            //else if (select1.value == '#fd6b3e') color1 = 'black' // Orange
+            else if (primary.value == '#fbcd27') color = 'black' // Yellow
+            else if (primary.value == '#6be067') color = 'black' // Light Green
+
+            // Add your desired css style here:
+            primary.style.cssText = `
+            background-color: ${primary.value};
+            color: ${color};
+            border: 3px solid #333;
+            `
+        }
+
+        // Accent 1
+        var select1 = document.getElementById('1_accent')
+        select1.onchange = () => {
+            // Initial color
+            let color1 = 'white'
+
+            // Check background color and change font color accordingly
+            if (select1.value == '#fbfbfd') color1 = 'black'
+            else if (select1.value == '#fbcd27') color1 = 'black'
+            else if (select1.value == '#6be067') color1 = 'black'
+
+            // Add your desired css style here:
+            select1.style.cssText = `
+            background-color: ${select1.value};
+            color: ${color1};
+            border: 3px solid #333;
+            `
+        }
+
+        // Accent 2
+        var select2 = document.getElementById('2_accent')
+        select2.onchange = () => {
+            // Initial color
+            let color2 = 'white'
+
+            // Check background color and change font color accordingly
+            if (select2.value == '#fbfbfd') color2 = 'black'
+            else if (select2.value == '#fbcd27') color2 = 'black'
+            else if (select2.value == '#6be067') color2 = 'black'
+
+            // Add your desired css style here:
+            select2.style.cssText = `
+            background-color: ${select2.value};
+            color: ${color2};
+            border: 3px solid #333;
+            `
+        }
+
+        // Accent 3
+        var select3 = document.getElementById('3_accent')
+        select3.onchange = () => {
+            // Initial color
+            let color3 = 'white'
+
+            // Check background color and change font color accordingly
+            if (select3.value == '#fbfbfd') color3 = 'black'
+            else if (select3.value == '#fbcd27') color3 = 'black'
+            else if (select3.value == '#6be067') color3 = 'black'
+
+            // Add your desired css style here:
+            select3.style.cssText = `
+            background-color: ${select3.value};
+            color: ${color3};
+            border: 3px solid #333;
+            `
+        }
+
+        // Accent 4
+        var select4 = document.getElementById('4_accent')
+        select4.onchange = () => {
+            // Initial color
+            let color4 = 'white'
+
+            // Check background color and change font color accordingly
+            if (select4.value == '#fbfbfd') color4 = 'black'
+            else if (select4.value == '#fbcd27') color4 = 'black'
+            else if (select4.value == '#6be067') color4 = 'black'
+
+            // Add your desired css style here:
+            select4.style.cssText = `
+            background-color: ${select4.value};
+            color: ${color4};
+            border: 3px solid #333;
+            `
+        }
+
+        // Accent 5
+        var select5 = document.getElementById('5_accent')
+        select5.onchange = () => {
+            // Initial color
+            let color5 = 'white'
+
+            // Check background color and change font color accordingly
+            if (select5.value == '#fbfbfd') color5 = 'black'
+            else if (select5.value == '#fbcd27') color5 = 'black'
+            else if (select5.value == '#6be067') color5 = 'black'
+
+            // Add your desired css style here:
+            select5.style.cssText = `
+            background-color: ${select5.value};
+            color: ${color5};
+            border: 3px solid #333;
+            `
+        }
+
+        // Accent 6
+        var select6 = document.getElementById('6_accent')
+        select6.onchange = () => {
+            // Initial color
+            let color6 = 'white'
+
+            // Check background color and change font color accordingly
+            if (select6.value == '#fbfbfd') color6 = 'black'
+            else if (select6.value == '#fbcd27') color6 = 'black'
+            else if (select6.value == '#6be067') color6 = 'black'
+
+            // Add your desired css style here:
+            select6.style.cssText = `
+            background-color: ${select6.value};
+            color: ${color6};
+            border: 3px solid #333;
+            `
+        }
+
+        // Accent 7
+        var select7 = document.getElementById('7_accent')
+        select7.onchange = () => {
+            // Initial color
+            let color7 = 'white'
+
+            // Check background color and change font color accordingly
+            if (select7.value == '#fbfbfd') color7 = 'black'
+            else if (select7.value == '#fbcd27') color7 = 'black'
+            else if (select7.value == '#6be067') color7 = 'black'
+
+            // Add your desired css style here:
+            select7.style.cssText = `
+            background-color: ${select7.value};
+            color: ${color7};
+            border: 3px solid #333;
+            `
+        }
+
+        // Accent 8
+        var select8 = document.getElementById('8_accent')
+        select8.onchange = () => {
+            // Initial color
+            let color8 = 'white'
+
+            // Check background color and change font color accordingly
+            if (select8.value == '#fbfbfd') color8 = 'black'
+            else if (select8.value == '#fbcd27') color8 = 'black'
+            else if (select8.value == '#6be067') color8 = 'black'
+
+            // Add your desired css style here:
+            select8.style.cssText = `
+            background-color: ${select8.value};
+            color: ${color8};
+            border: 3px solid #333;
+            `
+        }
+
+    </script>
+
+    <!-- Show different div dependent on choice -->
+    <script>
+        function bowdenHotendSection() {
+            document.getElementById('bowdenHotend').style.display = 'block';
+            document.getElementById('directHotend').style.display = 'none';
+        }
+
+        function directHotendSection() {
+            document.getElementById('bowdenHotend').style.display = 'none';
+            document.getElementById('directHotend').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

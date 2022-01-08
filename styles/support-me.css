@@ -1,0 +1,50 @@
+#mainDonate {
+    background-color: white;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    background-color: #f1f1f1;
+    background-image: url(../images/overlays/pw_maze_white.png);
+}
+
+#contentDonate {
+    max-width: 500px;
+    height: 100%;
+    padding: 20px 35px;
+    background-color: white;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.container {
+    display: inline-table;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.fieldName {
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 15px;
+}
+
+.data {
+    display: table-cell;
+}
+
+.centerDiv {
+    margin: auto;
+    width: 77%;
+}
+
+/* Media Queries */
+@media (max-width: 500px) {
+    #contentDonate {
+        box-shadow: none;
+        border-radius: 0px;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+}

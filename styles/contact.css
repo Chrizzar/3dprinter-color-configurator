@@ -1,0 +1,71 @@
+#main-about {
+    max-width: 100%;
+}
+
+.aboutColumn {
+    width: 450px;
+    margin-bottom: 50px;
+    padding: 0 8px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.about-section {
+    padding: 40px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+}
+
+.container {
+    padding: 0 16px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.container::after,
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: grey;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #333;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+
+@media screen and (max-width: 720px) {
+    .aboutColumn {
+        width: 100%;
+        display: block;
+    }
+}

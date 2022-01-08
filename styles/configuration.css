@@ -1,0 +1,171 @@
+/* CONTAINERS */
+.radioContainer {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.four {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* COLUMNS */
+.col {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 0;
+}
+
+.col:first-of-type {
+    margin-left: 0;
+}
+
+/* CLEARFIX */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+/* FORMS */
+.form .radioOptions input {
+    display: none;
+}
+
+.form label {
+    position: relative;
+    color: #fff;
+    background-color: #808080;
+    font-size: 16px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    cursor: pointer;
+    border: 3px solid transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+.form label:hover {
+    background-color: #909090;
+    /*background-color: #888888;*/
+}
+
+.form .radioOptions input:checked + label {
+    border: 3px solid #333;
+    background-color: #1abc9c;
+}
+
+.form .radioOptions input:checked + label:after {
+    content: "\2713";
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 100%;
+    border: 2px solid #333;
+    background-color: #1abc9c;
+    z-index: 999;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.submit {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px 60px;
+    display: inline-block;
+    border: none;
+    margin: 20px 0;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #333;
+    font-size: 18px;
+    -webkit-transition: transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.submit:hover {
+    cursor: pointer;
+    transform: rotateX(360deg);
+}
+
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: block;
+}
+
+
+/* <select> styles */
+select {
+    /* Reset */
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+
+    /* Personalize */
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    color: #fff;
+    background-color: #808080;
+    font-size: 16px;
+    text-align: center;
+    height: 50px;
+    line-height: 30px;
+    display: block;
+    cursor: pointer;
+    border: 3px solid transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+select:hover {
+    background-color: #909090;
+    /*background-color: #888888;*/
+}
+
+select option {
+    color: inherit;
+    background-color: gray;
+}
+
+select:focus {
+    outline: none;
+}
+
+
+option:checked {
+    background-color: dimgray;
+}
+
+
+select::-ms-expand {
+    display: none;
+}
+
+.whiteText {
+    color: white;
+}
+
+.selectionStyle {
+    font-weight: 500;
+}

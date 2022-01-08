@@ -1,0 +1,692 @@
+* {
+    touch-action: manipulation;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.frame {
+    top: 0;
+    position: absolute;
+    left: 0;
+    padding: 1rem;
+}
+
+.frame__title {
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.frame__links {
+    display: inline-block;
+    margin: 0 2rem;
+    text-transform: lowercase;
+}
+
+.frame__links a {
+    display: inline-block;
+    margin: 0 0.25rem;
+    text-decoration: none;
+    color: red;
+}
+
+.frame__links a:focus,
+.frame__links a:hover {
+    text-decoration: underline;
+}
+
+#c {
+    width: 100%;
+    height: 600px;
+    display: inline-block;
+    border-radius: 10px;
+    margin: 20px 20px 20px 20px;
+}
+
+.controls {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.options {
+    position: relative;
+    left: 0;
+}
+
+/* ------------- Resize option img (START) ------------- */
+.optionV0 .resize {
+    height: 130%;
+    width: 130%;
+}
+
+.optionV0_accents .resize {
+    height: 130%;
+    width: 130%;
+}
+
+.optionV2_accents .resize {
+    height: 130%;
+    width: 130%;
+}
+/* ------------- Resize option img (END) ------------- */
+
+
+/* ------------- Option for Voron V0.1 (START) ------------- */
+.optionV0:hover {
+    transform: scale(1.2);
+}
+
+.optionV0.--is-active {
+    filter: invert(17%) sepia(65%) saturate(5512%) hue-rotate(357deg) brightness(102%) contrast(81%);
+}
+
+.optionV0.--is-active:hover {
+    border-left: none;
+}
+
+.optionV0 img {
+    height: 100%;
+    width: auto;
+    pointer-events: none;
+}
+/* ------------- Option for Voron V0.1 (END) ------------- */
+
+
+/* ------------- Option for Voron V0.1 Accents (START) ------------- */
+.optionV0_accents:hover {
+    transform: scale(1.2);
+}
+
+.optionV0_accents.--is-active {
+    filter: invert(17%) sepia(65%) saturate(5512%) hue-rotate(357deg) brightness(102%) contrast(81%);
+}
+
+.optionV0_accents.--is-active:hover {
+    border-left: none;
+}
+
+.optionV0_accents img {
+    height: 100%;
+    width: auto;
+    pointer-events: none;
+}
+/* ------------- Option for Voron V0.1 Accents (END) ------------- */
+
+
+/* ------------- Option for Voron V2.4 (START) ------------- */
+.optionV2:hover {
+    transform: scale(1.2);
+}
+
+.optionV2.--is-active {
+    filter: invert(17%) sepia(65%) saturate(5512%) hue-rotate(357deg) brightness(102%) contrast(81%);
+}
+
+.optionV2.--is-active:hover {
+    border-left: none;
+}
+
+.optionV2 img {
+    height: 100%;
+    width: auto;
+    pointer-events: none;
+}
+/* ------------- Option for Voron V2.4 (END) ------------- */
+
+
+/* ------------- Option for Voron V2.4 Accents (START) ------------- */
+.optionV2_accents:hover {
+    transform: scale(1.2);
+}
+
+.optionV2_accents.--is-active {
+    filter: invert(17%) sepia(65%) saturate(5512%) hue-rotate(357deg) brightness(102%) contrast(81%);
+}
+
+.optionV2_accents.--is-active:hover {
+    border-left: none;
+}
+
+.optionV2_accents img {
+    height: 100%;
+    width: auto;
+    pointer-events: none;
+}
+/* ------------- Option for Voron V2.4 Accents (END) ------------- */
+
+
+.info {
+    display: flex;
+    justify-content: center;
+}
+
+.info p {
+    margin-top: 0;
+}
+
+.tray {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.tray__slide {
+    position: absolute;
+    display: flex;
+}
+
+.tray__swatch {
+    cursor: pointer;
+    transition: 0.1s ease-in;
+    height: 50px;
+    min-width: 50px;
+    flex: 1;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    background-position: center;
+}
+
+.tray__swatch:hover {
+    height: 58px;
+}
+
+.drag-notice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    width: 10em;
+    height: 10em;
+    box-sizing: border-box;
+    font-size: 0.9em;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 5em;
+    background: white;
+    position: absolute;
+}
+
+.drag-notice.start {
+    -webkit-animation: popout 0.25s 3s forwards;
+    animation: popout 0.25s 3s forwards;
+}
+
+@-webkit-keyframes popout {
+    to {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+}
+
+@keyframes popout {
+    to {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+}
+
+@-webkit-keyframes wheelin {
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes wheelin {
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+/* ----------------------- Media Queries (Start) ----------------------- */
+
+/* ------------- min-width: 961px (Start) ------------- */
+/* Media Query for the options panel of the canvas */
+@media screen and (min-width: 961px) {
+
+    /* ----- Option for Voron V0.1 (START) ----- */
+    .optionV0 {
+        margin-bottom: 1px;
+        padding: 10px;
+        height: 60px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .optionV0.--is-active {
+        /*border-right: 2px solid #e72e1e;*/
+        width: 63px;
+        transform: scale(1.2);
+        cursor: default;
+    }
+    /* ----- Option for Voron V0.1 (END) ----- */
+
+
+    /* ----- Option for Voron V0.1 Accents (START) ----- */
+    .optionV0_accents {
+        margin-bottom: 1px;
+        padding: 10px;
+        height: 60px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .optionV0_accents.--is-active {
+        /*border-right: 2px solid #e72e1e;*/
+        width: 63px;
+        transform: scale(1.2);
+        cursor: default;
+    }
+    /* ----- Option for Voron V0.1 Accents (END) ----- */
+
+
+    /* ----- Option for Voron V2.4 (START) ----- */
+    .optionV2 {
+        margin-bottom: 1px;
+        padding: 10px;
+        height: 60px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .optionV2.--is-active {
+        /*border-right: 2px solid #e72e1e;*/
+        width: 63px;
+        transform: scale(1.2);
+        cursor: default;
+    }
+    /* ----- Option for Voron V2.4 (END) ----- */
+    
+    
+    /* ----- Option for Voron V2.4 Accents (START) ----- */
+    .optionV2_accents {
+        margin-bottom: 1px;
+        padding: 10px;
+        height: 60px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .optionV2_accents.--is-active {
+        /*border-right: 2px solid #e72e1e;*/
+        width: 63px;
+        transform: scale(1.2);
+        cursor: default;
+    }
+    /* ----- Option for Voron V2.4 Accents (END) ----- */
+}
+/* ------------- min-width: 961px (End) ------------- */
+
+
+/* ------------- max-width: 960px (Start) ------------- */
+@media (max-width: 960px) {
+
+    /* ----- Option for Voron V0.1 (START) ----- */
+    .optionV0 {
+        margin-bottom: 1px;
+        margin-right: 1px;
+        padding: 10px;
+        height: 60px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .optionV0.--is-active {
+        width: 63px;
+        transform: scale(1.2);
+        cursor: default;
+    }
+    
+    /*
+    .optionV0.--is-active:before {
+        content: "";
+        position: absolute;
+        left: 12.5%;
+        bottom: 0;
+        height: 15px;
+        width: 75%;
+        border-bottom: 2px solid #e72e1e;
+    }
+    */
+
+    .optionV0 img {
+        height: 100%;
+        width: auto;
+        pointer-events: none;
+    }
+
+    .optionV0:nth-child(1) {
+        margin-right: 15px;
+    }
+
+    .optionV0:nth-child(3) {
+        margin-left: -5px;
+    }
+    /* ----- Option for Voron V0.1 (END) ----- */
+
+
+    /* ----- Option for Voron V0.1 Accents (START) ----- */
+    .optionV0_accents {
+        margin-bottom: 1px;
+        margin-right: 1px;
+        padding: 10px;
+        height: 60px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .optionV0_accents.--is-active {
+        width: 63px;
+        transform: scale(1.2);
+        cursor: default;
+    }
+    
+    /*
+    .optionV0_accents.--is-active:before {
+        content: "";
+        position: absolute;
+        left: 12.5%;
+        bottom: 0;
+        height: 15px;
+        width: 75%;
+        border-bottom: 2px solid #e72e1e;
+    }
+    */
+
+    .optionV0_accents img {
+        height: 100%;
+        width: auto;
+        pointer-events: none;
+    }
+
+    .optionV0_accents:nth-child(1) {
+        margin-right:7px;
+    }
+
+    .optionV0_accents:nth-child(3) {
+        margin-left: -20px;
+        margin-right: 4px;
+    }
+
+    .optionV0_accents:nth-child(4) {
+        margin-right: 12px;
+        margin-left: -5px;
+    }
+
+    .optionV0_accents:nth-child(5) {
+        margin-right: 10px;
+    }
+
+    .optionV0_accents:nth-child(6) {
+        margin-right: 13px;
+    }
+    /* ----- Option for Voron V0.1 (END) ----- */
+
+
+    /* ----- Option for Voron V2.4 (START) ----- */
+    .optionV2 {
+        margin-bottom: 1px;
+        margin-right: 1px;
+        padding: 10px;
+        height: 60px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .optionV2.--is-active {
+        width: 63px;
+        transform: scale(1.2);
+        cursor: default;
+    }
+    
+    /*
+    .optionV2.--is-active:before {
+        content: "";
+        position: absolute;
+        left: 12.5%;
+        bottom: 0;
+        height: 15px;
+        width: 75%;
+        border-bottom: 2px solid #e72e1e;
+    }
+    */
+
+    .optionV2 img {
+        height: 100%;
+        width: auto;
+        pointer-events: none;
+    }
+    
+    .optionV2:nth-child(1) {
+        margin-right: 5px;
+    }
+    
+    .optionV2:nth-child(2) {
+        margin-right: 15px;
+    }
+    /* ----- Option for Voron V2.4 (END) ----- */
+    
+    
+    /* ----- Option for Voron V2.4 Accents (START) ----- */
+    .optionV2_accents {
+        margin-bottom: 1px;
+        margin-right: 1px;
+        padding: 10px;
+        height: 60px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .optionV2_accents.--is-active {
+        width: 63px;
+        transform: scale(1.2);
+        cursor: default;
+    }
+    
+    /*
+    .optionV2_accents.--is-active:before {
+        content: "";
+        position: absolute;
+        left: 12.5%;
+        bottom: 0;
+        height: 15px;
+        width: 75%;
+        border-bottom: 2px solid #e72e1e;
+    }
+    */
+
+    .optionV2_accents img {
+        height: 100%;
+        width: auto;
+        pointer-events: none;
+    }
+    
+    .optionV2_accents:nth-child(1) {
+        margin-right: 5px;
+    }
+
+    .optionV2_accents:nth-child(4) {
+        margin-right: 10px;
+        margin-left: 5px;
+    }
+
+    .optionV2_accents:nth-child(5) {
+        margin: 0px 10px;
+    }
+
+    .optionV2_accents:nth-child(6) {
+        margin-left: 5px;
+    }
+    /* ----- Option for Voron V2.4 Accents (END) ----- */
+}
+/* ------------- max-width: 960px (End) ------------- */
+
+
+/* ------------- max-width: 680px (Start) ------------- */
+/* Responsive layout - when the screen is less than 680px wide, make the navigation links stack on top of each other instead of next to each other */
+@media (max-width: 680px) {
+
+    /* -----  Option for Voron V0.1 (Start) ----- */
+    .optionV0 {
+        margin-bottom: 1px;
+        padding: 5px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+    }
+    
+    .optionV0.--is-active {
+        width: 48px;
+        transform: scale(1.2);
+        cursor: default;
+    }
+
+    .optionV0 img {
+        height: 100%;
+        width: auto;
+        pointer-events: none;
+    }
+
+    .optionV0:nth-child(1) {
+        margin-right: 20px;
+    }
+
+    .optionV0:nth-child(2) {
+        margin-right: 5px;
+    }
+    /* ----- Option for Voron V0.1 (END) ----- */
+
+
+    /* -----  Option for Voron V0.1 Accents (Start) ----- */
+    .optionV0_accents {
+        margin-bottom: 1px;
+        padding: 5px;
+        height: 40px;
+        width: 40px;
+        display: flex;
+    }
+    
+    .optionV0_accents.--is-active {
+        width: 43px;
+        transform: scale(1.2);
+        cursor: default;
+    }
+
+    .optionV0_accents img {
+        height: 100%;
+        width: auto;
+        pointer-events: none;
+    }
+
+    .optionV0_accents:nth-child(1) {
+        margin-right: 8px;
+    }
+
+    .optionV0_accents:nth-child(3) {
+        margin-left: -13px;
+        margin-right: 7px;
+    }
+
+    .optionV0_accents:nth-child(4) {
+        margin-right: 13px;
+    }
+
+    .optionV0_accents:nth-child(5) {
+        margin-right: 13px;
+    }
+
+    .optionV0_accents:nth-child(6) {
+        margin-right: 15px;
+    }
+    
+    .optionV0_accents:nth-child(7) {
+        margin-right: 7px;
+    }
+
+    .optionV0_accents:nth-child(8) {
+        margin-right: 7px;
+    }
+    /* ----- Option for Voron V0.1 Accents (END) ----- */
+
+
+    /* ----- Option for Voron V2.4 (START) ----- */
+    .optionV2 {
+        margin-bottom: 1px;
+        padding: 5px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+    }
+    
+    .optionV2.--is-active {
+        width: 48px;
+        transform: scale(1.2);
+        cursor: default;
+    }
+
+    .optionV2 img {
+        height: 100%;
+        width: auto;
+        pointer-events: none;
+    }
+    /* ----- Option for Voron V2.4 (END) ----- */
+    
+    
+    /* ----- Option for Voron V2.4 Accents (START) ----- */
+    .optionV2_accents {
+        margin-bottom: 1px;
+        padding: 5px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+    }
+    
+    .optionV2_accents.--is-active {
+        width: 48px;
+        transform: scale(1.2);
+        cursor: default;
+    }
+
+    .optionV2_accents img {
+        height: 100%;
+        width: auto;
+        pointer-events: none;
+    }
+    /* ----- Option for Voron V2.4 Accents (END) ----- */
+}
+/* ------------- max-width: 680px (End) ------------- */
+
+/* ----------------------- Media Queries (End) ----------------------- */

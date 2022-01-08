@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Voron Color Configurator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="icons/voron_icon_v3.ico">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- --------- Google fonts (Start) --------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    
+    <!-- Oxygen -->
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+    
+    <!-- Inconsolata -->
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <!-- --------- Google fonts (End) --------- -->
+    
+    <!-- Font Awesome -->
+    <link href="fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <a class="skip-nav-link" href="#main-content">
+            skip navigation
+        </a>
+
+        <div class="header-text">
+            <h1>VORON COLOR CONFIGURATOR (WIP)</h1>
+            <p>A website created by: <br> Christian Sass Hansen</p>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Voron V0.1
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="voron-v0.1-default.html">Default</a>
+                <a href="voron-v0.1-9accents.html">9 Accents</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Voron Trident (WIP)
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Default</a>
+                <a href="#">.. Accents</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Voron V2.4
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="voron-v2.4-default.html">Default</a>
+                <a href="voron-v2.4-6accents.html">6 Accents</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Voron Switchwire (WIP)
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Default</a>
+                <a href="#">.. Accents</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Voron Legacy (WIP)
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Default</a>
+                <a href="#">.. Accents</a>
+            </div>
+        </div>
+        
+        <a href="download-center.html">Download Center</a>
+        
+        <div style="float: right;">
+            <div class="dropdown">
+                <button class="dropbtn">About Us
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="contact.html">Contact</a>
+                    <a href="terms-of-use.html">Terms of use</a>
+                </div>
+            </div>
+            
+            <a href="roadmap.html">Roadmap</a>
+
+            <a href="support-me.html" style="font-weight: bold;">Support Me</a>
+        </div>
+    </div>
+    
+    <!-- To the top button -->
+    <button onclick="topFunction()" id="toTheTop" title="Go to top">Top</button>
+
+    <div id="main-content">
+        <div class="content-box1">
+            <h2>WELCOME TO VORON COLOR CONFIGURATOR</h2>
+
+            <p>Welcome to our Voron Color Configurator Tool (VCCT). Using this tool, you can design your very own color theme of any of the Voron printers to your liking. At the moment we only support configuring Voron V2.4 and Voron V0.1, however don't worry more will come very soon. Check our roadmap for coming printers and features.</p>
+
+            <p><b>OBS.</b> All of the colors that can be chosen are based on the different ABS(+) filaments, eSun has to offer. All of those filaments can be seen here (<a class="hyperLinks" href="https://m.media-amazon.com/images/S/aplus-media-library-service-media/9ce0afaf-aec8-4c25-9021-e105dd57f442.__CR0,0,970,600_PT0_SX970_V1___.jpg" target="_blank">Filaments</a>) for further visualization.</p>
+
+            <p><b>OBS.</b> I am not working for or is affiliated with the Voron Team, but is working on an individual project of my own free will. All credit for the CAD and STL files goes to the Voron Team.</p>
+
+            <p>The files used on this website which includes, CAD files, STLs and detailed models are developed and created by the Voron Team.<br>
+                All of these files can be downloaded from their <a class="hyperLinks" href="https://vorondesign.com/" target="_blank">website</a>.</p>
+
+            <p>If you want, share your color themes with <b>#VoronColorConfigurator</b> on Twitter, Facebook or Instagram (whichever you prefer).</p>
+        </div>
+
+        <div class="content-box2">
+            <h2>How to use the color configurator (Recommended)</h2>
+
+            <p>To show how to use our configurator, we have chosen an arbitrary example, that consist of choosing one of the printers currently available on the site and how many colors we want to be able to config. Voron V2.4 with the default configuration (primary + an accent color), in this case (shown below).</p>
+            <div class="marginBottom">
+                <img src="images/home/step1.png" alt="step1" class="responsiveImges">
+            </div>
+
+            <p>As we now have chosen which printer to config and how many accents we want, we are ready to begin.</p>
+
+            <p>To color the different parts of the printer, we use the side-menu to the left of the canvas, displaying what parts we currently are about to color and the menu at the bottom of the canvas to choose what color we want the parts to be.</p>
+
+            <p><b>OBS.</b> All of the colors that can be chosen are based on the different ABS(+) filaments, eSun has to offer. All of those filaments can be seen here (<a class="hyperLinks" href="https://m.media-amazon.com/images/S/aplus-media-library-service-media/9ce0afaf-aec8-4c25-9021-e105dd57f442.__CR0,0,970,600_PT0_SX970_V1___.jpg" target="_blank">Filaments</a>) for further visualization.</p>
+
+            <p>Inside the canvas, we are also able to control the viewing angle of the printer, as well as zoom in and out. To do this, we grab the model by using the mouse's left click (or the finger for touch devices) and move it in any direction, while holding it down. To zoom, we use the mouse wheel or two fingers to pinch in and out on touch devices.</p>
+
+            <p>A more in-depth presentation of the interaction with the interface is shown below, in a short video.</p>
+
+            <video width="400" controls>
+                <source src="/videos/step2.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+
+            <p>Next, we want to choose what configuration of the machine we want. In this case, this consist of the size of the printer, type of hotend setup, what printhead we want, if we want the 3D printed zipchain or not and stating which colors we have chosen (here the primary color and the accent color). This is all done at the panel to the right of the canvas. This interaction is shown below.</p>
+
+            <video width="400" controls>
+                <source src="/videos/step3.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+
+            <p>When stating the colors we have chosen at the panel to the right, the order of the colors (i.e. primary color and accent color) from top to bottom, directly relates to the parts to be colored in the menu, left of the canvas (also ordered from top to bottom). This is shown in the visualization below.</p>
+
+            <div class="marginBottom">
+                <img src="images/home/step3.png" alt="step1" class="responsiveImges">
+            </div>
+
+            <p>Finally, we can submit our configuration and save it as an PDF file (or print it, if that works better for you). Here it is important to remember to activate ''Background graphics'' in the ''More settings'' tab, since we need to be able to see which colors we have chosen for this project. This interaction is shown below.</p>
+
+            <video width="400" controls>
+                <source src="/videos/step4.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+
+            <p>Using this tool, you are now able to create some very unique looking Voron build color themes, or if you want to stick with the default theme (black and red), you can choose that as well.</p>
+
+            <p>Now go and create an awesome Voron color theme to your liking!</p>
+
+            <p>If you want, share your designs with <b>#VoronColorConfigurator</b> on Twitter, Facebook or Instagram (whichever you prefer).</p>
+        </div>
+        
+        <div class="content-box3">
+            <h2>Downloading printer configuration - STL files</h2>
+
+            <p>After saving and/or printing your configuration, go to the download center and fetch the right configuration (zip file), that corresponds to your choices.</p>
+        </div>
+
+        <div class="content-box4">
+            <h2>Feedback</h2>
+
+            <p>I am open for feedback, so <a class="hyperLinks" href="about-us.html" target="_blank">contact me</a> if you have any problems, informational and grammar fixes or have suggestions for the website. Your suggestion will be added to the roadmap if it has enough interest.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-content">
+            <h3>About</h3>
+            <p>Our mission with this tool is to make it more convenient for the user to visualize what they want their Voron color theme to look like. Users can now create and visualize everything from the default two color groups (primary and accent color) to a very unique looking build, where up to 9 different groups of parts can be colored (this holds for Voron V0.1).</p>
+            <ul class="socials">
+                <!--<li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
+                <li><a href="https://twitter.com/Chrizzar" target="_blank" aria-label="Link to my Twitter"><i class="fa fa-twitter twitter"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UC7DucVUUyAl8whkK8KzqBhA" target="_blank" aria-label="Link to my YouTube"><i class="fa fa-youtube youtube"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/christian-sass-hansen-639571188/" target="_blank" aria-label="Link to my Linkedin"><i class="fa fa-linkedin-square linkedin"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2021. designed by <span>Christian Sass Hansen</span></p>
+        </div>
+    </div>
+    
+    <!-- Go to the top -->
+    <script>
+        //Get the button
+        var toTheTop = document.getElementById("toTheTop");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                toTheTop.style.display = "block";
+            } else {
+                toTheTop.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</body>
+</html>

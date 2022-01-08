@@ -1,0 +1,754 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    font-size: 16px; /* Default font-size */
+}
+
+/* Set core root defaults */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hyperlinks */
+.hyperLinks {
+    color: blue;
+    text-decoration: none;
+}
+
+
+/* ---------------------- Custom Scrollbar (Start) ---------------------- */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #aaaaaa;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ---------------------- Custom Scrollbar (End) ---------------------- */
+
+
+/* ---------------------- To the top right (Start) ---------------------- */
+
+#toTheTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#toTheTop:hover {
+    background-color: #1abc9c;
+}
+
+/* ---------------------- To the top button right (End) ---------------------- */
+
+
+/* ---------------------- Header (Start) ---------------------- */
+
+/* Header/logo Title */
+.header {
+    background: #1abc9c;
+    color: white;
+    background-image: url(images/overlays/crissxcross.png);
+    background-repeat: repeat;
+}
+
+.header-text {
+    padding: 80px;
+    text-align: center;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+    font-size: 40px;
+}
+
+/* skip to main content */
+.skip-nav-link {
+    text-decoration: none;
+    color: white;
+    background: #333;
+    padding: .5rem 1.5rem;
+    border-radius: 0 0 .25rem .25rem;
+    position: absolute;
+    left: 0.5rem;
+    transform: translateY(-120%);
+    transition: transform 325ms ease-in;
+}
+
+.skip-nav-link:focus {
+    transform: translateY(0);
+}
+
+/* Credit to Button */
+.creditTo {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 0 0 0 5px;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    border-color: #333;
+    background: opacity 0.5;
+}
+
+.creditTo:hover, .creditTo:active {
+  background-color: #f55a4e;
+}
+
+/* ---------------------- Header (End) ---------------------- */
+
+
+/* ---------------------- Navigation (Start) ---------------------- */
+
+/* Style the top navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+    z-index: 2;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Dropdown content */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ---------------------- Navigation (End) ---------------------- */
+
+
+/* ---------------------- Index Main Content (Start) ---------------------- */
+
+#main-content {
+    background-color: white;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f1f1f1;
+    background-image: url(../images/overlays/pw_maze_white.png);
+}
+
+/* Images */
+.responsiveImges {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Added margin to div tags */
+.marginBottom {
+    margin-bottom: 10px;
+}
+
+/* Video Styles */
+video {
+    width: 100%;
+    height: auto;
+}
+
+.content-box1 {
+    max-width: 1000px;
+    height: 100%;
+    padding: 20px 50px 20px 50px;
+    background-color: white;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.content-box2 {
+    max-width: 1000px;
+    height: 100%;
+    padding: 20px 50px 20px 50px;
+    background-color: white;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.content-box3 {
+    max-width: 1000px;
+    height: 100%;
+    padding: 20px 50px 20px 50px;
+    background-color: white;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.content-box4 {
+    max-width: 1000px;
+    height: 100%;
+    padding: 20px 50px 20px 50px;
+    background-color: white;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+/* ---------------------- Index Main Content (End) ---------------------- */
+
+
+/* ---------------------- Main section (Start) ---------------------- */
+
+/* Main column */
+.main {
+    -ms-flex: 80%;
+    /* IE10 */
+    flex: 80%;
+    background-color: white;
+    padding: 20px;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Content */
+.content {
+    max-width: 1000px;
+    max-height: 900px;
+}
+
+/* Sticky Content */
+div.content {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+}
+
+
+/* ----- Row (Start) ----- */
+/* Column container */
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+/* 3D Model Canvas Divs */
+.optionsModel {
+    -ms-flex: 10%; /* IE10 */
+    flex: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.canvasModel {
+    -ms-flex: 90%; /* IE10 */
+    flex: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ----- Row (End) ----- */
+
+
+/* ----- rowBlankLeft (Start) ----- */
+/* Column container ONLY FOR THE ROWS WITH BLANK SPACE TO THE LEFT */
+.rowBlankLeft {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+.blankModel {
+    -ms-flex: 10%; /* IE10 */
+    flex: 10%;
+}
+
+.headingModel {
+    -ms-flex: 90%; /* IE10 */
+    flex: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controlsModel {
+    -ms-flex: 90%; /* IE10 */
+    flex: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hides the mobile version of 
+the controls guide text,
+while in desktop mode */
+.mobile {
+    display: none;
+}
+/* ----- rowBlankLeft (End) ----- */
+
+/* ---------------------- Main section (End) ---------------------- */
+
+
+/* ---------------------- Side section (Start) ---------------------- */
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    -ms-flex: 20%; /* IE10 */
+    flex: 20%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    background-image: url(images/overlays/pw_maze_white.png);
+    background-repeat: repeat;
+}
+
+.side a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.side a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+/* Used to center text */
+.textCenter {
+    text-align: center;
+}
+
+/* ---------------------- Side section (End) ---------------------- */
+
+
+/* ----------------------- Footer (Start) ----------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.footer {
+    background: #ddd;
+    height: auto;
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
+    color: black;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1.5rem;
+}
+
+.footer-content p {
+    max-width: 550px;
+    padding: 0px 20px 0px 20px;
+    margin: 0px auto 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto 1.5rem auto;
+    padding-inline-start: 0px;
+}
+
+/* Social Media */
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: black;
+}
+
+.socials a i {
+    font-size: 1.4rem;
+    transition: color .4s ease;
+}
+
+.twitter:hover {
+    color: #1DA1F2;
+}
+
+.youtube:hover {
+    color: #FF0000;
+}
+
+.linkedin:hover {
+    color: #2867B2;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    background: #000;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+/* ----------------------- Footer (End) ----------------------- */
+
+
+/* ----------------------- Media Queries (Start) ----------------------- */
+
+/* ----- Print Screen Area (Start) ----- */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #section-to-print,
+    #section-to-print * {
+        visibility: visible;
+    }
+
+    #section-to-print {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+/* ----- Print Screen Area (End) ----- */
+
+
+/* ----- min-width: 1111px (Start) ----- */
+@media screen and (min-width: 1111px) {
+    /* -- To the top left (Start) -- */
+    #toTheTop-left {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    #toTheTop-left:hover {
+        background-color: #1abc9c;
+    }
+    /* -- To the top button left (End) -- */
+}
+/* ----- min-width: 1111px (End) ----- */
+
+
+/* ----- max-width: 1110px (Start) ----- */
+@media (max-width: 1110px) {
+    /* -- To the top left (Start) -- */
+    #toTheTop-left {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    #toTheTop-left:hover {
+        background-color: #1abc9c;
+    }
+    /* -- To the top button left (End) -- */
+}
+/* ----- max-width: 1110px (End) ----- */
+
+
+/* ----- max-width: 1010px (Start) ----- */
+@media (max-width: 1010px) {
+    .content-box1 {
+        box-shadow: none;
+        border-radius: 0px;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+
+    .content-box2 {
+        box-shadow: none;
+        border-radius: 0px;
+        margin-top: 0px;
+        margin-bottom: 50px;
+    }
+
+    .content-box3 {
+        box-shadow: none;
+        border-radius: 0px;
+        margin-top: 0px;
+        margin-bottom: 50px;
+    }
+    
+    .content-box4 {
+        box-shadow: none;
+        border-radius: 0px;
+        margin-top: 0px;
+        margin-bottom: 50px;
+    }
+}
+/* ----- max-width: 1010px (End) ----- */
+
+
+/* ----- min-width: 961px (Start) ----- */
+@media screen and (min-width: 961px) {
+    .about-text {
+        width: 50%;
+        margin: auto;
+        line-height: 1.5em;
+    }
+}
+/* ----- min-width: 961px (End) ----- */
+
+
+/* ----- max-width: 960px (Start) ----- */
+@media (max-width: 960px) {
+    .rowBlankLeft {
+        flex-direction: column;
+    }
+
+    .optionsModel {
+        margin-top: 0;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .options {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .info {
+        padding: 0 1em 1em 0;
+    }
+
+    .info__message {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .info__message p {
+        margin: 0;
+        font-size: 1em;
+    }
+    
+    /* Hides the desktop version of 
+    the controls guide text,
+    while in mobile mode */
+    .desktop {
+        display: none;
+    }
+    
+    /* Makes the mobile version of 
+    the controls guide text visible, 
+    while in mobile mode */
+    .mobile {
+        display: contents;
+    }
+
+
+    .frame {
+        left: auto;
+        right: 0;
+        padding-left: 6rem;
+    }
+
+    .frame__links {
+        display: block;
+        margin: 0;
+        text-align: right;
+    }
+}
+/* ----- max-width: 960px (End) ----- */
+
+
+/* ----- max-width: 720px (Start) ----- */
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 720px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .info {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1em 1em;
+    }
+
+    .special {
+        max-width: 50px;
+    }
+}
+/* ----- max-width: 720px (End) ----- */
+
+
+/* ----- max-width: 680px (Start) ----- */
+/* Responsive layout - when the screen is less than 680px wide, make the navigation links stack on top of each other instead of next to each other */
+@media (max-width: 680px) {
+    h2.textSmaller {
+        font-size: 1.18em;
+        font-weight: bolder;
+    }
+
+    .info {
+        padding: 1em 2em;
+    }
+
+    .options {
+        bottom: 50px;
+    }
+}
+/* ----- max-width: 680px (End) ----- */
+
+
+/* ----- max-width: 400px (Start) ----- */
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+
+    .side a {
+        text-align: center;
+        float: none;
+    }
+    
+    .options {
+        bottom: 50px;
+        max-width: 350px;
+    }
+}
+/* ----- max-width: 400px (End) ----- */
+
+/* ----------------------- Media Queries (End) ----------------------- */

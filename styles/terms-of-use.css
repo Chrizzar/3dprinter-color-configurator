@@ -1,0 +1,45 @@
+ol {
+    list-style-type: none;
+    counter-reset: item;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: table;
+    counter-increment: item;
+    margin-bottom: 0.6em;
+}
+
+li:before {
+    content: counters(item, ".") ". ";
+    display: table-cell;
+    padding-right: 0.6em;
+}
+
+li li {
+    margin: 10px;
+}
+
+li li:before {
+    content: counters(item, ".") " ";
+}
+
+.bolder {
+    font-size: 1.17em;
+    font-weight: bolder;
+    margin: 0px;
+}
+
+.parent::before {
+    font-size: 1.17em;
+    font-weight: bolder;
+}
+
+ol ol ol li:before {
+    content: "("counter(item, lower-alpha)")";
+}
+
+.socials li:before {
+    content: none;
+}
