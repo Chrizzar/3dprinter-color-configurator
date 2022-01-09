@@ -22,41 +22,6 @@ html {
 }
 
 
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 90px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 5px;
-    position: absolute;
-    z-index: 1;
-    right: 110%;
-    font-size: 13px;
-}
-
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent transparent black;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
-
-
 /* ---------------------- Custom Scrollbar (Start) ---------------------- */
 
 /* width */
