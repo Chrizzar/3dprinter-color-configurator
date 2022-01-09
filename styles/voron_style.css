@@ -283,7 +283,6 @@
     /* Colors text */
     .option-colors-desktop {
         border-bottom: 2px solid;
-        margin-bottom: 5px;
     }
     
     .option-colors-mobile {
@@ -319,7 +318,7 @@
         opacity: 1;
 
         /* customizable */
-        background: black;
+        background: #181818;
         left: 120%;
         width: 110px;
         
@@ -351,7 +350,7 @@
         cursor: default;
     }
     
-    .contentAdjust:nth-child(3) {
+    .adjust_v0:nth-child(3) {
         margin-bottom: 12px;
     }
 
@@ -372,9 +371,14 @@
 
     .optionV0_accents.--is-active {
         /*border-right: 2px solid #e72e1e;*/
-        width: 63px;
+        width: 60px;
         transform: scale(1.2);
         cursor: default;
+    }
+    
+    .adjust_v0_accents:nth-child(7) {
+        margin-top: -9px;
+        margin-bottom: -15px;
     }
 
     /* ----- Option for Voron V0.1 Accents (END) ----- */
@@ -394,9 +398,17 @@
 
     .optionV2.--is-active {
         /*border-right: 2px solid #e72e1e;*/
-        width: 63px;
+        width: 60px;
         transform: scale(1.2);
         cursor: default;
+    }
+    
+    .adjust_v2:nth-child(2) {
+        margin-bottom: 5px;
+    }
+    
+    .adjust_v2:nth-child(3) {
+        margin-bottom: 5px;
     }
 
     /* ----- Option for Voron V2.4 (END) ----- */
@@ -416,9 +428,13 @@
 
     .optionV2_accents.--is-active {
         /*border-right: 2px solid #e72e1e;*/
-        width: 63px;
+        width: 60px;
         transform: scale(1.2);
         cursor: default;
+    }
+    
+    .adjust_v2_accents:nth-child(6) {
+        margin-bottom: -5px;
     }
 
     /* ----- Option for Voron V2.4 Accents (END) ----- */
@@ -501,11 +517,11 @@
         pointer-events: none;
     }
 
-    .contentAdjust:nth-child(2) {
+    .adjust_v0:nth-child(2) {
         margin-right: 25px;
     }
     
-    .contentAdjust:nth-child(3) {
+    .adjust_v0:nth-child(3) {
         margin-left: -5px;
     }
 
@@ -526,7 +542,7 @@
     }
 
     .optionV0_accents.--is-active {
-        width: 63px;
+        width: 60px;
         transform: scale(1.2);
         cursor: default;
     }
@@ -537,25 +553,25 @@
         pointer-events: none;
     }
 
-    .optionV0_accents:nth-child(1) {
+    .adjust_v0_accents:nth-child(2) {
         margin-right: 7px;
     }
 
-    .optionV0_accents:nth-child(3) {
+    .adjust_v0_accents:nth-child(4) {
         margin-left: -20px;
         margin-right: 4px;
     }
 
-    .optionV0_accents:nth-child(4) {
+    .adjust_v0_accents:nth-child(5) {
         margin-right: 12px;
         margin-left: -5px;
     }
 
-    .optionV0_accents:nth-child(5) {
+    .adjust_v0_accents:nth-child(6) {
         margin-right: 10px;
     }
 
-    .optionV0_accents:nth-child(6) {
+    .adjust_v0_accents:nth-child(7) {
         margin-right: 13px;
     }
 
@@ -576,7 +592,7 @@
     }
 
     .optionV2.--is-active {
-        width: 63px;
+        width: 60px;
         transform: scale(1.2);
         cursor: default;
     }
@@ -587,11 +603,11 @@
         pointer-events: none;
     }
 
-    .optionV2:nth-child(1) {
+    .adjust_v2:nth-child(2) {
         margin-right: 5px;
     }
 
-    .optionV2:nth-child(2) {
+    .adjust_v2:nth-child(3) {
         margin-right: 15px;
     }
 
@@ -612,7 +628,7 @@
     }
 
     .optionV2_accents.--is-active {
-        width: 63px;
+        width: 60px;
         transform: scale(1.2);
         cursor: default;
     }
@@ -623,20 +639,20 @@
         pointer-events: none;
     }
 
-    .optionV2_accents:nth-child(1) {
+    .adjust_v2_accents:nth-child(2) {
         margin-right: 5px;
     }
 
-    .optionV2_accents:nth-child(4) {
+    .adjust_v2_accents:nth-child(5) {
         margin-right: 10px;
         margin-left: 5px;
     }
 
-    .optionV2_accents:nth-child(5) {
+    .adjust_v2_accents:nth-child(6) {
         margin: 0px 10px;
     }
 
-    .optionV2_accents:nth-child(6) {
+    .adjust_v2_accents:nth-child(7) {
         margin-left: 5px;
     }
 
@@ -675,11 +691,11 @@
         pointer-events: none;
     }
     
-    .contentAdjust:nth-child(2) {
+    .adjust_v0:nth-child(2) {
         margin-right: 25px;
     }
     
-    .contentAdjust:nth-child(3) {
+    .adjust_v0:nth-child(3) {
         margin-left: -5px;
     }
 
@@ -696,7 +712,7 @@
     }
 
     .optionV0_accents.--is-active {
-        width: 43px;
+        width: 40px;
         transform: scale(1.2);
         cursor: default;
     }
@@ -707,32 +723,32 @@
         pointer-events: none;
     }
 
-    .optionV0_accents:nth-child(1) {
+    .adjust_v0_accents:nth-child(2) {
         margin-right: 8px;
     }
 
-    .optionV0_accents:nth-child(3) {
+    .adjust_v0_accents:nth-child(4) {
         margin-left: -13px;
         margin-right: 7px;
     }
 
-    .optionV0_accents:nth-child(4) {
+    .adjust_v0_accents:nth-child(5) {
         margin-right: 13px;
     }
 
-    .optionV0_accents:nth-child(5) {
+    .adjust_v0_accents:nth-child(6) {
         margin-right: 13px;
     }
 
-    .optionV0_accents:nth-child(6) {
+    .adjust_v0_accents:nth-child(7) {
         margin-right: 15px;
     }
 
-    .optionV0_accents:nth-child(7) {
+    .adjust_v0_accents:nth-child(8) {
         margin-right: 7px;
     }
 
-    .optionV0_accents:nth-child(8) {
+    .adjust_v0_accents:nth-child(9) {
         margin-right: 7px;
     }
 
@@ -749,7 +765,7 @@
     }
 
     .optionV2.--is-active {
-        width: 48px;
+        width: 45px;
         transform: scale(1.2);
         cursor: default;
     }
@@ -759,7 +775,7 @@
         width: auto;
         pointer-events: none;
     }
-
+    
     /* ----- Option for Voron V2.4 (END) ----- */
 
 
@@ -773,7 +789,7 @@
     }
 
     .optionV2_accents.--is-active {
-        width: 48px;
+        width: 45px;
         transform: scale(1.2);
         cursor: default;
     }

@@ -15,13 +15,13 @@
     <!-- --------- Google fonts (Start) --------- -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    
+
     <!-- Oxygen -->
     <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
-    
+
     <!-- Inconsolata -->
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
     <!-- --------- Google fonts (End) --------- -->
@@ -80,7 +80,6 @@
                 transform: rotateY(180deg) rotateX(180deg);
             }
         }
-
     </style>
 
 </head>
@@ -148,9 +147,9 @@
                 <a href="#">.. Accents</a>
             </div>
         </div>
-        
+
         <a href="download-center.html">Download Center</a>
-       
+
         <div style="float:right;">
             <div class="dropdown">
                 <button class="dropbtn">About Us
@@ -161,13 +160,13 @@
                     <a href="terms-of-use.html">Terms of use</a>
                 </div>
             </div>
-            
+
             <a href="roadmap.html">Roadmap</a>
 
             <a href="support-me.html" style="font-weight: bold;">Support Me</a>
         </div>
     </div>
-    
+
     <!-- To the top button -->
     <button onclick="topFunction()" id="toTheTop-left" title="Go to top">Top</button>
 
@@ -185,36 +184,69 @@
                     </div>
                 </div>
 
+                <div class="center-color">
+                    <p class="textCenter option-colors-mobile">Colors</p>
+                </div>
+
                 <div class="row">
                     <div class="optionsModel">
                         <!-- These toggle the the different parts of the chair that can be edited, note data-option is the key that links to the name of the part in the 3D file -->
                         <div class="options">
-                            <div class="optionV0_accents --is-active special" data-option="first_color">
-                                <img class="resize" src="images/thumbnails/V0.1/V0_part_1.svg" alt="" />
+
+                            <p class="textCenter option-colors-desktop">Colors</p>
+
+                            <div data-tooltip="Primary color" class="adjust_v0_accents">
+                                <div class="optionV0_accents --is-active special" data-option="first_color">
+                                    <img class="resize" src="images/thumbnails/V0.1/V0_part_1.svg" alt="" />
+                                </div>
                             </div>
-                            <div class="optionV0_accents special" data-option="second_color">
-                                <img src="images/thumbnails/V0.1/V0_part_2.svg" alt="" />
+
+                            <div data-tooltip="First accent color" class="adjust_v0_accents">
+                                <div class="optionV0_accents special" data-option="second_color">
+                                    <img src="images/thumbnails/V0.1/V0_part_2.svg" alt="" />
+                                </div>
                             </div>
-                            <div class="optionV0_accents special" data-option="accessories">
-                                <img src="images/thumbnails/V0.1/V0_part_3.svg" alt="" />
+
+                            <div data-tooltip="Second accent color" class="adjust_v0_accents">
+                                <div class="optionV0_accents special" data-option="accessories">
+                                    <img src="images/thumbnails/V0.1/V0_part_3.svg" alt="" />
+                                </div>
                             </div>
-                            <div class="optionV0_accents special" data-option="stops">
-                                <img src="images/thumbnails/V0.1/V0_part_4.svg" alt="" />
+
+                            <div data-tooltip="Third accent color" class="adjust_v0_accents">
+                                <div class="optionV0_accents special" data-option="stops">
+                                    <img src="images/thumbnails/V0.1/V0_part_4.svg" alt="" />
+                                </div>
                             </div>
-                            <div class="optionV0_accents special" data-option="powersupply_shroud">
-                                <img class="resize" src="images/thumbnails/V0.1/V0_part_5.svg" alt="" />
+
+                            <div data-tooltip="Fourth accent color" class="adjust_v0_accents">
+                                <div class="optionV0_accents special" data-option="powersupply_shroud">
+                                    <img class="resize" src="images/thumbnails/V0.1/V0_part_5.svg" alt="" />
+                                </div>
                             </div>
-                            <div class="optionV0_accents special" data-option="skirt_2">
-                                <img class="resize" class="smaller" src="images/thumbnails/V0.1/V0_part_6.svg" alt="" />
+
+                            <div data-tooltip="Fith accent color" class="adjust_v0_accents">
+                                <div class="optionV0_accents special" data-option="skirt_2">
+                                    <img class="resize" class="smaller" src="images/thumbnails/V0.1/V0_part_6.svg" alt="" />
+                                </div>
                             </div>
-                            <div class="optionV0_accents special" data-option="skirt_1">
-                                <img class="resize" class="smaller" src="images/thumbnails/V0.1/V0_part_7.svg" alt="" />
+
+                            <div data-tooltip="Sixth accent color" class="adjust_v0_accents">
+                                <div class="optionV0_accents special" data-option="skirt_1">
+                                    <img class="resize" class="smaller" src="images/thumbnails/V0.1/V0_part_7.svg" alt="" />
+                                </div>
                             </div>
-                            <div class="optionV0_accents special" data-option="hotend_extruder_part1">
-                                <img class="resize" src="images/thumbnails/V0.1/V0_part_8.svg" alt="" />
+
+                            <div data-tooltip="Seventh accent color" class="adjust_v0_accents">
+                                <div class="optionV0_accents special" data-option="hotend_extruder_part1">
+                                    <img class="resize" src="images/thumbnails/V0.1/V0_part_8.svg" alt="" />
+                                </div>
                             </div>
-                            <div class="optionV0_accents special" data-option="hotend_extruder_part2">
-                                <img class="resize" src="images/thumbnails/V0.1/V0_part_9.svg" alt="" />
+
+                            <div data-tooltip="Eighth accent color" class="adjust_v0_accents">
+                                <div class="optionV0_accents special" data-option="hotend_extruder_part2">
+                                    <img class="resize" src="images/thumbnails/V0.1/V0_part_9.svg" alt="" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -423,7 +455,7 @@
                     <input class="submit" type="submit" value="Submit" onClick="window.print()">
 
                     <p class="textCenter" style="color: red; margin-top: 0px; margin-bottom: 20px">(OBS: The configuration will reset after submission)</p>
-                    
+
                 </form>
             </div>
         </div>
@@ -453,7 +485,7 @@
     <script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script>
     <script src="scripts/v0_accents_script.js"></script>
 
-    
+
     <!-- Go to the top -->
     <script>
         //Get the button
@@ -478,7 +510,7 @@
             document.documentElement.scrollTop = 0;
         }
     </script>
-    
+
     <!-- Change color of the select components dependent on, 
     if an option has been selected -->
     <script>
@@ -653,7 +685,6 @@
             border: 3px solid #333;
             `
         }
-
     </script>
 
     <!-- Show different div dependent on choice -->
@@ -669,5 +700,4 @@
         }
     </script>
 
-</body>
-</html>
+</body></html>

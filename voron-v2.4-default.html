@@ -15,13 +15,13 @@
     <!-- --------- Google fonts (Start) --------- -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    
+
     <!-- Oxygen -->
     <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
-    
+
     <!-- Inconsolata -->
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
     <!-- --------- Google fonts (End) --------- -->
@@ -80,7 +80,6 @@
                 transform: rotateY(180deg) rotateX(180deg);
             }
         }
-
     </style>
 
 </head>
@@ -90,7 +89,7 @@
         <a class="skip-nav-link" href="#main">
             skip navigation
         </a>
-        
+
         <a class="creditTo" style="float: right;" href="https://threejs.org/" target="_blank">
             Made with three.js
         </a>
@@ -148,9 +147,9 @@
                 <a href="#">.. Accents</a>
             </div>
         </div>
-        
+
         <a href="download-center.html">Download Center</a>
-        
+
         <div style="float:right;">
             <div class="dropdown">
                 <button class="dropbtn">About Us
@@ -161,13 +160,13 @@
                     <a href="terms-of-use.html">Terms of use</a>
                 </div>
             </div>
-            
+
             <a href="roadmap.html">Roadmap</a>
 
             <a href="support-me.html" style="font-weight: bold;">Support Me</a>
         </div>
     </div>
-    
+
     <!-- To the top button -->
     <button onclick="topFunction()" id="toTheTop-left" title="Go to top">Top</button>
 
@@ -184,19 +183,34 @@
                         <h2 class="textSmaller">VORON V2.4 - DEFAULT (PRIMARY + 2 ACCENTS)</h2>
                     </div>
                 </div>
+                
+                <div class="center-color">
+                    <p class="textCenter option-colors-mobile">Colors</p>
+                </div>
 
                 <div class="row">
                     <div class="optionsModel">
                         <!-- These toggle the the different parts of the chair that can be edited, note data-option is the key that links to the name of the part in the 3D file -->
                         <div class="options">
-                            <div class="optionV2 --is-active" data-option="first_color">
-                                <img src="images/thumbnails/V2.4/V2.4_part_1.svg" alt="" />
+                            
+                            <p class="textCenter option-colors-desktop">Colors</p>
+
+                            <div data-tooltip="Primary color" class="adjust_v2">
+                                <div class="optionV2 --is-active" data-option="first_color">
+                                    <img src="images/thumbnails/V2.4/V2.4_part_1.svg" alt="" />
+                                </div>
                             </div>
-                            <div class="optionV2" data-option="second_color">
-                                <img src="images/thumbnails/V2.4/V2.4_part_2.svg" alt="" />
+
+                            <div data-tooltip="Second accent color" class="adjust_v2">
+                                <div class="optionV2" data-option="second_color">
+                                    <img src="images/thumbnails/V2.4/V2.4_part_2.svg" alt="" />
+                                </div>
                             </div>
-                            <div class="optionV2" data-option="belts">
-                                <img src="images/thumbnails/V2.4/V2.4_part_4.svg" alt="" />
+
+                            <div data-tooltip="Third accent color" class="adjust_v2">
+                                <div class="optionV2" data-option="belts">
+                                    <img src="images/thumbnails/V2.4/V2.4_part_4.svg" alt="" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -252,7 +266,7 @@
                         <input type="radio" name="radio0" id="300mm" value="300mm"><label class="four col" for="300mm">300mm&nbsp;Spec</label>
                         <input type="radio" name="radio0" id="350mm" value="350mm"><label class="four col" for="350mm">350mm&nbsp;Spec</label>
                     </section>
-                    
+
                     <section class="radioOptions cf selectionStyle">
                         <h3>Choose type of toolhead:</h3>
                         <input type="radio" name="radio1" id="bowden" value="bowden" onclick="bowdenHotendSection()"><label class="four col" for="bowden">Bowden</label>
@@ -272,7 +286,7 @@
                         <input type="radio" name="radio3" id="slice_mosquito_dd" value="slice_mosquito_dd"><label class="four col" for="slice_mosquito_dd">Slice Mosquito DD</label>
                         <input type="radio" name="radio3" id="trianglelab_dragon_dd" value="trianglelab_dragon_dd"><label class="four col" for="trianglelab_dragon_dd">TriangleLab Dragon DD</label>
                     </section>
-                    
+
                     <section class="radioOptions cf selectionStyle">
                         <h3>3D printed ZipChain?</h3>
                         <input type="radio" name="radio4" id="with_zipchain" value="with_zipchain"><label class="credit-label four col" for="with_zipchain">With&nbsp;(Yes)</label>
@@ -308,7 +322,7 @@
                             <option class="whiteText" value="#fbcd27">Yellow</option>
                             <option class="whiteText" value="#6be067">Peak Green</option>
                         </select>
-                        
+
                         <h4>Second accent color</h4>
                         <select aria-label="Second accent color" id="2_accent" class="selectionStyle">
                             <option class="whiteText" value="" selected disabled hidden>Choose a color</option>
@@ -357,7 +371,7 @@
     <script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script>
     <script src="scripts/V2_default_script.js"></script>
 
-    
+
     <!-- Go to the top -->
     <script>
         //Get the button
@@ -382,7 +396,7 @@
             document.documentElement.scrollTop = 0;
         }
     </script>
-    
+
     <!-- Change color of the select components dependent on, 
     if an option has been selected -->
     <script>
@@ -424,7 +438,7 @@
             border: 3px solid #333;
             `
         }
-        
+
         // Accent 2
         var select2 = document.getElementById('2_accent')
         select2.onchange = () => {
@@ -444,7 +458,7 @@
             `
         }
     </script>
-    
+
     <!-- Show different div dependent on choice -->
     <script>
         function bowdenHotendSection() {
@@ -458,5 +472,4 @@
         }
     </script>
 
-</body>
-</html>
+</body></html>
