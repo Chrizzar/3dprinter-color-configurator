@@ -279,87 +279,57 @@
 /* ------------- min-width: 961px (Start) ------------- */
 /* Media Query for the options panel of the canvas */
 @media screen and (min-width: 961px) {
+    
+    /* Colors text */
+    .option-colors-desktop {
+        border-bottom: 2px solid;
+        margin-bottom: 5px;
+    }
+    
     .option-colors-mobile {
         display: none;
     }
     
     /* ----- Labels for colors and Tooltip (START) ----- */
-    .option-colors-desktop {
-        border-bottom: 2px solid;
+    [data-tooltip] {
+        font-size: 15px;
+        display: flex;
+        align-items: center
     }
 
-    .tooltip {
-        position: relative;
-        display: inline-block;
-        z-index: 265;
-    }
-
-
-    .tooltip .tooltiptext {
-        visibility: hidden;
-        width: 90px;
-        background-color: black;
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 5px 5px;
+    [data-tooltip]:before {
+        /* needed - do not touch */
+        content: attr(data-tooltip);
         position: absolute;
-        z-index: 265;
+        opacity: 0;
+
+        /* customizable */
+        /*transition: all 0.4s ease;*/
+        padding: 5px 10px;
+        color: white;
+        border-radius: 5px;
+        box-shadow: 2px 2px 1px silver;
         left: 110%;
-        font-size: 13px;
-        -webkit-filter: brightness(150%);
-        filter: brightness(150%);
-    }
-
-    .tooltip .tooltiptext::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        right: 100%;
-        margin-top: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: transparent black transparent transparent;
-    }
-
-    .tooltip:hover .tooltiptext {
-        visibility: visible;
-    }
-
-    /*
-    .tooltip .tooltiptext {
-        visibility: hidden;
-        width: 90px;
-        background-color: black;
-        color: #fff;
         text-align: center;
-        border-radius: 6px;
-        padding: 5px 5px;
-        position: absolute;
-        z-index: 1;
-        right: 110%;
-        font-size: 13px;
-        -webkit-filter: brightness(150%);
-        filter: brightness(150%);
+        z-index: 2;
     }
 
-    .tooltip .tooltiptext::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 100%;
-        margin-top: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: transparent transparent transparent black;
+    [data-tooltip]:hover:before {
+        /* needed - do not touch */
+        opacity: 1;
+
+        /* customizable */
+        background: black;
+        left: 120%;
+        width: 110px;
+        
+        z-index: 2;
     }
 
-    .tooltip:hover .tooltiptext {
-        visibility: visible;
+    [data-tooltip]:not([data-tooltip-persistent]):before {
+        pointer-events: none;
     }
-    */
-
-    /* ----- Labels for colors and Tooltip (END) ----- */
+    /* ----- Labels for colors and Tooltip (End) ----- */
 
 
     /* ----- Option for Voron V0.1 (START) ----- */
@@ -376,9 +346,13 @@
 
     .optionV0.--is-active {
         /*border-right: 2px solid #e72e1e;*/
-        width: 63px;
+        width: 60px;
         transform: scale(1.2);
         cursor: default;
+    }
+    
+    .contentAdjust:nth-child(3) {
+        margin-bottom: 12px;
     }
 
     /* ----- Option for Voron V0.1 (END) ----- */
@@ -455,50 +429,49 @@
 
 /* ------------- max-width: 960px (Start) ------------- */
 @media (max-width: 960px) {
-
-    /* ----- Labels for colors and Tooltip (START) ----- */
+    
     /* Colors text */
     .option-colors-desktop {
         display: none;
     }
-
-    .tooltip {
-        position: relative;
-        display: inline-block;
-        z-index: 265;
+    
+    /* ----- Labels for colors and Tooltip (START) ----- */
+    [data-tooltip] {
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
     }
 
-    .tooltip .tooltiptext {
-        visibility: hidden;
-        width: 90px;
-        background-color: black;
-        font-size: 13px;
-        color: #fff;
+    [data-tooltip]:before {
+        /* needed - do not touch */
+        content: attr(data-tooltip);
+        position: absolute;
+        opacity: 0;
+
+        /* customizable */
+        /*transition: all 0.4s ease;*/
+        padding: 5px;
+        color: white;
+        border-radius: 5px;
+        box-shadow: 2px 2px 1px silver;
+        top: 105%;
         text-align: center;
-        border-radius: 6px;
-        padding: 5px 5px;
-        position: absolute;
-        z-index: 1;
-        top: 110%;
-        left: 50%;
-        margin-left: -45px;
-        -webkit-filter: brightness(150%);
-        filter: brightness(150%);
+        z-index: 2;
     }
 
-    .tooltip .tooltiptext::after {
-        content: "";
-        position: absolute;
-        bottom: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: transparent transparent black transparent;
+    [data-tooltip]:hover:before {
+        /* needed - do not touch */
+        opacity: 1;
+
+        /* customizable */
+        background: black;
+        top: 115%;
+        width: 110px;
+        z-index: 2;
     }
 
-    .tooltip:hover .tooltiptext {
-        visibility: visible;
+    [data-tooltip]:not([data-tooltip-persistent]):before {
+        pointer-events: none;
     }
     /* ----- Labels for colors and Tooltip (END) ----- */
 
@@ -517,22 +490,10 @@
     }
 
     .optionV0.--is-active {
-        width: 63px;
+        width: 60px;
         transform: scale(1.2);
         cursor: default;
     }
-
-    /*
-    .optionV0.--is-active:before {
-        content: "";
-        position: absolute;
-        left: 12.5%;
-        bottom: 0;
-        height: 15px;
-        width: 75%;
-        border-bottom: 2px solid #e72e1e;
-    }
-    */
 
     .optionV0 img {
         height: 100%;
@@ -540,12 +501,11 @@
         pointer-events: none;
     }
 
-    .optionV0:nth-child(2) {
-        margin-right: 15px;
-        margin-left: 25px;
+    .contentAdjust:nth-child(2) {
+        margin-right: 25px;
     }
-
-    .optionV0:nth-child(4) {
+    
+    .contentAdjust:nth-child(3) {
         margin-left: -5px;
     }
 
@@ -570,18 +530,6 @@
         transform: scale(1.2);
         cursor: default;
     }
-
-    /*
-    .optionV0_accents.--is-active:before {
-        content: "";
-        position: absolute;
-        left: 12.5%;
-        bottom: 0;
-        height: 15px;
-        width: 75%;
-        border-bottom: 2px solid #e72e1e;
-    }
-    */
 
     .optionV0_accents img {
         height: 100%;
@@ -633,18 +581,6 @@
         cursor: default;
     }
 
-    /*
-    .optionV2.--is-active:before {
-        content: "";
-        position: absolute;
-        left: 12.5%;
-        bottom: 0;
-        height: 15px;
-        width: 75%;
-        border-bottom: 2px solid #e72e1e;
-    }
-    */
-
     .optionV2 img {
         height: 100%;
         width: auto;
@@ -681,18 +617,6 @@
         cursor: default;
     }
 
-    /*
-    .optionV2_accents.--is-active:before {
-        content: "";
-        position: absolute;
-        left: 12.5%;
-        bottom: 0;
-        height: 15px;
-        width: 75%;
-        border-bottom: 2px solid #e72e1e;
-    }
-    */
-
     .optionV2_accents img {
         height: 100%;
         width: auto;
@@ -725,7 +649,11 @@
 /* ------------- max-width: 680px (Start) ------------- */
 /* Responsive layout - when the screen is less than 680px wide, make the navigation links stack on top of each other instead of next to each other */
 @media (max-width: 680px) {
-
+    
+    [data-tooltip]:hover:before {
+        top: 125%;
+    }
+    
     /* -----  Option for Voron V0.1 (Start) ----- */
     .optionV0 {
         margin-bottom: 1px;
@@ -736,7 +664,7 @@
     }
 
     .optionV0.--is-active {
-        width: 48px;
+        width: 45px;
         transform: scale(1.2);
         cursor: default;
     }
@@ -746,13 +674,13 @@
         width: auto;
         pointer-events: none;
     }
-
-    .optionV0:nth-child(2) {
-        margin-right: 20px;
+    
+    .contentAdjust:nth-child(2) {
+        margin-right: 25px;
     }
-
-    .optionV0:nth-child(3) {
-        margin-right: 5px;
+    
+    .contentAdjust:nth-child(3) {
+        margin-left: -5px;
     }
 
     /* ----- Option for Voron V0.1 (END) ----- */
