@@ -6,7 +6,8 @@ function main() {
 
     var theModel;
     
-    const MODEL_PATH = "models/Voron_V2-4_Accents.glb";
+    const MODEL_PATH = "models/Voron_V2-4_Accents_with_screws.glb";
+    //const MODEL_PATH = "models/Voron_V2-4_Accents.glb";
     
     var activeOption = 'first_color';
     var loaded = false;

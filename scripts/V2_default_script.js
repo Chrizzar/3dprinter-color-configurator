@@ -6,7 +6,8 @@ function main() {
 
     var theModel;
     
-    const MODEL_PATH = "models/Voron_2-4_Default.glb";
+    const MODEL_PATH = "models/Voron_2-4_Default_with_screws.glb";
+    //const MODEL_PATH = "models/Voron_2-4_Default.glb";
     
     var activeOption = 'first_color';
     var loaded = false;
