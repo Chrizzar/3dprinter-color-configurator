@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="styles/voron_style.css">
     <link rel="stylesheet" type="text/css" href="styles/configuration.css">
+    <link rel="stylesheet" type="text/css" href="styles/instructions.css">
 
     <!-- --------- Google fonts (Start) --------- -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -95,7 +96,7 @@
         </a>
 
         <div class="header-text">
-            <h1>VORON COLOR CONFIGURATOR (WIP)</h1>
+            <h1>VORON COLOR CONFIGURATOR</h1>
             <p>A website created by: <br> Christian Sass Hansen</p>
         </div>
     </div>
@@ -108,16 +109,16 @@
             </button>
             <div class="dropdown-content">
                 <a href="voron-v0.1-default.html">Default</a>
-                <a href="voron-v0.1-9accents.html">9 Accents</a>
+                <a href="voron-v0.1-8accents.html">8 Accents</a>
             </div>
         </div>
         <div class="dropdown">
-            <button class="dropbtn">Voron Trident (WIP)
+            <button class="dropbtn">Voron Trident
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="#">Default</a>
-                <a href="#">.. Accents</a>
+                <a href="voron-trident-default.html">Default</a>
+                <a href="voron-trident-8accents.html">8 Accents</a>
             </div>
         </div>
         <div class="dropdown">
@@ -126,33 +127,34 @@
             </button>
             <div class="dropdown-content">
                 <a href="voron-v2.4-default.html">Default</a>
-                <a href="voron-v2.4-6accents.html">6 Accents</a>
+                <a href="voron-v2.4-7accents.html">7 Accents</a>
+                <a href="voron-v2.4-8accents.html">8 Accents</a>
             </div>
         </div>
         <div class="dropdown">
-            <button class="dropbtn">Voron Switchwire (WIP)
+            <button class="dropbtn">Voron Switchwire
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="#">Default</a>
-                <a href="#">.. Accents</a>
+                <a href="voron-switchwire-default.html">Default</a>
+                <a href="voron-switchwire-8accents.html">8 Accents</a>
             </div>
         </div>
         <div class="dropdown">
-            <button class="dropbtn">Voron Legacy (WIP)
+            <button class="dropbtn">Voron Legacy
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="#">Default</a>
-                <a href="#">.. Accents</a>
+                <a href="voron-legacy-default.html">Default</a>
+                <a href="voron-legacy-8accents.html">8 Accents</a>
             </div>
         </div>
-
-        <a href="download-center.html">Download Center</a>
-
-        <div style="float:right;">
+        
+        <a href="voron-download-center.html">Download Center</a>
+        
+        <div style="float: right;">
             <div class="dropdown">
-                <button class="dropbtn">About Us
+                <button class="dropbtn">About us
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -160,7 +162,7 @@
                     <a href="terms-of-use.html">Terms of use</a>
                 </div>
             </div>
-
+            
             <a href="roadmap.html">Roadmap</a>
 
             <a href="support-me.html" style="font-weight: bold;">Support Me</a>
@@ -180,7 +182,7 @@
                     </div>
 
                     <div class="headingModel">
-                        <h2 class="textSmaller">VORON V0.1 - DEFAULT (PRIMARY + 2 ACCENTS)</h2>
+                        <h2 class="textSmaller">VORON V0.1 - DEFAULT (PRIMARY + 3 ACCENTS)</h2>
                     </div>
                 </div>
 
@@ -196,20 +198,26 @@
                             <p class="textCenter option-colors-desktop">Colors</p>
 
                             <div data-tooltip="Primary color" class="adjust_v0">
-                                <div class="optionV0 --is-active" data-option="first_color">
+                                <div class="optionV0 --is-active" data-option="1_first_color">
                                     <img class="resize" src="images/thumbnails/V0.1/V0_part_1.svg" alt="" />
                                 </div>
                             </div>
 
                             <div data-tooltip="First accent color" class="adjust_v0">
-                                <div class="optionV0" data-option="second_color">
+                                <div class="optionV0" data-option="2_second_color">
                                     <img class="resize" src="images/thumbnails/V0.1/V0_part_8.svg" alt="" />
                                 </div>
                             </div>
 
                             <div data-tooltip="Second accent color" class="adjust_v0">
-                                <div class="optionV0" data-option="accessories">
-                                    <img src="images/thumbnails/V0.1/V0_part_3.svg" alt="" />
+                                <div class="optionV0" data-option="3_accessories">
+                                    <img class="resize" src="images/thumbnails/V0.1/V0_part_3.svg" alt="" />
+                                </div>
+                            </div>
+
+                            <div data-tooltip="Frame color" class="adjust_v0">
+                                <div class="optionV0" data-option="4_frame">
+                                    <img class="resize" src="images/thumbnails/V0.1/V0_frame_3D.svg" alt="" />
                                 </div>
                             </div>
                         </div>
@@ -329,11 +337,31 @@
                             <option class="whiteText" value="#fbcd27">Yellow</option>
                             <option class="whiteText" value="#6be067">Peak Green</option>
                         </select>
+                        
+                        <h4>Frame color</h4>
+                        <select aria-label="Frame color" id="frame_color" class="selectionStyle">
+                            <option class="whiteText" value="" selected disabled hidden>Choose a color</option>
+                            <option class="whiteText" value="#26282f">Black</option>
+                            <option class="whiteText" value="#fbfbfd">Cold White</option>
+                            <option class="whiteText" value="#e72e1e">Red</option>
+                            <option class="whiteText" value="#0b8d6f">Green</option>
+                            <option class="whiteText" value="#345495">Blue</option>
+                            <option class="whiteText" value="#5d4088">Purple</option>
+                            <option class="whiteText" value="#fd6b3e">Orange</option>
+                            <option class="whiteText" value="#fbcd27">Yellow</option>
+                            <option class="whiteText" value="#6be067">Peak Green</option>
+                        </select>
                     </section>
 
+                    <div class="instructions-info"><span class="instructions">Instructions</span> <i id="info-icon" class="fa fa-info-circle"></i></div>
+                    <div class="instructions-info-content">
+                        <h3>Instructions for after submission</h3>
+                        <p>After submitting, go to the Download Center to find and download your chosen configuration.</p>
+                    </div>
+                    
                     <input class="submit" type="submit" value="Submit" onClick="window.print()">
 
-                    <p class="textCenter" style="color: red; margin-top: 0px; margin-bottom: 20px">(OBS: The configuration will reset after submission)</p>
+                    <p class="textCenter obsText" style="color: red;">(OBS: The configuration will reset after submission)</p>
                 </form>
             </div>
         </div>
@@ -342,8 +370,9 @@
     <div class="footer">
         <div class="footer-content">
             <h3>About</h3>
-            <p>Our mission with this tool is to make it more convenient for the user to visualize what they want their Voron color theme to look like. Users can now create and visualize everything from the default two color groups (primary and accent color) to a very unique looking build, where up to 9 different groups of parts can be colored (this holds for Voron V0.1).</p>
+            <p>Our mission with this tool is to make it more convenient for the user to visualize what they want their Voron color theme to look like. Users can now create and visualize everything from the default four color groups (primary and accent color + chain and frame) to a very unique looking build, where up to 8 different groups of parts can be colored.</p>
             <ul class="socials">
+                <!-- Discord Maybe -->
                 <!--<li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
                 <li><a href="https://twitter.com/Chrizzar" target="_blank" aria-label="Link to my Twitter"><i class="fa fa-twitter twitter"></i></a></li>
                 <li><a href="https://www.youtube.com/channel/UC7DucVUUyAl8whkK8KzqBhA" target="_blank" aria-label="Link to my YouTube"><i class="fa fa-youtube youtube"></i></a></li>
@@ -351,7 +380,7 @@
             </ul>
         </div>
         <div class="footer-bottom">
-            <p>copyright &copy;2021. designed by <span>Christian Sass Hansen</span></p>
+            <p>copyright &copy; 2021-2022 <span>Christian Sass Hansen</span> - All Rights Reserved.</p>
         </div>
     </div>
 
@@ -361,7 +390,7 @@
     <script src='https://cdn.jsdelivr.net/gh/mrdoob/three.js@r136/examples/js/loaders/GLTFLoader.js'></script>
     <!-- This is a simple to use extension for three.js that activates all the rotating, dragging and zooming controls we need for both mouse and touch, there isn't a clear CDN for this that I can find -->
     <script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script>
-    <script src="scripts/v0_default_script.js"></script>
+    <script src="scripts/v0_default.js"></script>
 
 
     <!-- Go to the top -->
@@ -449,6 +478,25 @@
             border: 3px solid #333;
             `
         }
+        
+        // Frame color
+        var selectFrame = document.getElementById('frame_color')
+        selectFrame.onchange = () => {
+            // Initial color
+            let colorFrame = 'white'
+
+            // Check background color and change font color accordingly
+            if (selectFrame.value == '#fbfbfd') colorFrame = 'black'
+            else if (selectFrame.value == '#fbcd27') colorFrame = 'black'
+            else if (selectFrame.value == '#6be067') colorFrame = 'black'
+
+            // Add your desired css style here:
+            selectFrame.style.cssText = `
+            background-color: ${selectFrame.value};
+            color: ${colorFrame};
+            border: 3px solid #333;
+            `
+        }
     </script>
 
     <!-- Show different div dependent on choice -->
@@ -461,6 +509,30 @@
         function directHotendSection() {
             document.getElementById('bowdenHotend').style.display = 'none';
             document.getElementById('directHotend').style.display = 'block';
+        }
+    </script>
+    
+    <!-- Collapsible Content -->
+    <script>
+        var coll = document.getElementsByClassName("instructions-info");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    content.style.marginBottom = "0px"; // px to the bottom when disabled
+                    content.style.opacity  = "0";
+                    content.style.transition = "all 0.8s";
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    content.style.marginBottom = "15px"; // px to the bottom when active
+                    content.style.opacity  = "1";
+                    content.style.transition = "all 0.8s";
+                }
+            });
         }
     </script>
 

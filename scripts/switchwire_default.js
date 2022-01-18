@@ -6,10 +6,9 @@ function main() {
 
     var theModel;
     
-    const MODEL_PATH = "models/Voron_switchwire_default.glb";
-    /*const MODEL_PATH = "models/Voron_V0_Default.glb";*/
+    const MODEL_PATH = "models/switchwire/voron_switchwire_default.glb";
     
-    var activeOption = 'first_color';
+    var activeOption = '1_first_color';
     var loaded = false;
 
     const colors = [
@@ -50,13 +49,12 @@ function main() {
       color: '6be067' },
     ];
 
-
     // Init the scene and the renderer
     const canvas = document.querySelector('#c');
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
     
     var cameraFar = 2;
-    const fov = 35;
+    const fov = 50;
     const aspect = window.innerWidth / window.innerHeight;
     const near = 0.1;
     const far = 1000;
@@ -74,90 +72,119 @@ function main() {
     scene.background = new THREE.Color(BACKGROUND_COLOR);
     scene.fog = new THREE.Fog(BACKGROUND_COLOR, 20, 100);
     
-    // Initial materials
+    // Initial material
     const INITIAL_MTL = new THREE.MeshPhongMaterial({ 
         color: 0xf1f1f1, 
-        shininess: 10 
+        shininess: 10,
     });
-
+    
+    
+    // Part materials
     const BED_TOP_MTL = new THREE.MeshPhongMaterial({ 
         color: 0xff9900, 
-        shininess: 150
+        shininess: 150,
     });
 
     const FRAME_MTL = new THREE.MeshPhongMaterial({ 
         color: 0x222324, 
-        shininess: 150
-    });
-
-    const SILVER_MTL = new THREE.MeshPhongMaterial({ 
-        color: 0xd8d8d8, 
-        shininess: 100
-    });
-
-    const GOLD_MTL = new THREE.MeshPhongMaterial({ 
-        color: 0xD4AF37, 
-        shininess: 100
-    });
-
-    const LIGHT_BLACK_MTL = new THREE.MeshPhongMaterial({ 
-        color: 0x585858, 
-        shininess: 150
-    });
-
-    const BLACK_MTL = new THREE.MeshPhongMaterial({ 
-        color: 0x222324, 
-        shininess: 150
+        shininess: 150,
     });
     
-    const DARK_GRAY = new THREE.MeshPhongMaterial({ 
+    const PTFE_MTL = new THREE.MeshPhongMaterial({ 
+        color: 0xFCFBF8,
+        shininess: 150,
+        opacity: 0.9,
+        transparent: true,
+    });
+    
+    const BELTS_MTL = new THREE.MeshPhongMaterial({ 
+        color: 0xAD6342, 
+        shininess: 50,
+    });
+    
+    const WINDOWS_MTL = new THREE.MeshPhongMaterial({ 
         color: 0x383838, 
         shininess: 150,
         opacity: 0.2,
         transparent: true,
     });
+
     
+    // Color materials
+    const SILVER_MTL = new THREE.MeshPhongMaterial({ 
+        color: 0xC0C0C0, 
+        shininess: 100,
+    });
+    
+    const DARKSILVER_MTL = new THREE.MeshPhongMaterial({ 
+        color: 0xB8B8B8, 
+        shininess: 100,
+    });
+
+    const GOLD_MTL = new THREE.MeshPhongMaterial({ 
+        color: 0xD4AF37, 
+        shininess: 100,
+    });
+
+    const LIGHT_BLACK_MTL = new THREE.MeshPhongMaterial({ 
+        color: 0x585858, 
+        shininess: 150,
+    });
+
+    const BLACK_MTL = new THREE.MeshPhongMaterial({ 
+        color: 0x222324, 
+        shininess: 150,
+    });
+
     const RED_MTL = new THREE.MeshPhongMaterial({ 
         color: 0xF72F35, 
-        shininess: 150
+        shininess: 150,
+    });
+    
+    const GREEN_MTL = new THREE.MeshPhongMaterial({ 
+        color: 0x24a25f, 
+        shininess: 150,
     });
 
-    const WHITE_MTL = new THREE.MeshPhongMaterial({ 
-        color: 0xFCFBF8, 
-        shininess: 150
-    });
-
-    const BELTS_MTL = new THREE.MeshPhongMaterial({ 
-        color: 0xAD6342, 
-        shininess: 50
+    const PEARLWHITE_MTL = new THREE.MeshPhongMaterial({ 
+        color: 0xF8F6F0, 
+        shininess: 150,
     });
     
     const YELLOW_MTL = new THREE.MeshPhongMaterial({ 
         color: 0xcccc00, 
-        shininess: 50
+        shininess: 50,
     });
 
-    
+
     const INITIAL_MAP = [
-    { childID: "first_color", mtl: INITIAL_MTL },
-    { childID: "second_color", mtl: INITIAL_MTL },
-    { childID: "accessories", mtl: INITIAL_MTL },
-    { childID: "frame", mtl: FRAME_MTL },
-    { childID: "belts", mtl: BELTS_MTL },
-    { childID: "springs", mtl: YELLOW_MTL },
-    { childID: "electronics", mtl: BLACK_MTL },
-    { childID: "feet", mtl: BLACK_MTL },
-    { childID: "panels", mtl: DARK_GRAY },
-    { childID: "silver", mtl: SILVER_MTL },
+    { childID: "1_first_color", mtl: INITIAL_MTL },
+    { childID: "2_second_color", mtl: INITIAL_MTL },
+    { childID: "3_chains", mtl: INITIAL_MTL },
+    { childID: "4_frame", mtl: FRAME_MTL },
+    { childID: "bed_bottom", mtl: SILVER_MTL },
+    { childID: "bed_top", mtl: BED_TOP_MTL },
     { childID: "black", mtl: BLACK_MTL },
-    { childID: "red", mtl: RED_MTL },
+    { childID: "fans", mtl: BLACK_MTL },
+    { childID: "feet", mtl: BLACK_MTL },
+    { childID: "foam_and_vhb", mtl: BLACK_MTL },
     { childID: "gold", mtl: GOLD_MTL },
-    { childID: "spring_assembly", mtl: BLACK_MTL },
-        
-    { childID: "opaque_panels_sides", mtl: BLACK_MTL },
-    { childID: "opaque_panels_bottom", mtl: BLACK_MTL },
-    { childID: "opaque_panels_top", mtl: BLACK_MTL },
-    { childID: "transparent_panels", mtl: DARK_GRAY },
+    { childID: "green", mtl: GREEN_MTL },
+    { childID: "hotend", mtl: SILVER_MTL },
+    { childID: "motors", mtl: BLACK_MTL },
+    { childID: "nozzle", mtl: GOLD_MTL },
+    { childID: "opaque_panel_back", mtl: WINDOWS_MTL },
+    { childID: "opaque_panel_top", mtl: WINDOWS_MTL },
+    { childID: "opaque_panels_bottom", mtl: LIGHT_BLACK_MTL },
+    { childID: "opaque_panels_sides", mtl: WINDOWS_MTL },
+    { childID: "ptfe", mtl: PTFE_MTL },
+    { childID: "rails", mtl: SILVER_MTL },
+    { childID: "red", mtl: RED_MTL },
+    { childID: "rubber_belts", mtl: BELTS_MTL },
+    { childID: "screws", mtl: LIGHT_BLACK_MTL },
+    { childID: "silver", mtl: SILVER_MTL },
+    { childID: "spring_assembly", mtl: SILVER_MTL },
+    { childID: "transparent_panels", mtl: WINDOWS_MTL },
     ];
     
     // Init the object loader
@@ -236,11 +263,11 @@ function main() {
     /*controls.maxPolarAngle = Math.PI / 2;
     controls.minPolarAngle = Math.PI / 3;*/
     controls.enableDamping = true;
-    controls.enablePan = false;        // Right click-hold for control
+    controls.enablePan = true;       // Right click-hold for control
     controls.dampingFactor = 0.1;
-    controls.autoRotate = false;      // Toggle this if you'd like the chair to automatically rotate
-    controls.autoRotateSpeed = 0.2;   // 30
-    controls.target.set(0, -0.63, 0); // Model offset (focus at height)
+    controls.autoRotate = false;     // Toggle this if you'd like the chair to automatically rotate
+    controls.autoRotateSpeed = 0.2;  // 30
+    controls.target.set(0, -0.466, 0); // Model offset (focus at height)
 
     function animate() {
         controls.update();
@@ -308,7 +335,7 @@ function main() {
     buildColors(colors);
     
     // Select Option
-    const options = document.querySelectorAll(".optionV0");
+    const options = document.querySelectorAll(".optionSwitchwire");
 
     for (const option of options) {
         option.addEventListener('click', selectOption);

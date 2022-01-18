@@ -1,5 +1,6 @@
-#download-content {
-    max-width: 1000px;
+#download-content1 {
+    max-width: 700px;
+    width: 100%;
     height: 100%;
     padding: 20px 50px;
     background-color: white;
@@ -9,9 +10,21 @@
     margin-top: 50px;
 }
 
+#download-content2 {
+    max-width: 700px;
+    width: 100%;
+    height: 100%;
+    padding: 20px 50px;
+    background-color: white;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
 ul,
 .myUL {
     list-style-type: none;
+    padding-left: 1.5rem;
 }
 
 .myUL {
@@ -21,9 +34,12 @@ ul,
 
 .caret {
     cursor: pointer;
-    -webkit-user-select: none; /* Safari 3.1+ */
-    -moz-user-select: none;    /* Firefox 2+ */
-    -ms-user-select: none;     /* IE 10+ */
+    -webkit-user-select: none;
+    /* Safari 3.1+ */
+    -moz-user-select: none;
+    /* Firefox 2+ */
+    -ms-user-select: none;
+    /* IE 10+ */
     user-select: none;
 }
 
@@ -37,8 +53,10 @@ ul,
 }
 
 .caret-down::before {
-    -ms-transform: rotate(90deg);     /* IE 9 */
-    -webkit-transform: rotate(90deg); /* Safari */
+    -ms-transform: rotate(90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(90deg);
+    /* Safari */
     transform: rotate(90deg);
 }
 
@@ -52,12 +70,31 @@ ul,
 }
 
 /* Media Queries */
-@media (max-width: 685px) {
-    #download-content {
+@media (max-width: 711px) {
+    #download-content1 {
+        font-size: 14px;
         box-shadow: none;
         border-radius: 0px;
         margin-bottom: 50px;
         margin-top: 50px;
+        padding: 20px 20px;
+    }
+
+    #download-content2 {
+        font-size: 14px;
+        box-shadow: none;
+        border-radius: 0px;
+        margin-bottom: 50px;
+        padding: 20px 20px;
+    }
+    
+    .myUL ul {
+        list-style-type: none;
+        padding-left: 1.0rem;
+    }
+
+    .myUL {
+        margin: 0px 0px 5px 0px;
+        padding: 0;
     }
 }
-

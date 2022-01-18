@@ -1,0 +1,54 @@
+#info-icon {
+    font-size: 24px;
+    color: #808080;
+    cursor: pointer;
+}
+
+.instructions {
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+/* Collapsible Content */
+.instructions-info {
+    color: white;
+    padding: 0px;
+    width: 100%;
+    line-height: 17px;
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 30px 0 5px 0;
+}
+
+.instructions-info-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    background-color: #C0C0C0;
+}
+
+.instructions-info-content h3 {
+    margin: 0;
+    max-height: 100px;
+    width: 100%;
+    padding: 15px 15px;
+    background: #333;
+    color: white;
+    font-weight: inherit;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.instructions-info-content p {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: bold;
+    padding: 15px 20px 15px 20px; /* Padding inside box */
+    margin: 0;
+}
