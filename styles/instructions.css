@@ -39,7 +39,7 @@
     padding: 15px 15px;
     background: #333;
     color: white;
-    font-weight: inherit;
+    font-weight: 300;
     font-size: 17px;
     display: flex;
     justify-content: center;
@@ -56,4 +56,8 @@
 
 .instructions-info-content span {
     font-style: italic;
+}
+
+b {
+    font-weight: bold;
 }
