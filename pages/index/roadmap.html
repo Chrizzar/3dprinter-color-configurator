@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <title>3D Printer Color Configurator</title>
+    <title>Roadmap</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="icons/voron_icon_v3.ico">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/roadmap.css">
 
     <!-- --------- Google fonts (Start) --------- -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,8 +28,6 @@
     <!-- Font Awesome -->
     <link href="fontawesome/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Font Awesome Kit code -->
-    <script src="https://kit.fontawesome.com/314e48cde2.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -40,13 +38,13 @@
         </a>
 
         <div class="header-text">
-            <h1>3D Printer Color Configurator</h1>
+            <h1>VORON COLOR CONFIGURATOR</h1>
             <p>A website created by: <br> Christian Sass Hansen</p>
         </div>
     </div>
 
     <div class="navbar">
-        <a href="index.html">Home</a>
+        <a href="../../index.html">Home</a>
 
         <div style="float: right;">
             <div class="dropdown">
@@ -69,49 +67,21 @@
     <button onclick="topFunction()" id="toTheTop" title="Go to top">Top</button>
 
     <div id="main-content">
-
-        <section class="container">
-            <!--<a class="voron-link" href="voron-color-configurator.html"></a>-->
-            <div class="card">
-                <a class="link" href="voron-color-configurator.html" target="_blank">
-                    <div class="card-image voron-printers"></div>
-                    <p class="h2-size center-all">Voron Color Configurator</p>
-                </a>
+        <div class="content-box-roadmap">
+            <h1 class="textCenter">Roadmap for future updates and fixes</h1>
+            <div class="roadmap">
+                <p class="pStyle">Adding <b>Voron V2.4</b> for color configuring.</p>
+                <p class="pStyle">Adding <b>Voron V0.1</b> for color configuring.</p>
+                <p class="pStyle">Adding <b>Voron Trident</b> for color configuring.</p>
+                <p class="pStyle">Adding <b>Voron Switchwire</b> for color configuring.</p>
+                <p class="pStyle">Adding <b>Voron Legacy</b> for color configuring.</p>
+                <p class="pStyle"><b>Custom colored frames</b><br>Being able to color frames has been suggested by one of my testers, which I of course will add in the near future, since it will bring another layer of customization to the printers. Making each design potentially even more unique.</p>
+                <p class="pStyle"><b>Downloadble configuration files</b><br>Being able to download all the STL files, ordered in folders in relation to the level of configurations chosen. For example Voron V2.4 with primary color and 6 accent colors, will have a folder for the primary color and 6 other folders for the accent colors.</p>
+                <p class="pStyle"><b>Mozilla Firefox - Fixing black screen in canvas</b><br>One of my test-users pointed out to me that when using Mozilla Firefox, the canvas where the 3D model of the printers is displayed, it will show a black screen at submission. If you have this problem, I recommend using a Chromium based browser like Edge or Chrome, for now. </p>
+                <p class="pStyle"><b>Save configuration after submission</b><br> In the current version of the website, there is a problem after having submitted the config, where the site resets what has been set. This needs to be fixed.</p>
+                <p class="pStyle"><b>Dark Mode</b><br>In the future, we will explore adding the option to choose between light mode and dark mode. This is however not currently on high priority. </p>
             </div>
-            
-            <!--
-            <div class="card">
-                <a class="link" href="#" target="_blank">
-                    <div class="card-image"></div>
-                    <p class="h2-size center-all">...</p>
-                </a>
-            </div>
-            
-            <div class="card">
-                <a class="link" href="#" target="_blank">
-                    <div class="card-image"></div>
-                    <p class="h2-size center-all">...</p>
-                </a>
-            </div>
-            -->
-        </section>
-
-
-
-        <!--
-        <div class="flex-container">
-            <div class="flex-item-left">1</div>
-            <div class="flex-item-right">2</div>
         </div>
-
-        <div class="content-box1">
-            <h2>WELCOME TO VORON COLOR CONFIGURATOR</h2>
-        </div>
-
-        <div class="content-box2">
-            <h2>How to use the color configurator (Recommended)</h2>
-        </div>
-        -->
     </div>
 
     <div class="footer">
@@ -156,25 +126,4 @@
         }
     </script>
 
-    <!-- Click the whole card 
-    <script>
-        const card = document.querySelector(".container");
-        const mainLink = card.querySelector(".voron-link");
-        const clickableElements = Array.from(card.querySelectorAll("a")); //we are using 'a' here for simplicity but ideally you should put a class like 'clickable' on every clicable element inside card(a, button) and use that in query selector
-
-        clickableElements.forEach((ele) =>
-            ele.addEventListener("click", (e) => e.stopPropagation())
-        );
-
-        function handleClick(event) {
-            const noTextSelected = !window.getSelection().toString();
-
-            if (noTextSelected) {
-                mainLink.click();
-            }
-        }
-
-        card.addEventListener("click", handleClick);
-    </script>
-    -->
 </body></html>

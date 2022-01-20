@@ -113,6 +113,7 @@
     height: 130%;
     width: 130%;
 }
+
 /* ------------- Resize option img (END) ------------- */
 
 
@@ -136,6 +137,7 @@
     width: auto;
     pointer-events: none;
 }
+
 /* ------------- Option for Voron V0.1 Default (END) ------------- */
 
 /* ------------- Option for Voron V0.1 8Accents (START) ------------- */
@@ -157,6 +159,7 @@
     width: auto;
     pointer-events: none;
 }
+
 /* ------------- Option for Voron V0.1 8Accents (END) ------------- */
 
 
@@ -180,6 +183,7 @@
     width: auto;
     pointer-events: none;
 }
+
 /* ------------- Option for Voron V2.4 Default (END) ------------- */
 
 /* ------------- Option for Voron V2.4 6Accents (START) ------------- */
@@ -201,6 +205,7 @@
     width: auto;
     pointer-events: none;
 }
+
 /* ------------- Option for Voron V2.4 6Accents (END) ------------- */
 
 /* ------------- Option for Voron V2.4 8Accents (START) ------------- */
@@ -222,6 +227,7 @@
     width: auto;
     pointer-events: none;
 }
+
 /* ------------- Option for Voron V2.4 8Accents (END) ------------- */
 
 
@@ -245,6 +251,7 @@
     width: auto;
     pointer-events: none;
 }
+
 /* ------------- Option for Voron Trident Default (END) ------------- */
 
 /* ------------- Option for Voron Trident 8Accents (START) ------------- */
@@ -266,6 +273,7 @@
     width: auto;
     pointer-events: none;
 }
+
 /* ------------- Option for Voron Trident 8Accents (END) ------------- */
 
 
@@ -289,6 +297,7 @@
     width: auto;
     pointer-events: none;
 }
+
 /* ------------- Option for Voron Switchwire Default (END) ------------- */
 
 /* ------------- Option for Voron Switchwire 8Accents (START) ------------- */
@@ -310,6 +319,7 @@
     width: auto;
     pointer-events: none;
 }
+
 /* ------------- Option for Voron Switchwire 8Accents (END) ------------- */
 
 
@@ -333,6 +343,7 @@
     width: auto;
     pointer-events: none;
 }
+
 /* ------------- Option for Voron Legacy Default (END) ------------- */
 
 /* ------------- Option for Voron Legacy 8Accents (START) ------------- */
@@ -354,6 +365,7 @@
     width: auto;
     pointer-events: none;
 }
+
 /* ------------- Option for Voron Legacy 8Accents (END) ------------- */
 
 
@@ -369,7 +381,7 @@
 
 .tray {
     width: 100%;
-    height: 60px;
+    height: 100px;
     position: relative;
     overflow-x: hidden;
     display: flex;
@@ -395,6 +407,125 @@
 .tray__swatch:hover {
     height: 58px;
 }
+
+
+/* ---------------- First child and last child (START) ---------------- 
+.tray__swatch:first-child {
+    margin-left: 50px;
+}
+
+.tray__swatch:last-child {
+    margin-right: 50px;
+}*/
+/* ---------------- First child and last child (END) ---------------- */
+
+
+/* ---------------------- eSUN colors (START) ---------------------- 
+.tray__swatch:nth-child(1):before {
+    display: inline-block;
+    margin-top: 25%;
+    margin-left: -100%;
+    content: "eSUN";
+    color: black;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.tray__swatch:nth-child(1):hover::after {
+    margin-top: 70px;
+    content: "Black";
+    margin-left: 23px;
+    position: absolute;
+}
+
+.tray__swatch:nth-child(2):hover::after {
+    margin-top: 70px;
+    content: "Cold White";
+    position: absolute;
+    margin-left: 6px;
+}
+
+.tray__swatch:nth-child(3):hover::after {
+    margin-top: 70px;
+    content: "Red";
+    position: absolute;
+    margin-left: 6px;
+}
+
+.tray__swatch:nth-child(4):hover::after {
+    margin-top: 70px;
+    content: "Green";
+    position: absolute;
+    margin-left: 6px;
+}
+
+.tray__swatch:nth-child(5):hover::after {
+    margin-top: 70px;
+    content: "Blue";
+    position: absolute;
+    margin-left: 6px;
+}
+
+.tray__swatch:nth-child(6):hover::after {
+    margin-top: 70px;
+    content: "Purple";
+    position: absolute;
+    margin-left: 6px;
+}
+
+.tray__swatch:nth-child(7):hover::after {
+    margin-top: 70px;
+    content: "Orange";
+    position: absolute;
+    margin-left: 6px;
+}
+
+.tray__swatch:nth-child(8):hover::after {
+    margin-top: 70px;
+    content: "Yellow";
+    position: absolute;
+    margin-left: 6px;
+}
+
+.tray__swatch:nth-child(9):hover::after {
+    margin-top: 70px;
+    content: "Peak Green";
+    position: absolute;
+    margin-left: 6px;
+}*/
+/* ---------------------- KVP colors (END) ---------------------- */
+
+
+/* ---------------------- KVP colors (START) ---------------------- 
+.tray__swatch:nth-child(9) {
+    margin-right: 60px;
+}
+
+.tray__swatch:nth-child(10):before {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 25%;
+    margin-left: -80%;
+    content: "KVP";
+    color: black;
+    font-weight: bold;
+}
+
+.tray__swatch:nth-child(10):hover::after {
+    margin-top: 70px;
+    content: "British Racing Green";
+    position: absolute;
+    margin-left: -30px;
+}
+
+.tray__swatch:nth-child(11):hover::after {
+    margin-top: 70px;
+    content: "Coral";
+    position: absolute;
+    margin-left: 10px;
+}*/
+/* ---------------------- KVP colors (END) ---------------------- */
+
 
 .drag-notice {
     display: flex;
@@ -469,17 +600,17 @@
 /* ------------- min-width: 961px (Start) ------------- */
 /* Media Query for the options panel of the canvas */
 @media screen and (min-width: 961px) {
-    
+
     /* Colors text */
     .option-colors-desktop {
         border-bottom: 2px solid;
         margin-top: 0px;
     }
-    
+
     .option-colors-mobile {
         display: none;
     }
-    
+
     /* ----- Labels for colors and Tooltip (START) ----- */
     [data-tooltip] {
         font-size: 15px;
@@ -512,13 +643,14 @@
         background: #181818;
         left: 120%;
         width: 110px;
-        
+
         z-index: 51;
     }
 
     [data-tooltip]:not([data-tooltip-persistent]):before {
         pointer-events: none;
     }
+
     /* ----- Labels for colors and Tooltip (End) ----- */
 
 
@@ -540,14 +672,15 @@
         transform: scale(1.2);
         cursor: default;
     }
-    
+
     .adjust_v0:nth-child(3) {
         margin-bottom: 12px;
     }
-    
+
     .adjust_v0:nth-child(4) {
         margin-bottom: 12px;
     }
+
     /* ----- Option for Voron V0.1 Default (END) ----- */
 
     /* ----- Option for Voron V0.1 8Accents (START) ----- */
@@ -568,36 +701,36 @@
         transform: scale(1.2);
         cursor: default;
     }
-    
+
     .adjust_v0_8accents:nth-child(3) {
         margin-top: -5px;
         margin-bottom: 4px;
     }
-    
+
     .adjust_v0_8accents:nth-child(4) {
         margin-bottom: 2px;
     }
-    
+
     .adjust_v0_8accents:nth-child(5) {
         margin-top: -10px;
         margin-bottom: -17px;
     }
-    
+
     .adjust_v0_8accents:nth-child(6) {
         margin-bottom: 0px;
     }
-    
+
     .adjust_v0_8accents:nth-child(7) {
         margin-bottom: 0px;
     }
-    
+
     .adjust_v0_8accents:nth-child(8) {
         margin-bottom: 3px;
     }
-    
+
     /* ----- Option for Voron V0.1 8Accents (END) ----- */
 
-    
+
 
     /* ----- Option for Voron V2.4 Default (START) ----- */
     .optionV2 {
@@ -617,18 +750,19 @@
         transform: scale(1.2);
         cursor: default;
     }
-    
+
     .adjust_v2:nth-child(2) {
         margin-bottom: 6px;
     }
-    
+
     .adjust_v2:nth-child(3) {
         margin-bottom: 5px;
     }
-    
+
     .adjust_v2:nth-child(4) {
         margin-bottom: 6px;
     }
+
     /* ----- Option for Voron V2.4 Default (END) ----- */
 
     /* ----- Option for Voron V2.4 6Accents (START) ----- */
@@ -649,32 +783,33 @@
         transform: scale(1.2);
         cursor: default;
     }
-    
+
     .adjust_v2_7accents:nth-child(2) {
         margin-bottom: 7px;
     }
-    
+
     .adjust_v2_7accents:nth-child(3) {
         margin-bottom: 5px;
     }
-    
+
     .adjust_v2_7accents:nth-child(4) {
         margin-bottom: 5px;
     }
-    
+
     .adjust_v2_7accents:nth-child(5) {
         margin-bottom: 2px;
     }
-    
+
     .adjust_v2_7accents:nth-child(6) {
         margin-bottom: -5px;
     }
-    
+
     .adjust_v2_7accents:nth-child(7) {
         margin-bottom: 0px;
     }
+
     /* ----- Option for Voron V2.4 6Accents (END) ----- */
-    
+
     /* ----- Option for Voron V2.4 8Accents (START) ----- */
     .optionV2_8accents {
         margin-bottom: 1px;
@@ -693,38 +828,39 @@
         transform: scale(1.2);
         cursor: default;
     }
-    
+
     .adjust_v2_8accents:nth-child(2) {
         margin-bottom: 5px;
     }
-    
+
     .adjust_v2_8accents:nth-child(3) {
         margin-bottom: 1px;
     }
-    
+
     .adjust_v2_8accents:nth-child(4) {
         margin-bottom: -1px;
     }
-    
+
     .adjust_v2_8accents:nth-child(5) {
         margin-bottom: -0.5px;
     }
-    
+
     .adjust_v2_8accents:nth-child(6) {
         margin-bottom: 5px;
     }
-    
+
     .adjust_v2_8accents:nth-child(7) {
         margin-bottom: -1px;
     }
-    
+
     .adjust_v2_8accents:nth-child(8) {
         margin-bottom: 5px;
     }
+
     /* ----- Option for Voron V2.4 8Accents (END) ----- */
-    
-    
-    
+
+
+
     /* ----- Option for Voron Trident Default (START) ----- */
     .optionTrident {
         margin-bottom: 1px;
@@ -743,18 +879,19 @@
         transform: scale(1.2);
         cursor: default;
     }
-    
+
     .adjust_trident:nth-child(2) {
         margin-bottom: 5px;
     }
-    
+
     .adjust_trident:nth-child(3) {
         margin-bottom: 6px;
     }
-    
+
     .adjust_trident:nth-child(4) {
         margin-bottom: 9px;
     }
+
     /* ----- Option for Voron Trident Default (END) ----- */
 
     /* ----- Option for Voron Trident 8Accents (START) ----- */
@@ -775,25 +912,26 @@
         transform: scale(1.2);
         cursor: default;
     }
-    
+
     .adjust_trident_8accents:nth-child(3) {
         margin-top: 2px;
         margin-bottom: 2px;
     }
-    
+
     .adjust_trident_8accents:nth-child(6) {
         margin-top: -1px;
         margin-bottom: 5px;
     }
-    
+
     .adjust_trident_8accents:nth-child(8) {
         margin-top: -2px;
         margin-bottom: 5px;
     }
+
     /* ----- Option for Voron Trident 8Accents (END) ----- */
-    
-    
-    
+
+
+
     /* ----- Option for Voron Switchwire Default (START) ----- */
     .optionSwitchwire {
         margin-bottom: 1px;
@@ -812,18 +950,19 @@
         transform: scale(1.2);
         cursor: default;
     }
-    
+
     .adjust_switchwire:nth-child(2) {
         margin-bottom: 5px;
     }
-    
+
     .adjust_switchwire:nth-child(3) {
         margin-bottom: 5px;
     }
-    
+
     .adjust_switchwire:nth-child(4) {
         margin-bottom: 7px;
     }
+
     /* ----- Option for Voron Switchwire Default (END) ----- */
 
     /* ----- Option for Voron Switchwire 8Accents (START) ----- */
@@ -844,22 +983,23 @@
         transform: scale(1.2);
         cursor: default;
     }
-    
+
     .adjust_switchwire_8accents:nth-child(2) {
         margin-bottom: 5px;
     }
-    
+
     .adjust_switchwire_8accents:nth-child(7) {
         margin-bottom: 5px;
     }
-    
+
     .adjust_switchwire_8accents:nth-child(8) {
         margin-bottom: 13px;
     }
+
     /* ----- Option for Voron Switchwire 8Accents (END) ----- */
-    
-    
-    
+
+
+
     /* ----- Option for Voron Legacy Default (START) ----- */
     .optionLegacy {
         margin-bottom: 1px;
@@ -878,14 +1018,15 @@
         transform: scale(1.2);
         cursor: default;
     }
-    
+
     .adjust_legacy:nth-child(2) {
         margin-bottom: 4px;
     }
-    
+
     .adjust_legacy:nth-child(3) {
         margin-bottom: 14px;
     }
+
     /* ----- Option for Voron Legacy Default (END) ----- */
 
     /* ----- Option for Voron Legacy 8Accents (START) ----- */
@@ -906,34 +1047,35 @@
         transform: scale(1.2);
         cursor: default;
     }
-    
+
     .adjust_legacy_8accents:nth-child(2) {
         margin-bottom: 3px;
     }
-    
+
     .adjust_legacy_8accents:nth-child(3) {
         margin-bottom: 5px;
     }
-    
+
     .adjust_legacy_8accents:nth-child(4) {
         margin-bottom: 1px;
     }
-    
+
     .adjust_legacy_8accents:nth-child(5) {
         margin-bottom: 9px;
     }
-    
+
     .adjust_legacy_8accents:nth-child(6) {
         margin-bottom: 5px;
     }
-    
+
     .adjust_legacy_8accents:nth-child(7) {
         margin-bottom: -6px;
     }
-    
+
     .adjust_legacy_8accents:nth-child(8) {
         margin-bottom: 0px;
     }
+
     /* ----- Option for Voron Legacy 8Accents (END) ----- */
 }
 
@@ -942,12 +1084,12 @@
 
 /* ------------- max-width: 960px (Start) ------------- */
 @media (max-width: 960px) {
-    
+
     /* Colors text */
     .option-colors-desktop {
         display: none;
     }
-    
+
     /* ----- Labels for colors and Tooltip (START) ----- */
     [data-tooltip] {
         font-size: 15px;
@@ -986,6 +1128,7 @@
     [data-tooltip]:not([data-tooltip-persistent]):before {
         pointer-events: none;
     }
+
     /* ----- Labels for colors and Tooltip (END) ----- */
 
 
@@ -1017,14 +1160,15 @@
     .adjust_v0:nth-child(2) {
         margin-right: 24px;
     }
-    
+
     .adjust_v0:nth-child(3) {
         margin-left: -5px;
     }
-    
+
     .adjust_v0:nth-child(5) {
         margin-left: 9px;
     }
+
     /* ----- Option for Voron V0.1 Default (END) ----- */
 
     /* ----- Option for Voron V0.1 8Accents (START) ----- */
@@ -1071,13 +1215,14 @@
     .adjust_v0_8accents:nth-child(7) {
         margin-right: 5px;
     }
-    
+
     .adjust_v0_8accents:nth-child(8) {
         margin-right: 17px;
     }
+
     /* ----- Option for Voron V0.1 8Accents (END) ----- */
 
-    
+
 
     /* ----- Option for Voron V2.4 Default (START) ----- */
     .optionV2 {
@@ -1111,10 +1256,11 @@
     .adjust_v2:nth-child(3) {
         margin-right: 10px;
     }
-    
+
     .adjust_v2:nth-child(4) {
         margin-right: 21px;
     }
+
     /* ----- Option for Voron V2.4 Default (END) ----- */
 
     /* ----- Option for Voron V2.4 6Accents (START) ----- */
@@ -1145,7 +1291,7 @@
     .adjust_v2_7accents:nth-child(2) {
         margin-right: 3px;
     }
-    
+
     .adjust_v2_7accents:nth-child(3) {
         margin-right: 1px;
     }
@@ -1164,8 +1310,9 @@
     .adjust_v2_7accents:nth-child(7) {
         margin-right: 19px;
     }
+
     /* ----- Option for Voron V2.4 6Accents (END) ----- */
-    
+
     /* ----- Option for Voron V2.4 8Accents (START) ----- */
     .optionV2_8accents {
         margin-bottom: 1px;
@@ -1194,11 +1341,11 @@
     .adjust_v2_8accents:nth-child(2) {
         margin-right: 0px;
     }
-    
+
     .adjust_v2_8accents:nth-child(3) {
         margin-right: 8px;
     }
-    
+
     .adjust_v2_8accents:nth-child(4) {
         margin-right: 15px;
     }
@@ -1214,14 +1361,15 @@
     .adjust_v2_8accents:nth-child(7) {
         margin-right: 21px;
     }
-    
+
     .adjust_v2_8accents:nth-child(8) {
         margin-right: 18px;
     }
+
     /* ----- Option for Voron V2.4 8Accents (END) ----- */
-    
-    
-    
+
+
+
     /* ----- Option for Voron Trident Default (START) ----- */
     .optionTrident {
         margin-bottom: 1px;
@@ -1254,10 +1402,11 @@
     .adjust_trident:nth-child(3) {
         margin-right: 10px;
     }
-    
+
     .adjust_trident:nth-child(4) {
         margin-right: 19px;
     }
+
     /* ----- Option for Voron Trident Default (END) ----- */
 
     /* ----- Option for Voron Trident 8Accents (START) ----- */
@@ -1288,11 +1437,11 @@
     .adjust_trident_8accents:nth-child(2) {
         margin-right: 15px;
     }
-    
+
     .adjust_trident_8accents:nth-child(3) {
         margin-right: -1px;
     }
-    
+
     .adjust_trident_8accents:nth-child(4) {
         margin-right: 5px;
     }
@@ -1305,14 +1454,15 @@
     .adjust_trident_8accents:nth-child(7) {
         margin-right: 20px;
     }
-    
+
     .adjust_trident_8accents:nth-child(8) {
         margin-right: 14px;
     }
+
     /* ----- Option for Voron Trident 8Accents (END) ----- */
-    
-    
-    
+
+
+
     /* ----- Option for Voron Switchwire Default (START) ----- */
     .optionSwitchwire {
         margin-bottom: 1px;
@@ -1345,10 +1495,11 @@
     .adjust_switchwire:nth-child(3) {
         margin-right: 10px;
     }
-    
+
     .adjust_switchwire:nth-child(4) {
         margin-right: 18px;
     }
+
     /* ----- Option for Voron Switchwire Default (END) ----- */
 
     /* ----- Option for Voron Switchwire 8Accents (START) ----- */
@@ -1375,15 +1526,15 @@
         width: auto;
         pointer-events: none;
     }
-    
+
     .adjust_switchwire_8accents:nth-child(2) {
         margin-right: 0px;
     }
-    
+
     .adjust_switchwire_8accents:nth-child(3) {
         margin-right: 5px;
     }
-    
+
     .adjust_switchwire_8accents:nth-child(4) {
         margin-right: 8px;
     }
@@ -1399,14 +1550,15 @@
     .adjust_switchwire_8accents:nth-child(7) {
         margin-right: 9px;
     }
-    
+
     .adjust_switchwire_8accents:nth-child(8) {
         margin-right: 6px;
     }
+
     /* ----- Option for Voron Switchwire 8Accents (END) ----- */
-    
-    
-    
+
+
+
     /* ----- Option for Voron Legacy Default (START) ----- */
     .optionLegacy {
         margin-bottom: 1px;
@@ -1439,6 +1591,7 @@
     .adjust_legacy:nth-child(3) {
         margin-right: 15px;
     }
+
     /* ----- Option for Voron Legacy Default (END) ----- */
 
     /* ----- Option for Voron Legacy 8Accents (START) ----- */
@@ -1469,11 +1622,11 @@
     .adjust_legacy_8accents:nth-child(2) {
         margin-right: 5px;
     }
-    
+
     .adjust_legacy_8accents:nth-child(3) {
         margin-right: 5px;
     }
-    
+
     .adjust_legacy_8accents:nth-child(4) {
         margin-right: 16px;
     }
@@ -1489,10 +1642,11 @@
     .adjust_legacy_8accents:nth-child(7) {
         margin-right: 15px;
     }
-    
+
     .adjust_legacy_8accents:nth-child(8) {
         margin-right: 14px;
     }
+
     /* ----- Option for Voron Legacy 8Accents (END) ----- */
 }
 
@@ -1502,11 +1656,11 @@
 /* ------------- max-width: 680px (Start) ------------- */
 /* Responsive layout - when the screen is less than 680px wide, make the navigation links stack on top of each other instead of next to each other */
 @media (max-width: 680px) {
-    
+
     [data-tooltip]:hover:before {
         top: 125%;
     }
-    
+
     /* -----  Option for Voron V0.1 Default (Start) ----- */
     .optionV0 {
         margin-bottom: 1px;
@@ -1527,22 +1681,23 @@
         width: auto;
         pointer-events: none;
     }
-    
+
     .adjust_v0:nth-child(2) {
         margin-right: 25px;
     }
-    
+
     .adjust_v0:nth-child(3) {
         margin-left: -5px;
     }
-    
+
     .adjust_v0:nth-child(4) {
         margin-left: 2px;
     }
-    
+
     .adjust_v0:nth-child(5) {
         margin-left: 10px;
     }
+
     /* ----- Option for Voron V0.1 Default (END) ----- */
 
     /* -----  Option for Voron V0.1 8Accents (Start) ----- */
@@ -1569,7 +1724,7 @@
     .adjust_v0_8accents:nth-child(2) {
         margin-right: 7px;
     }
-    
+
     .adjust_v0_8accents:nth-child(3) {
         margin-right: 3px;
     }
@@ -1593,9 +1748,10 @@
     .adjust_v0_8accents:nth-child(8) {
         margin-right: 13px;
     }
+
     /* ----- Option for Voron V0.1 8Accents (END) ----- */
 
-    
+
 
     /* ----- Option for Voron V2.4 Default (START) ----- */
     .optionV2 {
@@ -1617,18 +1773,19 @@
         width: auto;
         pointer-events: none;
     }
-    
+
     .adjust_v2:nth-child(2) {
         margin-right: 5px;
     }
-    
+
     .adjust_v2:nth-child(3) {
         margin-right: 12px;
     }
-    
+
     .adjust_v2:nth-child(4) {
         margin-right: 23px;
     }
+
     /* ----- Option for Voron V2.4 Default (END) ----- */
 
     /* ----- Option for Voron V2.4 6Accents (START) ----- */
@@ -1651,12 +1808,13 @@
         width: auto;
         pointer-events: none;
     }
-    
+
     .adjust_v2_7accents:nth-child(4) {
-        margin-right:2px;
+        margin-right: 2px;
     }
+
     /* ----- Option for Voron V2.4 6Accents (END) ----- */
-    
+
     /* ----- Option for Voron V2.4 6Accents (START) ----- */
     .optionV2_8accents {
         margin-bottom: 1px;
@@ -1677,10 +1835,11 @@
         width: auto;
         pointer-events: none;
     }
+
     /* ----- Option for Voron V2.4 6Accents (END) ----- */
-    
-    
-    
+
+
+
     /* ----- Option for Voron Trident Default (START) ----- */
     .optionTrident {
         margin-bottom: 1px;
@@ -1701,6 +1860,7 @@
         width: auto;
         pointer-events: none;
     }
+
     /* ----- Option for Voron Trident Default (END) ----- */
 
     /* ----- Option for Voron Trident 8Accents (START) ----- */
@@ -1723,18 +1883,19 @@
         width: auto;
         pointer-events: none;
     }
-    
+
     .adjust_trident_8accents:nth-child(2) {
         margin-right: 12px;
     }
-    
+
     .adjust_trident_8accents:nth-child(6) {
         margin-right: 8px;
     }
+
     /* ----- Option for Voron Trident 8Accents (END) ----- */
-    
-    
-    
+
+
+
     /* ----- Option for Voron Switchwire Default (START) ----- */
     .optionSwitchwire {
         margin-bottom: 1px;
@@ -1755,18 +1916,19 @@
         width: auto;
         pointer-events: none;
     }
-    
+
     .adjust_switchwire:nth-child(2) {
         margin-right: 5px;
     }
-    
+
     .adjust_switchwire:nth-child(3) {
         margin-right: 15px;
     }
-    
+
     .adjust_switchwire:nth-child(4) {
         margin-right: 21px;
     }
+
     /* ----- Option for Voron Switchwire Default (END) ----- */
 
     /* ----- Option for Voron Switchwire 8Accents (START) ----- */
@@ -1789,10 +1951,11 @@
         width: auto;
         pointer-events: none;
     }
+
     /* ----- Option for Voron Switchwire 8Accents (END) ----- */
-    
-    
-    
+
+
+
     /* ----- Option for Voron Legacy Default (START) ----- */
     .optionLegacy {
         margin-bottom: 1px;
@@ -1813,6 +1976,7 @@
         width: auto;
         pointer-events: none;
     }
+
     /* ----- Option for Voron Legacy Default (END) ----- */
 
     /* ----- Option for Voron Legacy 8Accents (START) ----- */
@@ -1835,6 +1999,7 @@
         width: auto;
         pointer-events: none;
     }
+
     /* ----- Option for Voron Legacy 8Accents (END) ----- */
 }
 

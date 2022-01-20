@@ -12,6 +12,8 @@ function main() {
     var loaded = false;
 
     const colors = [
+    // -------------- eSUN ABS -------------- //
+        
     // Black
     {
       color: '26282f' },
@@ -47,6 +49,17 @@ function main() {
     // Light Green
     {
       color: '6be067' },
+    
+        
+    // -------------- KVP ABS -------------- //
+        
+    // British Racing Green
+    {
+      color: '0a4b45' },
+        
+    // Coral
+    {
+      color: 'd15459' },
     ];
 
 
