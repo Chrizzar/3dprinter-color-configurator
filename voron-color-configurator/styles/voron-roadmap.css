@@ -1,0 +1,138 @@
+.content-box-roadmap {
+    max-width: 780px;
+    width: 100%;
+    height: 100%;
+    padding: 30px 70px 30px 70px;
+    background-color: white;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+/* Main column */
+#mainRoadmap {
+    background-color: white;
+    padding: 20px;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+}
+
+.roadmap {
+    max-width: 600px;
+    margin: auto;
+}
+
+.pStyle {
+    font-size: 1em;
+    line-height: 1.75em;
+    border-top: 3px solid;
+    border-image: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+    border-image-slice: 1;
+    border-width: 3px;
+    margin: 0;
+    padding: 40px;
+    counter-increment: section;
+    position: relative;
+    color: #34435e;
+}
+
+.pStyle:before {
+    content: counter(section);
+    position: absolute;
+    border-radius: 50%;
+    padding: 10px;
+    height: 1.25em;
+    width: 1.25em;
+    background-color: #34435e;
+    text-align: center;
+    line-height: 1.25em;
+    color: #fff;
+    font-size: 1em;
+}
+
+.pStyle:nth-child(odd) {
+    border-right: 3px solid;
+    padding-left: 0;
+}
+
+.pStyle:nth-child(odd):before {
+    left: 100%;
+    margin-left: -20px;
+}
+
+.pStyle:nth-child(even) {
+    border-left: 3px solid;
+    padding-right: 0;
+}
+
+.pStyle:nth-child(even):before {
+    right: 100%;
+    margin-right: -20px;
+}
+
+.pStyle:first-child {
+    border-top: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.pStyle:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Added features */
+.pStyle:nth-child(1):before {
+    background-color: #1abc9c;
+    content: "\2713";
+    border: 3px solid #333;
+}
+
+.pStyle:nth-child(2):before {
+    background-color: #1abc9c;
+    content: "\2713";
+    border: 3px solid #333;
+}
+
+.pStyle:nth-child(3):before {
+    background-color: #1abc9c;
+    content: "\2713";
+    border: 3px solid #333;
+}
+
+.pStyle:nth-child(4):before {
+    background-color: #1abc9c;
+    content: "\2713";
+    border: 3px solid #333;
+}
+
+.pStyle:nth-child(5):before {
+    background-color: #1abc9c;
+    content: "\2713";
+    border: 3px solid #333;
+}
+
+.pStyle:nth-child(6):before {
+    background-color: #1abc9c;
+    content: "\2713";
+    border: 3px solid #333;
+}
+
+.pStyle:nth-child(7):before {
+    background-color: #1abc9c;
+    content: "\2713";
+    border: 3px solid #333;
+}
+
+
+/* Media Queries */
+@media (max-width: 791px) {
+    .content-box-roadmap {
+        box-shadow: none;
+        border-radius: 0px;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+}
