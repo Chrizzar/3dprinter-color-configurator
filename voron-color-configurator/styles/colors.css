@@ -1,0 +1,430 @@
+/* ---------------- First child and last child (START) ---------------- */
+.tray__swatch:first-child {
+    margin-left: 56px;
+}
+
+.tray__swatch:last-child {
+    margin-right: 50px;
+}
+/* ---------------- First child and last child (END) ---------------- */
+
+
+.tray__swatch {
+    position: relative;
+}
+
+
+/* --------- n (all color tiles) colors styles --------- */
+.tray__swatch:nth-child(n):hover::after {
+    margin-top: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+
+
+/* ---------------------- eSUN colors (START) ---------------------- */
+
+/* --- Black to White Colors (4) --- */
+.tray__swatch:nth-child(4) {
+    margin-right: 20px;
+}
+
+/* --- Neutral colors (3) --- */
+.tray__swatch:nth-child(7) {
+    margin-right: 20px;
+}
+
+/* --- Red to Yellow Colors (7) --- */
+.tray__swatch:nth-child(14) {
+    margin-right: 20px;
+}
+
+/* --- Green Colors (3) --- */
+.tray__swatch:nth-child(17) {
+    margin-right: 20px;
+}
+
+.tray__swatch:nth-child(1):before {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 25%;
+    margin-left: -100%;
+    content: "eSUN";
+    color: black;
+    font-weight: bold;
+}
+
+
+/* --------- Black to White Colors (START) --------- */
+.tray__swatch:nth-child(1):hover::after {
+    content: "Black";
+}
+
+.tray__swatch:nth-child(2):hover::after {
+    content: "Grey";
+}
+
+.tray__swatch:nth-child(3):hover::after {
+    content: "Silver";
+}
+
+.tray__swatch:nth-child(4):hover::after {
+    content: "Cold\00a0 White";
+}
+/* --------- Black to White Colors (END) --------- */
+
+/* --------- Neutral Colors (START) --------- */
+.tray__swatch:nth-child(5):hover::after {
+    content: "Brown";
+}
+
+.tray__swatch:nth-child(6):hover::after {
+    content: "Beige";
+}
+
+.tray__swatch:nth-child(7):hover::after {
+    content: "Natural";
+}
+/* --------- Neutral Colors (END) --------- */
+
+/* --------- Red to Yellow Colors (START) --------- */
+.tray__swatch:nth-child(8):hover::after {
+    content: "Fire\00a0 Engine\00a0 Red";
+}
+
+.tray__swatch:nth-child(9):hover::after {
+    content: "Red";
+}
+
+.tray__swatch:nth-child(10):hover::after {
+    content: "Magenta";
+}
+
+.tray__swatch:nth-child(11):hover::after {
+    content: "Pink";
+}
+
+.tray__swatch:nth-child(12):hover::after {
+    content: "Orange";
+}
+
+.tray__swatch:nth-child(13):hover::after {
+    content: "Gold";
+}
+
+.tray__swatch:nth-child(14):hover::after {
+    content: "Yellow";
+}
+/* --------- Red to Yellow Colors (END) --------- */
+
+/* --------- Green Colors (START) --------- */
+.tray__swatch:nth-child(15):hover::after {
+    content: "Green";
+}
+
+.tray__swatch:nth-child(16):hover::after {
+    content: "Pine\00a0 Green";
+}
+
+.tray__swatch:nth-child(17):hover::after {
+    content: "Peak\00a0 Green";
+}
+/* --------- Green Colors (END) --------- */
+
+/* --------- Blue Colors (START) --------- */
+.tray__swatch:nth-child(18):hover::after {
+    content: "Purple";
+}
+
+.tray__swatch:nth-child(19):hover::after {
+    content: "Blue";
+}
+
+.tray__swatch:nth-child(20):hover::after {
+    content: "Light\00a0 Blue";
+}
+/* --------- Blue Colors (END) --------- */
+
+/* ---------------------- eSUN colors (END) ---------------------- */
+
+
+/* ---------------------- KVP colors (START) ---------------------- */
+
+/* --------- Space between color group (START) --------- */
+
+/* --- Black to White Colors (9) --- */
+.tray__swatch:nth-child(29) {
+    margin-right: 20px;
+}
+
+/* --- Brown colors (3) --- */
+.tray__swatch:nth-child(32) {
+    margin-right: 20px;
+}
+
+/* --- Purple colors (6) --- */
+.tray__swatch:nth-child(38) {
+    margin-right: 20px;
+}
+
+/* --- Red to Yellow Colors (17) --- */
+.tray__swatch:nth-child(55) {
+    margin-right: 20px;
+}
+
+/* --- Green Colors (12) --- */
+.tray__swatch:nth-child(67) {
+    margin-right: 20px;
+}
+/* --------- Space between color group (END) --------- */
+
+
+/* --------- Space for KVP text (START) --------- */
+.tray__swatch:nth-child(21) {
+    margin-left: 60px;
+}
+
+.tray__swatch:nth-child(21):before {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 25%;
+    margin-left: -80%;
+    content: "KVP";
+    color: black;
+    font-weight: bold;
+}
+/* --------- Space for KVP text (END) --------- */
+
+
+/* --------- Black to White Colors (START) --------- */
+.tray__swatch:nth-child(21):hover::after {
+    content: "Black";
+}
+
+.tray__swatch:nth-child(22):hover::after {
+    content: "Galaxy\00a0 Black ";
+}
+
+.tray__swatch:nth-child(23):hover::after {
+    content: "Dark\00a0 Gray";
+}
+
+.tray__swatch:nth-child(24):hover::after {
+    content: "Battleship\00a0 Gray";
+}
+
+.tray__swatch:nth-child(25):hover::after {
+    content: "Industrial\00a0 Gray ";
+}
+
+.tray__swatch:nth-child(26):hover::after {
+    content: "Metallic\00a0 Silver";
+}
+
+.tray__swatch:nth-child(27):hover::after {
+    content: "Metallic\00a0 Light\00a0 Gray ";
+}
+
+.tray__swatch:nth-child(28):hover::after {
+    content: "Soft\00a0 White";
+}
+
+.tray__swatch:nth-child(29):hover::after {
+    content: "Polar\00a0 White";
+}
+/* --------- Black to White (END) --------- */
+
+/* --------- Brown Colors (START) --------- */
+.tray__swatch:nth-child(30):hover::after {
+    content: "Dark\00a0 Brown";
+}
+
+.tray__swatch:nth-child(31):hover::after {
+    content: "Light\00a0 Brown";
+}
+
+.tray__swatch:nth-child(32):hover::after {
+    content: "Bronze";
+}
+/* --------- Brown Colors (END) --------- */
+
+/* --------- Purple Colors (START) --------- */
+.tray__swatch:nth-child(33):hover::after {
+    content: "Accent\00a0 Purple";
+}
+
+.tray__swatch:nth-child(34):hover::after {
+    content: "Purple";
+}
+
+.tray__swatch:nth-child(35):hover::after {
+    content: "Pastel\00a0 Purple";
+}
+
+.tray__swatch:nth-child(36):hover::after {
+    content: "Magenta";
+}
+
+.tray__swatch:nth-child(37):hover::after {
+    content: "Flourescent\00a0 Pink ";
+}
+
+.tray__swatch:nth-child(38):hover::after {
+    content: "Hot\00a0 Jade\00a0 Pink";
+}
+/* --------- Purple Colors (END) --------- */
+
+/* --------- Red to Yellow Colors (START) --------- */
+.tray__swatch:nth-child(39):hover::after {
+    content: "Crimson";
+}
+
+.tray__swatch:nth-child(40):hover::after {
+    content: "Red";
+}
+
+.tray__swatch:nth-child(41):hover::after {
+    content: "Voron\00a0 Flourescent\00a0 Red";
+}
+
+.tray__swatch:nth-child(42):hover::after {
+    content: "Coral";
+}
+
+.tray__swatch:nth-child(43):hover::after {
+    content: "Agate\00a0 Orange";
+}
+
+.tray__swatch:nth-child(44):hover::after {
+    content: "Safety\00a0 Orange";
+}
+
+.tray__swatch:nth-child(45):hover::after {
+    content: "Orange";
+}
+
+.tray__swatch:nth-child(46):hover::after {
+    content: "Flourescent\00a0 Orange";
+}
+
+.tray__swatch:nth-child(47):hover::after {
+    content: "Metallic\00a0 Gold";
+}
+
+.tray__swatch:nth-child(48):hover::after {
+    content: "Golden\00a0 Rod";
+}
+
+.tray__swatch:nth-child(49):hover::after {
+    content: "Neon\00a0 Orange";
+}
+
+.tray__swatch:nth-child(50):hover::after {
+    content: "Tan";
+}
+
+.tray__swatch:nth-child(51):hover::after {
+    content: "Natural";
+}
+
+.tray__swatch:nth-child(52):hover::after {
+    content: "Yellow\00a0 (601.1,\00a0 459C)";
+}
+
+.tray__swatch:nth-child(53):hover::after {
+    content: "Yellow\00a0 (616,\00a0 101C)";
+}
+
+.tray__swatch:nth-child(54):hover::after {
+    content: "Pastel\00a0 Yellow";
+}
+
+.tray__swatch:nth-child(55):hover::after {
+    content: "Pale\00a0 Yellow";
+}
+/* --------- Red to Yellow Colors (END) --------- */
+
+/* --------- Green Colors (START) --------- */
+.tray__swatch:nth-child(56):hover::after {
+    content: "Olive\00a0 Green";
+}
+
+.tray__swatch:nth-child(57):hover::after {
+    content: "British\00a0 Racing\00a0 Green";
+}
+
+.tray__swatch:nth-child(58):hover::after {
+    content: "Forest\00a0 Green";
+}
+
+.tray__swatch:nth-child(59):hover::after {
+    content: "Green\00a0 (602.1,\00a0 7727C)";
+}
+
+.tray__swatch:nth-child(60):hover::after {
+    content: "Grass\00a0 Green";
+}
+
+.tray__swatch:nth-child(61):hover::after {
+    content: "Green\00a0 (541.7,\00a0 7737C)";
+}
+
+.tray__swatch:nth-child(62):hover::after {
+    content: "Flourescent\00a0 Green";
+}
+
+.tray__swatch:nth-child(63):hover::after {
+    content: "Neon\00a0 Green";
+}
+
+.tray__swatch:nth-child(64):hover::after {
+    content: "Glow\00a0 in\00a0 the\00a0 Dark\00a0 Green";
+}
+
+.tray__swatch:nth-child(65):hover::after {
+    content: "Lulzbot\00a0 Green";
+}
+
+.tray__swatch:nth-child(66):hover::after {
+    content: "Flourescent\00a0 Yellow";
+}
+
+.tray__swatch:nth-child(67):hover::after {
+    content: "Glow\00a0 in\00a0 the\00a0 Dark";
+}
+/* --------- Green Colors (END) --------- */
+
+/* --------- Blue Colors (START) --------- */
+.tray__swatch:nth-child(68):hover::after {
+    content: "Flourescent\00a0 Blue";
+}
+
+.tray__swatch:nth-child(69):hover::after {
+    content: "Navy\00a0 Blue";
+}
+
+.tray__swatch:nth-child(70):hover::after {
+    content: "Dark\00a0 Teal";
+}
+
+.tray__swatch:nth-child(71):hover::after {
+    content: "Blue";
+}
+
+.tray__swatch:nth-child(72):hover::after {
+    content: "Glow\00a0 in\00a0 the\00a0 Dark\00a0 Blue";
+}
+
+.tray__swatch:nth-child(73):hover::after {
+    content: "Sea\00a0 Blue";
+}
+
+.tray__swatch:nth-child(74):hover::after {
+    content: "Teal";
+}
+/* --------- Blue Colors (END) --------- */
+
+/* ---------------------- KVP colors (END) ---------------------- */

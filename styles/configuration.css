@@ -116,7 +116,7 @@
 select {
     /* Reset */
     appearance: none;
-    border: 0;
+    /*border: 0;*/
     outline: 0;
     font: inherit;
 
@@ -138,28 +138,33 @@ select {
     box-sizing: border-box;
 }
 
+/* Dropdown option box styling */
+select option {
+    color: inherit;
+    background-color: #A0A0A0;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
 select:hover {
     background-color: #909090;
     /*background-color: #888888;*/
-}
-
-select option {
-    color: inherit;
-    background-color: gray;
 }
 
 select:focus {
     outline: none;
 }
 
-
+/* Chosen element styling */
 option:checked {
-    background-color: dimgray;
+    background-color: #888888;
 }
 
-
-select::-ms-expand {
-    display: none;
+select option:disabled {
+    color: #000;
+    font-weight: bold;
 }
 
 .whiteText {

@@ -13,41 +13,390 @@ function main() {
     var loaded = false;
 
     const colors = [
+    // --------------------- eSUN ABS --------------------- //
+        
+    // --- Black to White Colors (4) --- //
     // Black
     {
-      color: '26282f' },
-        
-    // White
+        color: '26282f',
+        shininess: 100 },
+
+    // Grey
     {
-      color: 'fbfbfd' },
+        color: '7c8398',
+        shininess: 100 },
+
+    // Silver
+    {
+        color: 'b0acba',
+        shininess: 100 },
+
+    // Cold White
+    {
+        color: 'fbfbfd',
+        shininess: 100 },
+    
+    // --- Neutral colors (3) --- //
+    // Brown
+    {
+        color: '5d402e',
+        shininess: 100 },
+
+    // Beige
+    {
+        color: 'e7b291',
+        shininess: 100 },
+
+    // Natural
+    {
+        color: 'ede9d6',
+        shininess: 100 },
+    
+    // --- Red to Yellow Colors (7) --- //
+    // Fire Engine Red
+    {
+        color: 'e1262e',
+        shininess: 100 },
 
     // Red
     {
-      color: 'e72e1e' },
+        color: 'e72e1e',
+        shininess: 100 },
 
+    // Magenta
+    {
+        color: 'e63d67',
+        shininess: 100 },
+
+    // Pink
+    {
+        color: 'fb7a8c',
+        shininess: 100 },
+
+    // Orange
+    {
+        color: 'fd6b3e',
+        shininess: 100 },
+
+    // Gold
+    {
+        color: 'dfa83c',
+        shininess: 150 },
+
+    // Yellow
+    {
+        color: 'fbcd27',
+        shininess: 100 },
+    
+    // --- Green Colors (3) --- //
     // Green
     {
-      color: '0b8d6f' },
+        color: '0b8d6f',
+        shininess: 100 },
+
+    // Pine Green
+    {
+        color: '367c56',
+        shininess: 100 },
+
+    // Peak Green
+    {
+        color: '6be067',
+        shininess: 100 },
+
+    // --- Blue Colors (3) --- //
+    // Purple
+    {
+        color: '5d4088',
+        shininess: 100 },
 
     // Blue
     {
-      color: '345495' },
+        color: '345495',
+        shininess: 100 },
 
+    // Light Blue
+    {
+        color: '56cff6',
+        shininess: 100 },
+        
+    // --------------------- KVP ABS --------------------- //
+        
+    // --- Black to White Colors (9) --- //
+    // Black
+    {
+        color: '000109',
+        shininess: 100 },
+    
+    // Galaxy Black
+    {
+        color: '322f2a',
+        shininess: 100 },
+
+    // Dark Gray
+    {
+        color: '54565a',
+        shininess: 100 },
+
+    // Battleship Gray
+    {
+        color: '62656a',
+        shininess: 100 },
+
+    // Industrial Gray
+    {
+        color: '898c8d',
+        shininess: 100 },
+
+    // Metallic Silver
+    {
+        color: 'b1b1b1',
+        shininess: 100 },
+
+    // Metallic Light Gray
+    {
+        color: 'b1b1b1',
+        shininess: 100 },
+
+    // Soft White
+    {
+        color: 'd9d8d6',
+        shininess: 100 },
+
+    // Polar White
+    {
+        color: 'f5f7f3',
+        shininess: 100 },
+
+    // --- Brown colors (3) --- //
+    // Dark Brown
+    {
+        color: '855b2f',
+        shininess: 100 },
+    
+    // Light Brown
+    {
+        color: '9b6f3f',
+        shininess: 100 },
+
+    // Bronze
+    {
+        color: 'b06532',
+        shininess: 100 },
+
+    // --- Purple colors (6) --- //
+    // Accent Purple
+    {
+        color: '943a80',
+        shininess: 100 },
+    
     // Purple
     {
-      color: '5d4088' },
-        
+        color: '8862aa',
+        shininess: 100 },
+
+    // Pastel Purple 
+    {
+        color: 'ac96c6',
+        shininess: 100 },
+
+    // Magenta
+    {
+        color: 'ae3865',
+        shininess: 100 },
+
+    // Flourescent Pink 
+    {
+        color: 'f04b7f',
+        shininess: 100 },
+
+    // Hot Jade Pink
+    {
+        color: 'ef4f97',
+        shininess: 100 },
+
+    // --- Red to Yellow Colors (17) --- //
+    // Crimson
+    {
+        color: '822b41',
+        shininess: 100 },
+    
+    // Red
+    {
+        color: 'c31f32',
+        shininess: 100 },
+
+    // Voron Flourescent Red
+    {
+        color: 'dd1d35',
+        shininess: 100 },
+
+    // Coral
+    {
+        color: 'd15459',
+        shininess: 100 },
+
+    // Agate Orange
+    {
+        color: 'f04a23',
+        shininess: 100 },
+
+    // Safety Orange
+    {
+        color: 'f15322',
+        shininess: 100 },
+    
     // Orange
     {
-      color: 'fd6b3e' },
-        
-    // Yellow
+        color: 'ee7625',
+        shininess: 100 },
+    
+    // Flourescent Orange 
     {
-      color: 'fbcd27' },
-        
-    // Light Green
+        color: 'f58320',
+        shininess: 100 },
+
+    // Metallic Gold
     {
-      color: '6be067' },
+        color: 'd69928',
+        shininess: 100 },
+
+    // Golden Rod 
+    {
+        color: 'eaaa20',
+        shininess: 100 },
+
+    // Neon Orange
+    {
+        color: 'f8a05b',
+        shininess: 100 },
+
+    // Tan
+    {
+        color: 'e8b889',
+        shininess: 100 },
+    
+    // Natural
+    {
+        color: 'f1e5b1',
+        shininess: 100 },
+    
+    // Yellow (601.1, 459C)
+    {
+        color: 'ddcb62',
+        shininess: 100 },
+
+    // Yellow (616, 101C)
+    {
+        color: 'f3ea49',
+        shininess: 100 },
+
+    // Pastel Yellow
+    {
+        color: 'edec74',
+        shininess: 100 },
+
+    // Pale Yellow
+    {
+        color: 'eae599',
+        shininess: 100 },
+
+    // --- Green Colors (12) --- //
+    // Olive Green 
+    {
+        color: '274633',
+        shininess: 100 },
+    
+    // British Racing Green 
+    {
+        color: '0a4b45',
+        shininess: 100 },
+
+    // Forest Green
+    {
+        color: '034d43',
+        shininess: 100 },
+
+    // Forest Green
+    {
+        color: '006d47',
+        shininess: 100 },
+
+    // Grass Green
+    {
+        color: '23b24b',
+        shininess: 100 },
+
+    // Green (541.7, 7737C) 
+    {
+        color: '69a442',
+        shininess: 100 },
+    
+    // Flourescent Green 
+    {
+        color: '57ba47',
+        shininess: 100 },
+    
+    // Neon Green
+    {
+        color: '5bdd45',
+        shininess: 100 },
+
+    // Glow in the Dark Green
+    {
+        color: '6fc492',
+        shininess: 100 },
+
+    // Lulzbot Green
+    {
+        color: 'bfd430',
+        shininess: 100 },
+
+    // Flourescent yellow
+    {
+        color: 'cadb2a',
+        shininess: 100 },
+
+    // Glow in the Dark
+    {
+        color: 'cfdebc',
+        shininess: 100 },
+
+    // --- Blue Colors (7) --- //
+    // Flourescent Blue
+    {
+        color: '0a3f8b',
+        shininess: 100 },
+    
+    // Navy Blue 
+    {
+        color: '044d7c',
+        shininess: 100 },
+
+    // Navy Blue 
+    {
+        color: '00687f',
+        shininess: 100 },
+
+    // Blue
+    {
+        color: '0770ba',
+        shininess: 100 },
+
+    // Glow in the Blue
+    {
+        color: '408ac9',
+        shininess: 100 },
+
+    // Sea Blue
+    {
+        color: '38b3e4',
+        shininess: 100 },
+
+    // Teal
+    {
+        color: '00a2ae',
+        shininess: 100 },
     ];
 
 
