@@ -739,12 +739,12 @@ function main() {
         slides = items.getElementsByClassName('tray__swatch');
 
         // Mouse events
-        items.onmousedown = dragStart;
+        wrapper.onmousedown = dragStart;
 
         // Touch events
-        items.addEventListener('touchstart', dragStart);
-        items.addEventListener('touchend', dragEnd);
-        items.addEventListener('touchmove', dragAction);
+        wrapper.addEventListener('touchstart', dragStart);
+        wrapper.addEventListener('touchend', dragEnd);
+        wrapper.addEventListener('touchmove', dragAction);
 
 
         function dragStart(e) {
