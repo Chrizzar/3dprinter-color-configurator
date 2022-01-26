@@ -39,6 +39,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10;
 }
 
 .menu {
@@ -48,6 +49,7 @@ header {
     
     display: flex;
     flex-direction: row;
+    z-index: 10;
 }
 
 .menu li {
@@ -171,7 +173,7 @@ header {
         top: 4.55em;
         left: 0;
         right: 0;
-        height: auto;
+        height: 100vh;
 
         opacity: 0;
         transform: scaleY(0);
