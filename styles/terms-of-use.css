@@ -5,7 +5,7 @@ ol {
     padding: 0;
 }
 
-li {
+.terms li {
     display: table;
     counter-increment: item;
     margin-bottom: 0.6em;
@@ -41,5 +41,9 @@ ol ol ol li:before {
 }
 
 .socials li:before {
+    content: none;
+}
+
+.new-navbar li:before {
     content: none;
 }

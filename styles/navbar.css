@@ -11,12 +11,6 @@
     --children-hover: hsla(0, 0%, 100%, 0.05);
 }
 
-*,
-*::after,
-*::before {
-    box-sizing: inherit;
-}
-
 header {
     background: var(--header-bg);
     position: relative;
