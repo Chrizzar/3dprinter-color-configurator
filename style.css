@@ -904,6 +904,15 @@ while in desktop mode */
 /* ----- max-width: 540px (Start) ----- */
 /* Newly added - Working change */
 @media screen and (max-width: 540px) {
+
+    .header-text {
+        padding: 20px;
+    }
+    
+    .header-hidden {
+        display: none;
+    }
+
     .reverse-wrap {
         display: -ms-flexbox;
         /* IE10 */
