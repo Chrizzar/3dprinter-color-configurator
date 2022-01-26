@@ -1957,9 +1957,6 @@
 
     .tray {
         height: 100px;
-        position: fixed;
-        overflow-y: scroll;
-        overscroll-behavior: contain;
     }
 
     .drag-here-position {
