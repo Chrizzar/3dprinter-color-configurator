@@ -1,7 +1,7 @@
 document.write('\
 \
 <div class="navbar">\
-    <a href="voron-color-configurator.html">Home</a>\
+    <a href="../voron-color-configurator.html">Home</a>\
     <div class="dropdown">\
         <button class="dropbtn">Voron V0.1\
             <i class="fa fa-caret-down"></i>\
