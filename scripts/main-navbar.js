@@ -12,7 +12,7 @@ document.write('\
 \
         <ul class="menu">\
             <li class="has-dropdown">\
-                <a style="cursor: pointer;" class="menu-link">About us\
+                <a href="#" class="menu-link">About us\
                     <span class="arrow"></span>\
                 </a>\
                 <ul class="submenu">\
