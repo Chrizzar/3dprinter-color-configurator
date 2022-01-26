@@ -10,6 +10,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="stylesheet" type="text/css" href="styles/navbar.css">
 
     <!-- --------- Google fonts (Start) --------- -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,12 +40,43 @@
             skip navigation
         </a>
 
+        <!-- Toggle Dark Mode / Light Mode -->
+        <!--<div class="btn-toggle dark-mode unselectable">Toggle Dark-Mode</div>-->
+
         <div class="header-text">
             <h1>3D Printer Color Configurator</h1>
             <p>A website created by: <br> Christian Sass Hansen</p>
         </div>
     </div>
 
+    <header>
+        <nav class="new-navbar">
+            <div clas="branding"><a href="index.html" class="branding-logo">Home</a>
+            </div>
+
+            <div class="hamburger-spacer">
+                <label for="input-hamburger" class="hamburger"></label>
+            </div>
+            <input type="checkbox" id="input-hamburger" hidden>
+
+            <ul class="menu">
+                <li class="has-dropdown">
+                    <a href="#" class="menu-link">About us
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="contact.html" class="menu-link">Contact</a></li>
+                        <li><a href="terms-of-use.html" class="menu-link">Terms of use</a></li>
+                        <li><a href="feedback.html" class="menu-link">Feedback</a></li>
+                    </ul>
+                </li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="support-me.html" style="font-weight: bold;">Support Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--
     <div class="navbar">
         <a href="index.html">Home</a>
 
@@ -65,6 +97,7 @@
             <a href="support-me.html" style="font-weight: bold;">Support Me</a>
         </div>
     </div>
+    -->
 
     <!-- To the top button -->
     <button onclick="topFunction()" id="toTheTop" title="Go to top">Top</button>
@@ -73,13 +106,13 @@
 
         <section class="container">
             <!--<a class="voron-link" href="voron-color-configurator.html"></a>-->
-            <div class="card" onclick="window.open('voron-color-configurator.html', '_blank')">
+            <div class="card" onclick="window.open('voron-color-configurator/voron-color-configurator.html', '_blank')">
                 <!--<a class="link" href="voron-color-configurator.html" target="_blank">-->
-                    <div class="card-image voron-printers"></div>
-                    <p class="h2-size center-all">Voron Color Configurator</p>
+                <div class="card-image voron-printers"></div>
+                <p class="h2-size center-all">Voron Color Configurator</p>
                 <!--</a>-->
             </div>
-            
+
             <!--
             <div class="card">
                 <a class="link" href="#" target="_blank">
@@ -96,23 +129,6 @@
             </div>
             -->
         </section>
-
-
-
-        <!--
-        <div class="flex-container">
-            <div class="flex-item-left">1</div>
-            <div class="flex-item-right">2</div>
-        </div>
-
-        <div class="content-box1">
-            <h2>WELCOME TO VORON COLOR CONFIGURATOR</h2>
-        </div>
-
-        <div class="content-box2">
-            <h2>How to use the color configurator (Recommended)</h2>
-        </div>
-        -->
     </div>
 
     <div class="footer">
@@ -156,5 +172,42 @@
             document.documentElement.scrollTop = 0;
         }
     </script>
-   
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function() {
+            this.classList.toggle("close");
+        });
+    </script>
+
+    <!-- Toggle Dark Mode / Light Mode -->
+    <!--
+    <script>
+        const btn = document.querySelector(".btn-toggle");
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+        const currentTheme = localStorage.getItem("theme");
+        if (currentTheme == "dark") {
+            document.body.classList.toggle("dark-theme");
+        } else if (currentTheme == "light") {
+            document.body.classList.toggle("light-theme");
+        }
+
+        btn.addEventListener("click", function() {
+            if (prefersDarkScheme.matches) {
+                document.body.classList.toggle("light-theme");
+                var theme = document.body.classList.contains("light-theme") ?
+                    "light" :
+                    "dark";
+            } else {
+                document.body.classList.toggle("dark-theme");
+                var theme = document.body.classList.contains("dark-theme") ?
+                    "dark" :
+                    "light";
+            }
+            localStorage.setItem("theme", theme);
+        });
+    </script>
+    -->
+
 </body></html>

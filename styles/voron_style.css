@@ -386,6 +386,7 @@
     overflow-x: hidden;
     display: flex;
     justify-content: center;
+    z-index: 5;
 }
 
 .tray__slide {
@@ -466,6 +467,13 @@
     font-weight: bolder;
 }
 
+.option-colors-tablet {
+    margin-top: 0;
+    font-size: 1.17em;
+    font-weight: bolder;
+    border-bottom: 2px solid;
+}
+
 .option-colors-mobile {
     margin-top: 0;
     font-size: 1.17em;
@@ -479,16 +487,37 @@
     width: 100%;
 }
 
+.drag-here-position {
+    position: absolute;
+    z-index: 2;
+}
+
 /* ----------------------- Media Queries (Start) ----------------------- */
 
 /* ------------- min-width: 961px (Start) ------------- */
 /* Media Query for the options panel of the canvas */
 @media screen and (min-width: 961px) {
 
+    .drag-here-position {
+        margin-top: -80px;
+    }
+
+    .info-mobile {
+        display: none;
+    }
+
     /* Colors text */
     .option-colors-desktop {
         border-bottom: 2px solid;
         margin-top: 0px;
+    }
+
+    .option-colors-tablet {
+        display: none;
+    }
+
+    .center-color-mobile {
+        display: none;
     }
 
     .option-colors-mobile {
@@ -968,9 +997,25 @@
 
 /* ------------- max-width: 960px (Start) ------------- */
 @media (max-width: 960px) {
-
+    
+    .drag-here-position {
+        margin-top: -80px;
+    }
+    
     /* Colors text */
     .option-colors-desktop {
+        display: none;
+    }
+
+    .center-color-mobile {
+        display: none;
+    }
+
+    .option-colors-mobile {
+        display: none;
+    }
+
+    .info-mobile {
         display: none;
     }
 
@@ -1888,5 +1933,52 @@
 }
 
 /* ------------- max-width: 680px (End) ------------- */
+
+
+/* ------------- max-width: 540px (START) ------------- */
+@media screen and (max-width: 540px) {
+    .optionsModel {
+        margin-bottom: 20px;
+    }
+
+    .option-colors-tablet {
+        display: none;
+    }
+
+    .option-colors-mobile {
+        display: inherit;
+    }
+
+    .center-color-mobile {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .tray {
+        height: 100px;
+    }
+    
+    .drag-here-position {
+        margin-top: -40px;
+    }
+
+    .info {
+        display: none;
+    }
+
+    .info-mobile {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .info-mobile p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+/* ------------- max-width: 540px (End) ------------- */
 
 /* ----------------------- Media Queries (End) ----------------------- */

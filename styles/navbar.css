@@ -1,0 +1,274 @@
+:root {
+    box-sizing: border-box;
+    --primary: #333333;
+    --hover-color: #fdd052;
+    /*--hover-color: #1abc9c;*/
+    --dark: #333333;
+    --white: #ffffff;
+
+    --header-bg: var(--primary);
+    --parent-hover: hsla(0, 0%, 0%, 0.95);
+    --children-hover: hsla(0, 0%, 100%, 0.05);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+header {
+    background: var(--header-bg);
+    position: relative;
+    top: 0;
+}
+
+.branding-logo {
+    color: var(--white);
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 1em 1.5em;
+}
+
+.branding-logo:hover {
+    background-color: #191919;
+    color: var(--hover-color);
+}
+
+.new-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    /* Don't change */
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu li a {
+    display: block;
+    text-decoration: none;
+    color: var(--white);
+    padding: 1em 1.5em;
+    font-size: 1rem;
+}
+
+/* Styling submenu */
+.has-dropdown {
+    position: relative;
+}
+
+.submenu {
+    /* Don't change */
+    margin: 0;
+
+    position: absolute;
+    left: 0;
+    background-color: var(--dark);
+    white-space: nowrap;
+    padding: 1em 0;
+    min-width: 9em;
+
+    /* hide submenus */
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top center;
+}
+
+.submenu > li > a {
+    padding: 0.8em 1.5em;
+}
+
+.submenu .submenu {
+    left: -100%;
+    top: 0;
+}
+
+.submenu .submenu .submenu {
+    left: -100%;
+    top: 0;
+}
+
+.menu > li:hover > a,
+.submenu > li:hover > a {
+    background-color: var(--children-hover);
+    color: var(--hover-color);
+}
+
+.menu > li:hover > a {
+    background-color: #191919;
+}
+
+/* Arrows */
+.arrow {
+    width: 0.5rem;
+    height: 0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    border-left: 0.15em solid currentColor;
+    border-bottom: 0.15em solid currentColor;
+    transform: rotate(-135deg);
+    margin-top: 0em;
+    margin-left: 0.25em;
+    transition: transform 100ms ease-in-out;
+}
+
+/* Reveal Sum Menus */
+.menu > li:hover > a + .submenu,
+.submenu > li:hover > a + .submenu {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+/* Animate Arrows */
+.menu > li:hover > a > .arrow,
+.submenu > li:hover > a > .submenu {
+    transform: rotate(-45deg);
+    margin-top: -0.25em;
+}
+
+@media only screen and (max-width: 78.75em) {
+    .submenu .submenu .submenu {
+        left: -100%;
+        top: 0.5em;
+    }
+
+    .submenu {
+        min-width: 9em;
+    }
+}
+
+@media only screen and (max-width: 58.75em) {
+    .menu li a {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 50em) {
+    header {
+        /*     position: relative; */
+        padding: 1.63em 0;
+    }
+
+    .branding-logo {
+        padding: 1.487em 1.5em;
+        font-size: 1.1em;
+    }
+
+    .menu {
+        flex-flow: column;
+        position: absolute;
+        background: var(--white);
+        top: 4.55em;
+        left: 0;
+        right: 0;
+        height: 100vh;
+
+        opacity: 0;
+        transform: scaleY(0);
+        transform-origin: top center;
+        transition: 200ms transform cubic-bezier(0.36, 0.4, 0.42, 1.48) 100ms, 100ms opacity ease-in-out;
+        overflow-y: scroll;
+
+    }
+
+    .menu > li > a {
+        font-size: 1rem;
+        color: var(--dark);
+    }
+
+    .submenu > li > a {
+        font-size: 1rem;
+    }
+
+    .submenu {
+        top: 0;
+        padding-left: 0;
+        /*padding-left: 1.5em;*/
+        border-left: 0.12em dotted hsla(342, 99%, 45%, 0.95);
+    }
+
+    .submenu .submenu {
+        left: 0;
+        top: 0;
+    }
+
+    .submenu .submenu .submenu {
+        left: 0;
+        top: 0;
+    }
+
+    .menu > li:hover > a + .submenu,
+    .submenu > li:hover > a + .submenu {
+        position: relative;
+    }
+
+    .hamburger-spacer {
+        padding-right: 2em;
+    }
+
+    .hamburger {
+        width: 2em;
+        height: 0.25em;
+        display: block;
+        background: var(--white);
+        position: relative;
+        cursor: pointer;
+        transition: 0.2s transform ease-in-out;
+    }
+
+    .hamburger::after,
+    .hamburger::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        background: inherit;
+        width: inherit;
+        height: inherit;
+
+        transition: 0.2s transform ease-in-out;
+    }
+
+    .hamburger::after {
+        top: 0.65em;
+    }
+
+    .hamburger::before {
+        bottom: 0.65em;
+    }
+
+    .close::after,
+    .close::before {
+        top: 0;
+        transition: 0.2s transform ease-in-out;
+    }
+
+    .close::before {
+        display: none;
+    }
+
+    .close {
+        transform: rotate(45deg);
+        transition: 0.2s transform ease-in-out;
+    }
+
+    .close::after {
+        transform: rotate(-90deg);
+    }
+
+    /* reveal menu */
+    input[type="checkbox"]:checked + .menu {
+        position: absolute;
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}

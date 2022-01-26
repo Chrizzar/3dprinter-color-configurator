@@ -102,73 +102,8 @@
         </div>
     </div>
 
-    <div class="navbar">
-        <a href="../voron-color-configurator.html">Home</a>
-        <div class="dropdown">
-            <button class="dropbtn">Voron V0.1
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="voron-v0.1-default.html">Default</a>
-                <a href="voron-v0.1-8accents.html">8 Accents</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Voron Trident
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="voron-trident-default.html">Default</a>
-                <a href="voron-trident-8accents.html">8 Accents</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Voron V2.4
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="voron-v2.4-default.html">Default</a>
-                <a href="voron-v2.4-7accents.html">7 Accents</a>
-                <a href="voron-v2.4-8accents.html">8 Accents</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Voron Switchwire
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="voron-switchwire-default.html">Default</a>
-                <a href="voron-switchwire-8accents.html">8 Accents</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Voron Legacy
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="voron-legacy-default.html">Default</a>
-                <a href="voron-legacy-8accents.html">8 Accents</a>
-            </div>
-        </div>
-        
-        <a href="voron-download-center.html">Download Center</a>
-        
-        <div style="float: right;">
-            <div class="dropdown">
-                <button class="dropbtn">About us
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="contact.html">Contact</a>
-                    <a href="terms-of-use.html">Terms of use</a>
-                </div>
-            </div>
-            
-            <a href="roadmap.html">Roadmap</a>
-
-            <a href="support-me.html" style="font-weight: bold;">Support Me</a>
-        </div>
-    </div>
+    <!-- Navbar -->
+    <script src="scripts/page-navbar.js"></script>
 
     <!-- To the top button -->
     <button onclick="topFunction()" id="toTheTop-left" title="Go to top">Top</button>
@@ -188,52 +123,59 @@
                 </div>
 
                 <div class="center-color">
-                    <p class="textCenter option-colors-mobile">Colors</p>
+                    <p class="textCenter option-colors-tablet unselectable">Colors</p>
                 </div>
 
                 <div class="row">
-                    <div class="optionsModel">
-                        <!-- These toggle the the different parts of the chair that can be edited, note data-option is the key that links to the name of the part in the 3D file -->
-                        <div class="options">
+                    <div class="reverse-wrap">
+                        <div class="optionsModel">
+                            <!-- These toggle the the different parts of the chair that can be edited, note data-option is the key that links to the name of the part in the 3D file -->
+                            <div class="options">
 
-                            <p class="textCenter option-colors-desktop">Colors</p>
+                                <p class="textCenter option-colors-desktop unselectable">Colors</p>
 
-                            <div data-tooltip="Primary color" class="adjust_v0">
-                                <div class="optionV0 --is-active" data-option="1_first_color">
-                                    <img class="resize" src="images/thumbnails/V0.1/V0_part_1.svg" alt="" />
+                                <div data-tooltip="Primary color" class="adjust_v0">
+                                    <div class="optionV0 --is-active" data-option="1_first_color">
+                                        <img class="resize" src="images/thumbnails/V0.1/V0_part_1.svg" alt="" />
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div data-tooltip="First accent color" class="adjust_v0">
-                                <div class="optionV0" data-option="2_second_color">
-                                    <img class="resize" src="images/thumbnails/V0.1/V0_part_8.svg" alt="" />
+                                <div data-tooltip="First accent color" class="adjust_v0">
+                                    <div class="optionV0" data-option="2_second_color">
+                                        <img class="resize" src="images/thumbnails/V0.1/V0_part_8.svg" alt="" />
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div data-tooltip="Second accent color" class="adjust_v0">
-                                <div class="optionV0" data-option="3_accessories">
-                                    <img class="resize" src="images/thumbnails/V0.1/V0_part_3.svg" alt="" />
+                                <div data-tooltip="Second accent color" class="adjust_v0">
+                                    <div class="optionV0" data-option="3_accessories">
+                                        <img class="resize" src="images/thumbnails/V0.1/V0_part_3.svg" alt="" />
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div data-tooltip="Frame color" class="adjust_v0">
-                                <div class="optionV0" data-option="4_frame">
-                                    <img class="resize" src="images/thumbnails/V0.1/V0_frame_3D.svg" alt="" />
+                                <div data-tooltip="Frame color" class="adjust_v0">
+                                    <div class="optionV0" data-option="4_frame">
+                                        <img class="resize" src="images/thumbnails/V0.1/V0_frame_3D.svg" alt="" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="canvasModel" style="position: relative;">
-                        <!-- Just a quick notice to the user that it can be interacted with -->
-                        <span class="drag-notice" id="js-drag-notice">Drag to rotate 360&#176;</span>
+                        <!-- Colors Text Shown on Mobile -->
+                        <div class="center-color-mobile">
+                            <p class="textCenter option-colors-mobile unselectable">Colors</p>
+                        </div>
 
-                        <!-- The canvas element is used to draw the 3D scene -->
-                        <canvas id="c"></canvas>
+                        <div class="canvasModel" style="position: relative;">
+                            <!-- Just a quick notice to the user that it can be interacted with -->
+                            <span class="drag-notice" id="js-drag-notice">Drag to rotate 360&#176;</span>
 
-                        <!-- The loading element overlays all else until the model is loaded, at which point we remove this element from the DOM -->
-                        <div class="loading" id="js-loader">
-                            <div class="loader"></div>
+                            <!-- The canvas element is used to draw the 3D scene -->
+                            <canvas id="c"></canvas>
+
+                            <!-- The loading element overlays all else until the model is loaded, at which point we remove this element from the DOM -->
+                            <div class="loading" id="js-loader">
+                                <div class="loader"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -242,23 +184,9 @@
                     <div class="blankModel">
                     </div>
 
-                    <div class="controlsModel">
-                        <div class="controls">
-                            <div class="info">
-                                <div class="desktop" class="info__message">
-                                    <p><strong>&nbsp;Grab&nbsp;</strong>to rotate the printer. <strong>&nbsp;Scroll&nbsp;</strong>to zoom. <strong>&nbsp;Drag&nbsp;</strong>colors to view more.</p>
-                                </div>
+                    <!-- Controls Model - color selection bar and information -->
+                    <script src="scripts/page-controls-model.js"></script>
 
-                                <div class="mobile" class="info__message">
-                                    <p><strong>&nbsp;Touch&nbsp;</strong>to rotate the printer.<br> <strong>&nbsp;Pinch&nbsp;</strong>to zoom. <strong>&nbsp;Drag&nbsp;</strong>colors to view more.</p>
-                                </div>
-                            </div>
-                            <!-- This tray will be filled with colors via JS, and the ability to slide this panel will be added in with a lightweight slider script (no dependency used for this) -->
-                            <div id="js-tray" class="tray">
-                                <div id="js-tray-slide" class="tray__slide"></div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -311,7 +239,7 @@
                         <select aria-label="Second accent color" id="2_accent" class="selectionStyle">
                             <script src="scripts/choose-colors.js"></script>
                         </select>
-                        
+
                         <h4>Frame color</h4>
                         <select aria-label="Frame color" id="frame_color" class="selectionStyle">
                             <script src="scripts/choose-colors.js"></script>
@@ -322,12 +250,13 @@
                     <div class="instructions-info-content">
                         <h3>Instructions for submission</h3>
                         <p><b>At submission:</b><br>
-                        When clicking submit, it is important to remember to activate &Prime;<span>Background graphics</span> &Prime; in the &Prime;<span>More settings</span> &Prime; tab, since we need to be able to see which colors we have chosen for this project.
-                        <br><br>
-                        <b>After submission:</b><br>
-                        After submitting, go to the Download Center to find and download your chosen configuration.</p>
+                            When clicking submit, it is important to remember to activate &Prime;<span>Background graphics</span> &Prime; in the &Prime;<span>More settings</span> &Prime; tab, since we need to be able to see which colors we have chosen for this project.
+                            <br><br>
+                            <b>After submission:</b><br>
+                            After submitting, go to the Download Center to find and download your chosen configuration.
+                        </p>
                     </div>
-                    
+
                     <input class="submit" type="submit" value="Submit" onClick="window.print()">
 
                     <p class="textCenter obsText" style="color: red;">(OBS: The configuration will reset after submission)</p>
@@ -336,22 +265,8 @@
         </div>
     </div>
 
-    <div class="footer">
-        <div class="footer-content">
-            <h3>About</h3>
-            <p>Our mission with this tool is to make it more convenient for the user to visualize what they want their Voron color theme to look like. Users can now create and visualize everything from the default four color groups (primary and accent color + chain and frame) to a very unique looking build, where up to 8 different groups of parts can be colored.</p>
-            <ul class="socials">
-                <!-- Discord Maybe -->
-                <!--<li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
-                <li><a href="https://twitter.com/Chrizzar" target="_blank" aria-label="Link to my Twitter"><i class="fa fa-twitter twitter"></i></a></li>
-                <li><a href="https://www.youtube.com/channel/UC7DucVUUyAl8whkK8KzqBhA" target="_blank" aria-label="Link to my YouTube"><i class="fa fa-youtube youtube"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/christian-sass-hansen-639571188/" target="_blank" aria-label="Link to my Linkedin"><i class="fa fa-linkedin-square linkedin"></i></a></li>
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <p>copyright &copy; 2021-2022 <span>Christian Sass Hansen</span> - All Rights Reserved.</p>
-        </div>
-    </div>
+    <!-- Footer -->
+    <script src="scripts/page-footer.js"></script>
 
     <!-- The main three.js file -->
     <script src='https://unpkg.com/three@0.136.0/build/three.js'></script>
@@ -360,7 +275,7 @@
     <!-- This is a simple to use extension for three.js that activates all the rotating, dragging and zooming controls we need for both mouse and touch, there isn't a clear CDN for this that I can find -->
     <script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script>
     <script src="scripts/v0_default.js"></script>
-    
+
     <!-- Change color of the select components dependent on, 
     if an option has been selected -->
     <script src="scripts/default-text-selection-color-change.js"></script>
@@ -403,7 +318,7 @@
             document.getElementById('directHotend').style.display = 'block';
         }
     </script>
-    
+
     <!-- Collapsible Content -->
     <script>
         var coll = document.getElementsByClassName("instructions-info");
@@ -416,12 +331,12 @@
                 if (content.style.maxHeight) {
                     content.style.maxHeight = null;
                     content.style.marginBottom = "0px"; // px to the bottom when disabled
-                    content.style.opacity  = "0";
+                    content.style.opacity = "0";
                     content.style.transition = "all 0.8s";
                 } else {
                     content.style.maxHeight = content.scrollHeight + "px";
                     content.style.marginBottom = "15px"; // px to the bottom when active
-                    content.style.opacity  = "1";
+                    content.style.opacity = "1";
                     content.style.transition = "all 0.8s";
                 }
             });

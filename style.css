@@ -21,6 +21,62 @@ html {
     text-decoration: none;
 }
 
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-right {
+    position: relative;
+    width: 50px;
+    border-bottom: 3px solid #D3D3D3;
+    margin-left: 5px;
+}
+
+.arrow-right::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 10px solid #D3D3D3;
+    position: absolute;
+    right: -10px;
+    top: -5.4px;
+}
+
+.arrow-left {
+    position: relative;
+    width: 50px;
+    border-bottom: 3px solid #D3D3D3;
+    margin-right: 5px;
+}
+
+.arrow-left::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-right: 10px solid #D3D3D3;
+    position: absolute;
+    left: -10px;
+    top: -5.4px;
+}
+
+.drag-here {
+    color: #D3D3D3;
+}
 
 /* ---------------------- Header sizes (Start) ---------------------- */
 .h1-size {
@@ -385,6 +441,16 @@ div.content {
     -ms-flex-wrap: wrap;
     /* IE10 */
     flex-wrap: wrap;
+}
+
+.reverse-wrap {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 /* 3D Model Canvas Divs */
@@ -833,6 +899,22 @@ while in desktop mode */
 }
 
 /* ----- max-width: 680px (End) ----- */
+
+
+/* ----- max-width: 540px (Start) ----- */
+/* Newly added - Working change */
+@media screen and (max-width: 540px) {
+    .reverse-wrap {
+        display: -ms-flexbox;
+        /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap-reverse;
+        /* IE10 */
+        flex-wrap: wrap-reverse;
+    }
+}
+
+/* ----- max-width: 540px (END) ----- */
 
 
 /* ----- max-width: 400px (Start) ----- */

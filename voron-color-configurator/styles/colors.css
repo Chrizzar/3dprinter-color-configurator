@@ -16,14 +16,35 @@
 
 
 /* --------- n (all color tiles) colors styles --------- */
+
 .tray__swatch:nth-child(n):hover::after {
     margin-top: 50px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
+    /* Tooltip styling */
     font-weight: bold;
+    background-color: white;
+    padding: 0px 5px 0px 5px;
+    border-radius: 4px;
 }
+
+/*
+.tray__swatch:nth-child(n):hover::after {
+    margin-top: 35px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: bold;
+    background-color: white;
+    padding: 0px 5px 0px 5px;
+    border-radius: 4px;
+}
+*/
 
 
 /* ---------------------- eSUN colors (START) ---------------------- */
