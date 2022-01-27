@@ -17,7 +17,7 @@ li:before {
     padding-right: 0.6em;
 }
 
-li li {
+.terms li li {
     margin: 10px;
 }
 

@@ -1,8 +1,253 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+:root {
+    --primary: #333;
+    --hover-color: #fdd052;
+    /*--hover-color: #1abc9c;*/
+    --dark: #333;
+    --light-dark: #3d3d3d;
+    --lighter-dark: #484848;
+    --white: #fff;
+
+    --header-bg: var(--primary);
+    --parent-hover: hsla(0, 0%, 100%, 0.05);
+    --children-hover: hsla(0, 0%, 0%, 0.95);
+}
+
+* {
+    /*margin: 0;
+    padding: 0;*/
+    box-sizing: border-box;
+    /*font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;*/
+}
+
+/* Navigation Bar */
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--header-bg);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    padding: 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+header a {
+    text-decoration: none;
+}
+
+/* Logo */
+header .logo {
+    font-weight: bolder;
+    font-size: 22px;
+    color: var(--white);
+    padding-left: 10px;
+}
+
+/* Logo Hover */
+header .logo:hover {
+    color: var(--hover-color);
+}
+
+/* Menu */
+header .new-navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Menu */
+header .new-navbar ul li {
+    position: relative;
+    float: left;
+}
+
+header .new-navbar ul li:nth-child(6):after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: -5px;
+    border-right: 5px solid rgba(0, 0, 0, 0.2);
+}
+
+header .new-navbar ul li:nth-child(7) {
+    margin-left: 5px;
+}
+
+/* Menu hover */
+header .new-navbar ul li:hover {
+    background: #191919;
+}
+
+/* Menu a */
+header .new-navbar ul li a {
+    font-size: 17px;
+    padding: 15px 15px;
+    color: var(--white);
+    display: block;
+}
+
+header .new-navbar ul li a:hover {
+    color: var(--hover-color);
+}
+
+/* Menu hover */
+header .new-navbar ul li ul a:hover {
+    background: var(--light-dark);
+    color: var(--hover-color);
+}
+
+/* All Submenus */
+header .new-navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: var(--primary);
+    display: none;
+}
+
+header :not(li) > ul > li > ul {
+    border-top: 2px solid var(--hover-color);
+}
+
+/* Submenu */
+header .new-navbar ul li ul li {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* Sub-Submenu */
+header .new-navbar ul li ul li ul {
+    left: 200px;
+    top: 0;
+}
+
+/* Dropdown Activation */
+header .new-navbar ul li:focus-within > ul,
+header .new-navbar ul li:hover > ul {
+    display: initial;
+}
+
+/* Menu bar checkbox */
+#menu-bar {
+    display: none;
+}
+
+/* Open and close menu on mobile */
+header label {
+    font-size: 20px;
+    color: var(--white);
+    cursor: pointer;
+    display: none;
+}
+
+/* Hamburger menu at mobile width */
+@media (max-width: 1295px) {
+    header {
+        padding: 20px;
+    }
+
+    header label {
+        display: initial;
+    }
+
+    header .new-navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--primary);
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
+        display: none;
+    }
+
+    header .new-navbar ul li {
+        width: 100%;
+    }
+
+    header .new-navbar ul li ul {
+        position: relative;
+        width: 100%;
+    }
+    
+    /* Submenu */
+    header .new-navbar ul li ul li {
+        background: var(--light-dark);
+    }
+    
+    /* Submenu indent */
+    header .new-navbar ul li ul a {
+        padding-left: 40px;
+    }
+    
+    /* Submenu hover */
+    header .new-navbar ul li ul a:hover {
+        background: var(--lighter-dark);
+    }
+
+    /* Sub-Submenu */
+    header .new-navbar ul li ul li ul {
+        width: 100%;
+        left: 0;
+    }
+    
+    /* Submenu indent */
+    header .new-navbar ul li ul li ul a {
+        padding-left: 80px;
+    }
+
+    /* -------- hamburger (START) ------- */
+    .hamburger {
+        display: inline-block;
+        cursor: pointer;
+        margin-bottom: -5px;
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-8px, 6px);
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-9px, -8px);
+    }
+
+    /* -------- hamburger (END) ------- */
+
+    /* Subsequent-sibling combinator (tilde) to display menu at click */
+    #menu-bar:checked ~ .new-navbar {
+        display: initial;
+    }
+}
+
+
+
+/*
 :root {
     box-sizing: border-box;
     --primary: #333333;
     --hover-color: #fdd052;
-    /*--hover-color: #1abc9c;*/
     --dark: #333333;
     --white: #ffffff;
 
@@ -37,7 +282,6 @@ header {
 }
 
 .menu {
-    /* Don't change */
     margin: 0;
     padding: 0;
     
@@ -58,13 +302,11 @@ header {
     font-size: 1rem;
 }
 
-/* Styling submenu */
 .has-dropdown {
     position: relative;
 }
 
 .submenu {
-    /* Don't change */
     margin: 0;
 
     position: absolute;
@@ -74,7 +316,6 @@ header {
     padding: 1em 0;
     min-width: 9em;
 
-    /* hide submenus */
     opacity: 0;
     transform: scaleY(0);
     transform-origin: top center;
@@ -104,7 +345,6 @@ header {
     background-color: #191919;
 }
 
-/* Arrows */
 .arrow {
     width: 0.5rem;
     height: 0.5rem;
@@ -118,14 +358,12 @@ header {
     transition: transform 100ms ease-in-out;
 }
 
-/* Reveal Sum Menus */
 .menu > li:hover > a + .submenu,
 .submenu > li:hover > a + .submenu {
     opacity: 1;
     transform: scaleY(1);
 }
 
-/* Animate Arrows */
 .menu > li:hover > a > .arrow,
 .submenu > li:hover > a > .submenu {
     transform: rotate(-45deg);
@@ -151,7 +389,6 @@ header {
 
 @media only screen and (max-width: 800px) {
     header {
-        /*     position: relative; */
         padding: 1.56em 0;
     }
 
@@ -193,7 +430,6 @@ header {
     .submenu {
         top: 0;
         padding-left: 0;
-        /*padding-left: 1.5em;*/
         border-left: 0.2em dotted hsla(342, 99%, 45%, 0.95);
     }
 
@@ -265,10 +501,10 @@ header {
         transform: rotate(-90deg);
     }
 
-    /* reveal menu */
     input[type="checkbox"]:checked + .menu {
         position: absolute;
         opacity: 1;
         transform: scaleY(1);
     }
 }
+*/

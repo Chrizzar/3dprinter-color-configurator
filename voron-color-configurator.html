@@ -9,21 +9,22 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../styles/navbar.css">
 
     <!-- --------- Google fonts (Start) --------- -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    
+
     <!-- Oxygen -->
     <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
-    
+
     <!-- Inconsolata -->
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
     <!-- --------- Google fonts (End) --------- -->
-    
+
     <!-- Font Awesome -->
     <link href="fontawesome/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -42,76 +43,143 @@
         </div>
     </div>
 
-    <!-- Navbar -->
+    <header>
+        <a href="voron-color-configurator.html" class="logo">Home</a>
+
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar" class="icon">
+            <div class="hamburger" onclick="changeHamburger(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </label>
+
+        <nav class="new-navbar">
+            <ul>
+                <!-- Voron V0.1 -->
+                <li><a href="#">Voron V0.1 <i class="fa fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="voron-color-configurator/voron-v0.1-default.html">Default</a></li>
+                        <li><a href="voron-color-configurator/voron-v0.1-8accents.html">8 Accents</a></li>
+                    </ul>
+                </li>
+                <!-- Voron Trident -->
+                <li><a href="#">Voron Trident <i class="fa fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="voron-color-configurator/voron-trident-default.html">Default</a></li>
+                        <li><a href="voron-color-configurator/voron-trident-8accents.html">8 Accents</a></li>
+                    </ul>
+                </li>
+                <!-- Voron V2.4 -->
+                <li><a href="#">Voron V2.4 <i class="fa fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="voron-color-configurator/voron-v2.4-default.html">Default</a></li>
+                        <li><a href="voron-color-configurator/voron-v2.4-7accents.html">7 Accents</a></li>
+                        <li><a href="voron-color-configurator/voron-v2.4-8accents.html">8 Accents</a></li>
+                    </ul>
+                </li>
+                <!-- Voron Switchwire -->
+                <li><a href="#">Voron Switchwire <i class="fa fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="voron-color-configurator/voron-switchwire-default.html">Default</a></li>
+                        <li><a href="voron-color-configurator/voron-switchwire-8accents.html">8 Accents</a></li>
+                    </ul>
+                </li>
+                <!-- Voron Legacy -->
+                <li><a href="#">Voron Legacy <i class="fa fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="voron-color-configurator/voron-legacy-default.html">Default</a></li>
+                        <li><a href="voron-color-configurator/voron-legacy-8accents.html">8 Accents</a></li>
+                    </ul>
+                </li>
+                <!-- Download Center -->
+                <li><a href="voron-color-configurator/voron-download-center.html">Download Center</a></li>
+                <!-- About us -->
+                <li><a href="#">About us <i class="fa fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="voron-color-configurator/contact.html">Contact</a></li>
+                        <li><a href="voron-color-configurator/terms-of-use.html">Terms of use</a></li>
+                    </ul>
+                </li>
+                <!-- Roadmap -->
+                <li><a href="voron-color-configurator/roadmap.html">Roadmap</a></li>
+                <!-- Support Me -->
+                <li><a href="voron-color-configurator/support-me.html" style="font-weight: bold;">Support Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Navbar
     <div class="navbar">
-    <a href="voron-color-configurator.html">Home</a>
-    <div class="dropdown">
-        <button class="dropbtn">Voron V0.1
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="voron-color-configurator/voron-v0.1-default.html">Default</a>
-            <a href="voron-color-configurator/voron-v0.1-8accents.html">8 Accents</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn">Voron Trident
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="voron-color-configurator/voron-trident-default.html">Default</a>
-            <a href="voron-color-configurator/voron-trident-8accents.html">8 Accents</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn">Voron V2.4
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="voron-color-configurator/voron-v2.4-default.html">Default</a>
-            <a href="voron-color-configurator/voron-v2.4-7accents.html">7 Accents</a>
-            <a href="voron-color-configurator/voron-v2.4-8accents.html">8 Accents</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn">Voron Switchwire
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="voron-color-configurator/voron-switchwire-default.html">Default</a>
-            <a href="voron-color-configurator/voron-switchwire-8accents.html">8 Accents</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn">Voron Legacy
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="voron-color-configurator/voron-legacy-default.html">Default</a>
-            <a href="voron-color-configurator/voron-legacy-8accents.html">8 Accents</a>
-        </div>
-    </div>
-
-    <a href="voron-color-configurator/voron-download-center.html">Download Center</a>
-
-    <div style="float: right;">
+        <a href="voron-color-configurator.html">Home</a>
         <div class="dropdown">
-            <button class="dropbtn">About us
+            <button class="dropbtn">Voron V0.1
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="voron-color-configurator/contact.html">Contact</a>
-                <a href="voron-color-configurator/terms-of-use.html">Terms of use</a>
+                <a href="voron-color-configurator/voron-v0.1-default.html">Default</a>
+                <a href="voron-color-configurator/voron-v0.1-8accents.html">8 Accents</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Voron Trident
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="voron-color-configurator/voron-trident-default.html">Default</a>
+                <a href="voron-color-configurator/voron-trident-8accents.html">8 Accents</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Voron V2.4
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="voron-color-configurator/voron-v2.4-default.html">Default</a>
+                <a href="voron-color-configurator/voron-v2.4-7accents.html">7 Accents</a>
+                <a href="voron-color-configurator/voron-v2.4-8accents.html">8 Accents</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Voron Switchwire
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="voron-color-configurator/voron-switchwire-default.html">Default</a>
+                <a href="voron-color-configurator/voron-switchwire-8accents.html">8 Accents</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Voron Legacy
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="voron-color-configurator/voron-legacy-default.html">Default</a>
+                <a href="voron-color-configurator/voron-legacy-8accents.html">8 Accents</a>
             </div>
         </div>
 
-        <a href="voron-color-configurator/roadmap.html">Roadmap</a>
+        <a href="voron-color-configurator/voron-download-center.html">Download Center</a>
 
-        <a href="voron-color-configurator/support-me.html" style="font-weight: bold;">Support Me</a>
+        <div style="float: right;">
+            <div class="dropdown">
+                <button class="dropbtn">About us
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="voron-color-configurator/contact.html">Contact</a>
+                    <a href="voron-color-configurator/terms-of-use.html">Terms of use</a>
+                </div>
+            </div>
+
+            <a href="voron-color-configurator/roadmap.html">Roadmap</a>
+
+            <a href="voron-color-configurator/support-me.html" style="font-weight: bold;">Support Me</a>
+        </div>
     </div>
-</div>
+    -->
 
-    
     <!-- To the top button -->
     <button onclick="topFunction()" id="toTheTop" title="Go to top">Top</button>
 
@@ -122,17 +190,17 @@
             <p>Welcome to <b>Voron Color Configurator Tool (VCCT)</b>. Using this tool, you can design your very own color theme of any of the Voron printers to your liking. We now support color configuring <b>all voron printers</b>. Check our roadmap for coming printers, mods, features and fixes.
 
             <p>
-            <b>OBS.</b> All of the colors that can be chosen are based on the different <b>ABS(+) filaments from eSun and KVP</b> has to offer. All of those filaments can be seen here, for further visualization:<br>
-            eSUN ABS(+):
-            <a class="hyperLinks" href="https://m.media-amazon.com/images/S/aplus-media-library-service-media/9ce0afaf-aec8-4c25-9021-e105dd57f442.__CR0,0,970,600_PT0_SX970_V1___.jpg" target="_blank">Filaments</a>.<br>
-            Keene Village Plastics (KVP) ABS: 
-            <a class="hyperLinks" href="https://www.villageplastics.com/wp-content/uploads/2018/02/ABS-Color-Chart.pdf" target="_blank">Filaments</a>.<br>
+                <b>OBS.</b> All of the colors that can be chosen are based on the different <b>ABS(+) filaments from eSun and KVP</b> has to offer. All of those filaments can be seen here, for further visualization:<br>
+                eSUN ABS(+):
+                <a class="hyperLinks" href="https://m.media-amazon.com/images/S/aplus-media-library-service-media/9ce0afaf-aec8-4c25-9021-e105dd57f442.__CR0,0,970,600_PT0_SX970_V1___.jpg" target="_blank">Filaments</a>.<br>
+                Keene Village Plastics (KVP) ABS:
+                <a class="hyperLinks" href="https://www.villageplastics.com/wp-content/uploads/2018/02/ABS-Color-Chart.pdf" target="_blank">Filaments</a>.<br>
             </p>
 
             <p><b>OBS.</b> I am not working for or is affiliated with the Voron Design Team, but is working on an individual project of my own free will. All credit for the CAD and STL files goes to the Voron Team.</p>
 
             <p>The files used on this website which includes, CAD files, STLs and detailed models are developed and created by the Voron Team.<br>
-            All of these files can be downloaded from their <a class="hyperLinks" href="https://vorondesign.com/" target="_blank">website</a>.</p>
+                All of these files can be downloaded from their <a class="hyperLinks" href="https://vorondesign.com/" target="_blank">website</a>.</p>
 
             <p>If you would like to share your color themes, you can do so on <a class="hyperLinks" href="https://www.teamfdm.com/gallery/category/11-3d-printer-color-configurator/">TeamFDM</a>, where an tidy indexed album has been created or on Reddit, Twitter, Facebook or Instagram (whichever you prefer), with <b>#VoronColorConfigurator</b>.</p>
         </div>
@@ -186,7 +254,7 @@
 
             <p>If you would like to share your color themes, you can do so on <a class="hyperLinks" href="https://www.teamfdm.com/gallery/category/11-3d-printer-color-configurator/">TeamFDM</a>, where an tidy indexed album has been created or on Reddit, Twitter, Facebook or Instagram (whichever you prefer), with <b>#VoronColorConfigurator</b>.</p>
         </div>
-        
+
         <div class="content-box3">
             <h2>Downloading printer configuration - STL files</h2>
 
@@ -203,6 +271,21 @@
     <!-- Footer -->
     <script src="voron-color-configurator/scripts/page-footer.js"></script>
     
+    <!-- Hamburger menu animation -->
+    <script>
+        function changeHamburger(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+    
+    <!-- Hamburger menu animation 
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function() {
+            this.classList.toggle("close");
+        });
+    </script>-->
+
     <!-- Go to the top -->
     <script>
         //Get the button
@@ -228,5 +311,4 @@
         }
     </script>
 
-</body>
-</html>
+</body></html>

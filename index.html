@@ -29,6 +29,7 @@
     <!-- Font Awesome -->
     <link href="fontawesome/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Font Awesome Kit code -->
     <script src="https://kit.fontawesome.com/314e48cde2.js" crossorigin="anonymous"></script>
 
@@ -86,12 +87,20 @@
     
     <!-- Hamburger menu animation -->
     <script>
+        function changeHamburger(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+    
+    <!-- Hamburger menu animation 
+    <script>
         const hamburger = document.querySelector(".hamburger");
         hamburger.addEventListener("click", function() {
             this.classList.toggle("close");
         });
     </script>
-    
+    -->
+
     <!-- Go to the top -->
     <script>
         //Get the button
