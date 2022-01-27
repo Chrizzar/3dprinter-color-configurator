@@ -9,6 +9,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../styles/navbar.css">
     <link rel="stylesheet" type="text/css" href="styles/voron-roadmap.css">
 
     <!-- --------- Google fonts (Start) --------- -->
@@ -44,7 +45,7 @@
     </div>
 
     <!-- Navbar -->
-    <script src="scripts/page-navbar.js"></script>
+    <script src="scripts/voron-navbar.js"></script>
 
     <!-- To the top button -->
     <button onclick="topFunction()" id="toTheTop" title="Go to top">Top</button>
@@ -70,6 +71,13 @@
 
     <!-- Footer -->
     <script src="scripts/page-footer.js"></script>
+    
+    <!-- Hamburger menu animation -->
+    <script>
+        function changeHamburger(x) {
+            x.classList.toggle("change");
+        }
+    </script>
 
     <!-- Go to the top -->
     <script>

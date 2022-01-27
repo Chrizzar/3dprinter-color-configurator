@@ -9,6 +9,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../styles/navbar.css">
     <link rel="stylesheet" type="text/css" href="../styles/voron_style.css">
     <link rel="stylesheet" type="text/css" href="../styles/configuration.css">
     <link rel="stylesheet" type="text/css" href="../styles/instructions.css">
@@ -103,7 +104,7 @@
     </div>
 
     <!-- Navbar -->
-    <script src="scripts/page-navbar.js"></script>
+    <script src="scripts/voron-navbar.js"></script>
 
     <!-- To the top button -->
     <button onclick="topFunction()" id="toTheTop-left" title="Go to top">Top</button>
@@ -287,7 +288,13 @@
     <!-- Change color of the select components dependent on, 
     if an option has been selected -->
     <script src="scripts/default-text-selection-color-change.js"></script>
-
+    
+    <!-- Hamburger menu animation -->
+    <script>
+        function changeHamburger(x) {
+            x.classList.toggle("change");
+        }
+    </script>
 
     <!-- Go to the top -->
     <script>
