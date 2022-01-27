@@ -14,7 +14,7 @@ document.write('\
 \
     <nav class="new-navbar">\
         <ul>\
-            <li><a href="#">About us</a>\
+            <li><a href="#">About us <i class="fa fa-caret-down"></i></a>\
                 <ul>\
                     <li><a href="contact.html">Contact</a></li>\
                     <li><a href="terms-of-use.html">Terms of use</a></li>\

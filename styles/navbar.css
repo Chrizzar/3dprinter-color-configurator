@@ -150,11 +150,16 @@ header label {
 /* Hamburger menu at mobile width */
 @media (max-width: 1295px) {
     header {
-        padding: 20px;
+        padding: 20px 20px 20px 0px;
     }
 
     header label {
         display: initial;
+    }
+
+    /* Logo */
+    header .logo {
+        padding-left: 15px;
     }
 
     header .new-navbar {
@@ -175,17 +180,17 @@ header label {
         position: relative;
         width: 100%;
     }
-    
+
     /* Submenu */
     header .new-navbar ul li ul li {
         background: var(--light-dark);
     }
-    
+
     /* Submenu indent */
     header .new-navbar ul li ul a {
         padding-left: 40px;
     }
-    
+
     /* Submenu hover */
     header .new-navbar ul li ul a:hover {
         background: var(--lighter-dark);
@@ -196,7 +201,7 @@ header label {
         width: 100%;
         left: 0;
     }
-    
+
     /* Submenu indent */
     header .new-navbar ul li ul li ul a {
         padding-left: 80px;
