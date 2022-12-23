@@ -1,6 +1,6 @@
 function main() {
     const LOADER = document.getElementById('js-loader');
-
+    
     const TRAY = document.getElementById('js-tray-slide');
     const DRAG_NOTICE = document.getElementById('js-drag-notice');
 
