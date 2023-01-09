@@ -13,7 +13,7 @@ document.write('\
         </ul>\
     </div>\
     <div class="footer-bottom">\
-        <p>copyright &copy; 2021-2022 <span>Christian Sass Hansen</span> - All Rights Reserved.</p>\
+        <p>copyright &copy; 2021-2023 <span>Christian Sass Hansen</span> - All Rights Reserved.</p>\
     </div>\
 </div>\
 \
