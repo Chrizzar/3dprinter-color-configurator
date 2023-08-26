@@ -16,10 +16,10 @@ document.write('\
     <nav class="new-navbar">\
         <ul>\
             <!-- Voron V0.1 -->\
-            <li><a href="#">Voron V0.1 <i class="fa fa-caret-down"></i></a>\
+            <li><a href="#">Voron V0.2R1 <i class="fa fa-caret-down"></i></a>\
                 <ul>\
-                    <li><a href="voron-v0.1-default.html">Default</a></li>\
-                    <li><a href="voron-v0.1-8accents.html">8 Accents</a></li>\
+                    <li><a href="voron-v0.2-default.html">Default</a></li>\
+                    <li><a href="voron-v0.2-8accents.html">8 Accents</a></li>\
                 </ul>\
             </li>\
             <!-- Voron Trident -->\

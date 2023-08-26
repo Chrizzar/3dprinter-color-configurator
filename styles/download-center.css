@@ -33,13 +33,37 @@
     margin-bottom: 50px;
 }
 
+#download-content3 {
+    max-width: 700px;
+    width: 100%;
+    height: 100%;
+    padding: 20px 50px;
+    background-color: white;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+/* Updated Content (START) */
 ul,
-.myUL {
+.updated-content {
     list-style-type: none;
     padding-left: 1.5rem;
 }
 
-.myUL {
+.updated-content {
+    margin: 0px 0px 15px 0px;
+    padding: 0;
+}
+
+/* Superceded Content (START) */
+ul,
+.superceded-content {
+    list-style-type: none;
+    padding-left: 1.5rem;
+}
+
+.superceded-content {
     margin: 0px 0px 15px 0px;
     padding: 0;
 }

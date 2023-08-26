@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Voron V0.1 - Default Config</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="icons/voron_icon_v3.ico">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../styles/navbar.css">
+    <link rel="stylesheet" type="text/css" href="../styles/voron_style.css">
+    <link rel="stylesheet" type="text/css" href="../styles/configuration.css">
+    <link rel="stylesheet" type="text/css" href="../styles/instructions.css">
+    <link rel="stylesheet" type="text/css" href="styles/colors.css">
+
+    <!-- --------- Google fonts (Start) --------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Oxygen -->
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+
+    <!-- Inconsolata -->
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <!-- --------- Google fonts (End) --------- -->
+
+    <!-- Font Awesome -->
+    <link href="fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- We add the loader CSS here so that assets don't pop in before the bundled CSS is loaded -->
+    <style>
+        .loading {
+            position: absolute;
+            border-radius: 10px;
+            margin: 20px 20px 20px 0px;
+            z-index: 50;
+            width: 100%;
+            height: 600px;
+            top: 0;
+            left: 0;
+            background: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader {
+            -webkit-perspective: 120px;
+            -moz-perspective: 120px;
+            -ms-perspective: 120px;
+            perspective: 120px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .loader::before {
+            content: "";
+            position: absolute;
+            left: 25px;
+            top: 25px;
+            width: 50px;
+            height: 50px;
+            background-color: #ff0000;
+            animation: flip 1s infinite;
+        }
+
+        @keyframes flip {
+            0% {
+                transform: rotate(0);
+            }
+
+            50% {
+                transform: rotateY(180deg);
+            }
+
+            100% {
+                transform: rotateY(180deg) rotateX(180deg);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <a class="skip-nav-link" href="#main">
+            skip navigation
+        </a>
+
+        <a class="creditTo" style="float: right;" href="https://threejs.org/" target="_blank">
+            Made with three.js
+        </a>
+
+        <div class="header-text">
+            <h1>VORON COLOR CONFIGURATOR</h1>
+            <p>A website created by: <br> Christian Sass Hansen</p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <script src="scripts/voron-navbar.js"></script>
+
+    <!-- To the top button -->
+    <button onclick="topFunction()" id="toTheTop-left" title="Go to top">Top</button>
+
+    <div id="section-to-print" class="row">
+        <div id="main" class="main">
+            <div class="content">
+
+                <div class="rowBlankLeft">
+                    <div class="blankModel">
+
+                    </div>
+
+                    <div class="headingModel">
+                        <h2 class="textSmaller">VORON V0.2R1 - DEFAULT (PRIMARY + 3 ACCENTS)</h2>
+                    </div>
+                </div>
+
+                <div class="center-color">
+                    <p class="textCenter option-colors-tablet unselectable">Colors</p>
+                </div>
+
+                <div class="row">
+                    <div class="reverse-wrap">
+                        <div class="optionsModel">
+                            <!-- These toggle the the different parts of the chair that can be edited, note data-option is the key that links to the name of the part in the 3D file -->
+                            <div class="options">
+
+                                <p class="textCenter option-colors-desktop unselectable">Colors</p>
+
+                                <div data-tooltip="Primary color" class="adjust_v0">
+                                    <div class="optionV0 --is-active" data-option="0_Primary_color">
+                                        <img class="resize" src="images/thumbnails/V0.1/V0_part_1.svg" alt="" />
+                                    </div>
+                                </div>
+
+                                <div data-tooltip="First accent color" class="adjust_v0">
+                                    <div class="optionV0" data-option="1st_accent_color">
+                                        <img class="resize" src="images/thumbnails/V0.1/V0_part_8.svg" alt="" />
+                                    </div>
+                                </div>
+
+                                <div data-tooltip="Second accent color" class="adjust_v0">
+                                    <div class="optionV0" data-option="2nd_accent_color">
+                                        <img class="resize" src="images/thumbnails/V0.1/V0_part_3.svg" alt="" />
+                                    </div>
+                                </div>
+
+                                <div data-tooltip="Frame color" class="adjust_v0">
+                                    <div class="optionV0" data-option="3_frame">
+                                        <img class="resize" src="images/thumbnails/V0.1/V0_frame_3D.svg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Colors Text Shown on Mobile -->
+                        <div class="center-color-mobile">
+                            <p class="textCenter option-colors-mobile unselectable">Colors</p>
+                        </div>
+
+                        <div class="canvasModel" style="position: relative;">
+                            <!-- Just a quick notice to the user that it can be interacted with -->
+                            <span class="drag-notice" id="js-drag-notice">Drag to rotate 360&#176;</span>
+
+                            <!-- The canvas element is used to draw the 3D scene -->
+                            <canvas id="c"></canvas>
+
+                            <!-- The loading element overlays all else until the model is loaded, at which point we remove this element from the DOM -->
+                            <div class="loading" id="js-loader">
+                                <div class="loader"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rowBlankLeft">
+                    <div class="blankModel">
+                    </div>
+
+                    <!-- Controls Model - color selection bar and information -->
+                    <script src="scripts/page-controls-model.js"></script>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="side">
+            <h2 class="textCenter">Configuration</h2>
+            <div class="radioContainer">
+                <form class="form cf">
+
+                    <section class="radioOptions cf selectionStyle">
+                        <h3>Choose type of toolhead:</h3>
+                        <input type="radio" name="radio1" id="bowden" value="bowden" onclick="bowdenTypeSection()"><label class="four col" for="bowden">Bowden</label>
+                        <input type="radio" name="radio1" id="afterburner" value="afterburner" onclick="ddTypeSection()"><label class="four col" for="afterburner">Mini&nbsp;Stealthburner</label>
+                    </section>
+
+                    <section id="bowdenType" class="radioOptions cf hidden selectionStyle" style="display:none;">
+                        <h3>Choose bowden setup:</h3>
+                        <input type="radio" name="radio2" id="fan_saver1" value="fan_saver1" onclick="fanSaverHotendSection()"><label class="four col" for="fan_saver1">Fan Saver</label>
+                        <input type="radio" name="radio2" id="standard1" value="standard1" onclick="standardHotendSection()"><label class="yearly-label four col" for="standard1">Standard</label>
+                    </section>
+
+                    <section id="ddType" class="radioOptions cf hidden selectionStyle" style="display:none;">
+                        <h3>Choose Mini Stealthburner setup:</h3>
+                        <input type="radio" name="radio3" id="fan_saver2" value="fan_saver2" onclick="fanSaverHotendSection()"><label class="four col" for="fan_saver2">Fan Saver</label>
+                        <input type="radio" name="radio3" id="standard2" value="standard2" onclick="standardHotendSection()"><label class="yearly-label four col" for="standard2">Standard</label>
+                    </section>
+
+                    <section id="fanSaverHotend" class="radioOptions cf hidden selectionStyle" style="display:none;">
+                        <h3>Choose Fan Saver hotend:</h3>
+                         <input type="radio" name="radio4" id="fs_creality_spider" value="fs_creality_spider"><label class="four col" for="fs_creality_spider">FS Creality Spider</label>
+                         <input type="radio" name="radio4" id="fs_hotend_bambu_X1C" value="fs_hotend_bambu_X1C"><label class="four col" for="fs_hotend_bambu_X1C">FS Bambu X1C</label>
+                         <input type="radio" name="radio4" id="fs_dragon" value="fs_dragon"><label class="four col" for="fs_dragon">FS Dragon</label>
+                         <input type="radio" name="radio4" id="fs_dragonfly_bmo" value="fs_dragonfly_bmo"><label class="four col" for="fs_dragonfly_bmo">FS Dragonfly BMO</label>
+                         <input type="radio" name="radio4" id="fs_dragonfly_bms_7_fins" value="fs_dragonfly_bms_7_fins"><label class="four col" for="fs_dragonfly_bms_7_fins">FS Dragonfly BMS 7 FINS</label>
+                         <input type="radio" name="radio4" id="fs_drop_effect_xg" value="fs_drop_effect_xg"><label class="four col" for="fs_drop_effect_xg">FS Drop Effect XG</label>
+                         <input type="radio" name="radio4" id="fs_formbot" value="fs_formbot"><label class="four col" for="fs_formbot">FS Formbot</label>
+                         <input type="radio" name="radio4" id="fs_revo_voron" value="fs_revo_voron"><label class="four col" for="fs_revo_voron">FS Revo Voron</label>
+                    </section>
+
+                    <section id="standardHotend" class="radioOptions cf hidden selectionStyle" style="display:none;">
+                        <h3>Choose Standard hotend:</h3>
+                        <input type="radio" name="radio5" id="std_bambu_x1c" value="std_bambu_x1c"><label class="four col" for="std_bambu_x1c">Bambu X1C</label>
+                        <input type="radio" name="radio5" id="creality_spider_pro" value="creality_spider_pro"><label class="four col" for="creality_spider_pro">Creality Spider Pro</label>
+                        <input type="radio" name="radio5" id="std_dragon" value="std_dragon"><label class="four col" for="std_dragon">Dragon</label>
+                        <input type="radio" name="radio5" id="std_dragonfly_bmo" value="std_dragonfly_bmo"><label class="four col" for="std_dragonfly_bmo">Dragonfly BMO</label>
+                        <input type="radio" name="radio5" id="std_dragonfly_bms_7_fins" value="std_dragonfly_bms_7_fins"><label class="four col" for="std_dragonfly_bms_7_fins">Dragonfly BMS 7 FINS</label>
+                        <input type="radio" name="radio5" id="std_drop_effect_xg" value="std_drop_effect_xg"><label class="four col" for="std_drop_effect_xg">Drop Effect XG</label>
+                        <input type="radio" name="radio5" id="std_formbot" value="std_formbot"><label class="four col" for="std_formbot">Formbot</label>
+                        <input type="radio" name="radio5" id="std_MicroSwiss_all_metal" value="std_MicroSwiss_all_metal"><label class="four col" for="std_MicroSwiss_all_metal"> MicroSwiss All Metal</label>
+                        <input type="radio" name="radio5" id="std_revo_voron" value="std_revo_voron"><label class="four col" for="std_revo_voron">Revo Voron</label>
+                    </section>
+
+                    <section class="radioOptions cf selectionStyle">
+                        <h3>Choose panel thickness:</h3>
+                        <input type="radio" name="radio6" id="panel1" value="panel1"><label class="credit-label four col" for="panel1">For 3mm</label>
+                        <input type="radio" name="radio6" id="panel2" value="panel2"><label class="debit-label four col" for="panel2">For 2.5mm</label>
+                        <input type="radio" name="radio6" id="panel3" value="panel3"><label class="paypal-label four col" for="panel3">For 2mm</label>
+                    </section>
+
+                    <section>
+                        <h3>Choose colors (using the tool):</h3>
+                        <h4>Primary color</h4>
+                        <select aria-label="Primary color" id="primaryColor" class="selectionStyle">
+                            <script src="scripts/choose-colors.js"></script>
+                        </select>
+
+                        <h4>First accent color</h4>
+                        <select aria-label="First accent color" id="1_accent" class="selectionStyle">
+                            <script src="scripts/choose-colors.js"></script>
+                        </select>
+
+                        <h4>Second accent color</h4>
+                        <select aria-label="Second accent color" id="2_accent" class="selectionStyle">
+                            <script src="scripts/choose-colors.js"></script>
+                        </select>
+
+                        <h4>Frame color</h4>
+                        <select aria-label="Frame color" id="frame_color" class="selectionStyle">
+                            <script src="scripts/choose-colors.js"></script>
+                        </select>
+                    </section>
+
+                    <div class="instructions-info"><span class="instructions">Instructions</span> <i id="info-icon" class="fa fa-info-circle"></i></div>
+                    <div class="instructions-info-content">
+                        <h3>Instructions for submission</h3>
+                        <p><b>At submission:</b><br>
+                            When clicking submit, it is important to remember to activate &Prime;<span>Background graphics</span> &Prime; in the &Prime;<span>More settings</span> &Prime; tab, since we need to be able to see which colors we have chosen for this project.
+                            <br><br>
+                            <b>After submission:</b><br>
+                            After submitting, go to the Download Center to find and download your chosen configuration.
+                        </p>
+                    </div>
+
+                    <input class="submit" type="submit" value="Submit" onClick="window.print()">
+
+                    <p class="textCenter obsText" style="color: red;">(OBS: The configuration will reset after submission)</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <script src="scripts/page-footer.js"></script>
+
+    <!-- The main three.js file -->
+    <script src='https://unpkg.com/three@0.148.0/build/three.js'></script>
+    <!-- This brings in the ability to load custom 3D objects in the .gltf file format. Blender allows the ability to export to this format out the box -->
+    <script src='https://cdn.jsdelivr.net/gh/mrdoob/three.js@r136/examples/js/loaders/GLTFLoader.js'></script>
+    <!-- This is a simple to use extension for three.js that activates all the rotating, dragging and zooming controls we need for both mouse and touch, there isn't a clear CDN for this that I can find -->
+    <!--<script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script>-->
+    <script src='https://cdn.jsdelivr.net/npm/three@0.136/examples/js/controls/OrbitControls.js'></script>
+    <script src="scripts/v0_default.js"></script>
+
+    <!-- Change color of the select components dependent on, 
+    if an option has been selected -->
+    <script src="scripts/default-text-selection-color-change.js"></script>
+    
+    <!-- Hamburger menu animation -->
+    <script>
+        function changeHamburger(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+
+    <!-- Go to the top -->
+    <script>
+        //Get the button
+        var toTheTop = document.getElementById("toTheTop-left");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                toTheTop.style.display = "block";
+            } else {
+                toTheTop.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <!-- Show different div dependent on choice -->
+    <script>
+        function bowdenTypeSection() {
+            document.getElementById('bowdenType').style.display = 'block';
+            document.getElementById('ddType').style.display = 'none';
+        }
+
+        function ddTypeSection() {
+            document.getElementById('bowdenType').style.display = 'none';
+            document.getElementById('ddType').style.display = 'block';
+        }
+        
+        function fanSaverHotendSection() {
+            document.getElementById('fanSaverHotend').style.display = 'block';
+            document.getElementById('standardHotend').style.display = 'none';
+        }
+        
+        function standardHotendSection() {
+            document.getElementById('fanSaverHotend').style.display = 'none';
+            document.getElementById('standardHotend').style.display = 'block';
+        }
+    </script>
+
+    <!-- Collapsible Content -->
+    <script>
+        var coll = document.getElementsByClassName("instructions-info");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    content.style.marginBottom = "0px"; // px to the bottom when disabled
+                    content.style.opacity = "0";
+                    content.style.transition = "all 0.8s";
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    content.style.marginBottom = "15px"; // px to the bottom when active
+                    content.style.opacity = "1";
+                    content.style.transition = "all 0.8s";
+                }
+            });
+        }
+    </script>
+
+</body></html>

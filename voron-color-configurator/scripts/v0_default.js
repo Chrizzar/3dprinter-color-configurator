@@ -6,7 +6,7 @@ function main() {
 
     var theModel;
     
-    const MODEL_PATH = "models/v0/voron_v0_default.glb";
+    const MODEL_PATH = "models/v0/voron_v0-2R1_default.glb";
     
     var activeOption = '1_first_color';
     var loaded = false;
@@ -456,14 +456,20 @@ function main() {
         color: 0xD4AF37, 
         shininess: 100,
     });
-
-    const LIGHT_BLACK_MTL = new THREE.MeshPhongMaterial({ 
-        color: 0x585858, 
-        shininess: 150,
+    
+    const WHITE_MTL = new THREE.MeshPhongMaterial({ 
+        color: 0xf1f1f1, 
+        shininess: 10,
     });
 
     const BLACK_MTL = new THREE.MeshPhongMaterial({ 
         color: 0x222324, 
+        shininess: 150,
+    });
+    
+
+    const LIGHT_BLACK_MTL = new THREE.MeshPhongMaterial({ 
+        color: 0x585858, 
         shininess: 150,
     });
     
@@ -474,6 +480,11 @@ function main() {
     
     const RED_MTL = new THREE.MeshPhongMaterial({ 
         color: 0xF72F35, 
+        shininess: 150,
+    });
+    
+    const GREEN_MTL = new THREE.MeshPhongMaterial({ 
+        color: 0x24a25f, 
         shininess: 150,
     });
 
@@ -494,21 +505,20 @@ function main() {
 
     
     const INITIAL_MAP = [
-    { childID: "1_first_color", mtl: INITIAL_MTL },
-    { childID: "2_second_color", mtl: INITIAL_MTL },
-    { childID: "3_accessories", mtl: INITIAL_MTL },
-    { childID: "4_frame", mtl: FRAME_MTL },
-    { childID: "panels", mtl: DARK_GRAY },
-    { childID: "spring_assembly", mtl: BLACK_MTL },
-    { childID: "rubber_belts", mtl: BELTS_MTL },
-    { childID: "electronics", mtl: BLACK_MTL },
-    { childID: "feet", mtl: BLACK_MTL },
-    { childID: "screws", mtl: BLACK_MTL },
-    { childID: "springs", mtl: YELLOW_MTL },
-    { childID: "black", mtl: BLACK_MTL },
-    { childID: "red", mtl: RED_MTL },
-    { childID: "gold", mtl: GOLD_MTL },
-    { childID: "silver", mtl: SILVER_MTL },
+        { childID: "0_Primary_color", mtl: INITIAL_MTL },
+        { childID: "1st_accent_color", mtl: INITIAL_MTL },
+        { childID: "2nd_accent_color", mtl: INITIAL_MTL },
+        { childID: "3_frame", mtl: FRAME_MTL },
+        { childID: "black", mtl: BLACK_MTL },
+        { childID: "bowden_tube", mtl: SILVER_MTL },
+        { childID: "gold", mtl: GOLD_MTL },
+        { childID: "green", mtl: GREEN_MTL },
+        { childID: "panels", mtl: DARK_GRAY },
+        { childID: "red", mtl: RED_MTL },
+        { childID: "rubber_belts", mtl: BELTS_MTL },
+        { childID: "screws", mtl: BLACK_MTL },
+        { childID: "silver", mtl: SILVER_MTL },
+        { childID: "white", mtl: WHITE_MTL },
     ];
     
     // Init the object loader
